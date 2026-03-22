@@ -18,6 +18,7 @@
     "@storybook/addon-vitest": "^10.3.1",
     "@storybook/addon-a11y": "^10.3.1",
     "@storybook/addon-docs": "^10.3.1",
+    "@storybook/addon-designs": "^11.0.0",
     "@storybook/addon-onboarding": "^10.3.1",
     "eslint-plugin-storybook": "^10.3.1",
     "vitest": "^4.1.0",
