@@ -40,9 +40,9 @@
 
 ### Storybook Documentation
 
-- [ ] **STORY-01**: Storybook 8 configured with `@storybook/react-vite` builder, `@storybook/addon-essentials`, and `reactDocgen: "react-docgen-typescript"` for full TypeScript prop inference
-- [ ] **STORY-02**: CSS custom property output from Style Dictionary imported in `.storybook/preview.ts` so all token variables are available globally in stories and MDX
-- [ ] **STORY-03**: Sidebar sort order: Introduction → Design Purpose → Design Principles → Tokens → Styles → Primitives
+- [x] **STORY-01**: Storybook 8 configured with `@storybook/react-vite` builder, `@storybook/addon-essentials`, and `reactDocgen: "react-docgen-typescript"` for full TypeScript prop inference
+- [x] **STORY-02**: CSS custom property output from Style Dictionary imported in `.storybook/preview.ts` so all token variables are available globally in stories and MDX
+- [x] **STORY-03**: Sidebar sort order: Introduction → Design Purpose → Design Principles → Tokens → Styles → Primitives
 - [ ] **STORY-04**: Token preview page — Color: displays full palette using `ColorPalette`/`ColorItem` blocks with hex values and token names
 - [ ] **STORY-05**: Token preview page — Typography: displays all font families, weights, sizes, and line heights
 - [ ] **STORY-06**: Token preview page — Spacing: visual scale showing all spacing steps with pixel values and token names
@@ -110,9 +110,9 @@
 | FIGMA-01 | Phase 3 | Complete |
 | FIGMA-02 | Phase 3 | Complete |
 | FIGMA-03 | Phase 3 | Complete |
-| STORY-01 | Phase 4 | Pending |
-| STORY-02 | Phase 4 | Pending |
-| STORY-03 | Phase 4 | Pending |
+| STORY-01 | Phase 4 | Complete |
+| STORY-02 | Phase 4 | Complete |
+| STORY-03 | Phase 4 | Complete |
 | STORY-04 | Phase 5 | Pending |
 | STORY-05 | Phase 5 | Pending |
 | STORY-06 | Phase 5 | Pending |

@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T17:08:29.016Z"
+last_updated: "2026-03-22T21:23:25.531Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 8
+  completed_plans: 7
 ---
 
 # STATE: Design System X
@@ -18,7 +18,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A single source of truth for all design decisions — tokens defined once in Figma, consumed reliably in code, with Storybook as the living reference that bridges design and development.
-**Current focus:** Phase 03 — semantic-tokens-figma-pipeline
+**Current focus:** Phase 04 — storybook-foundation
 
 ## Current Status
 
@@ -31,15 +31,16 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 2 Plan 02: Token Authoring — **COMPLETE** (02-02)
 - [x] Phase 3 Plan 01: Semantic Token Bootstrap — **COMPLETE** (03-01)
 - [x] Phase 3 Plan 02: Tokens Studio Pro Figma Push — **COMPLETE** (03-02)
+- [x] Phase 4 Plan 01: Storybook Config (addon-designs, preview.tsx) — **COMPLETE** (04-01)
 
 ## Active Phase
 
-**Phase 3: Semantic Tokens & Figma Pipeline** — COMPLETE
+**Phase 4: Storybook Foundation** — IN PROGRESS (1/2 plans complete)
 
-- Plan 03-01 — Semantic token bootstrap (4 DTCG files, SD multi-instance loop) ✓ COMPLETE
-- Plan 03-02 — Tokens Studio Pro Figma push — ✓ COMPLETE (GitHub remote configured, Figma Semantic Collection live with 4 modes, 226 variables each, round-trip sync verified)
+- Plan 04-01 — Storybook config: addon-designs, token CSS imports, global decorator, storySort — ✓ COMPLETE
+- Plan 04-02 — Token preview stories — pending
 
-Current position: Phase 3 COMPLETE — ready to begin Phase 4 (Storybook Foundation)
+Current position: Phase 4 Plan 01 COMPLETE — ready to begin Plan 04-02 (Token preview stories)
 
 ## Decisions
 
@@ -72,6 +73,9 @@ Current position: Phase 3 COMPLETE — ready to begin Phase 4 (Storybook Foundat
 - [Phase 03-02]: Tokens Studio Pro Folder storage (not Single file) required for Pro themes/modes multi-mode export
 - [Phase 03-02]: W3C DTCG format in Tokens Studio Pro matches Plan 01 JSON authoring — ensures round-trip fidelity
 - [Phase 03-02]: Figma canonical source of truth (D-14) established — bootstrap complete (D-15), all future token edits in Figma
+- [Phase 04-storybook-foundation]: preview.tsx not .ts — JSX global decorator requires .tsx extension (parser error with .ts)
+- [Phase 04-storybook-foundation]: decorators as top-level preview key — Storybook 9+ silently ignores parameters.decorators
+- [Phase 04-storybook-foundation]: Only parent-brand/light CSS imported in preview.tsx — brand/mode switching deferred to Phase 5
 
 ## Open Questions / Risks
 
@@ -103,3 +107,4 @@ Current position: Phase 3 COMPLETE — ready to begin Phase 4 (Storybook Foundat
 *Last session: 2026-03-22 — Completed 03-01-PLAN.md (Semantic token bootstrap: 4 DTCG semantic files, SD multi-instance loop, 5 CSS outputs, $themes.json)*
 *Last session: 2026-03-22 — Reached checkpoint in 03-02-PLAN.md: human-action required (GitHub repo + PAT + Tokens Studio Pro sync + Figma push)*
 *Last session: 2026-03-22 — Completed 03-02-PLAN.md (Tokens Studio Pro Figma sync: GitHub remote configured, Semantic Variable Collection live with 4 modes + 226 variables, round-trip sync verified, Phase 3 COMPLETE)*
+*Last session: 2026-03-22 — Completed 04-01-PLAN.md (Storybook config: addon-designs registered, preview.tsx with CSS imports + global decorator + storySort, turbo build passing)*
