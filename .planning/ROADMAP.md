@@ -15,7 +15,7 @@
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Root workspace + package scaffolding (tokens, primitives, Turborepo, TypeScript)
+- [x] 01-01-PLAN.md — Root workspace + package scaffolding (tokens, primitives, Turborepo, TypeScript)
 - [ ] 01-02-PLAN.md — Storybook, ESLint, and Changesets setup
 
 ### Tasks
@@ -89,7 +89,7 @@ Plans:
 
 **Goal:** Configure Storybook 8 with the correct React + TypeScript setup, import token outputs, and establish the documentation structure that token preview pages and component stories will populate.
 
-**Requirements covered:** STORY-01, STORY-02, STORY-03
+**Requirements covered:** STORY-01, STORY-02, STORY-03, STORY-13, STORY-14, FIGMA-06
 
 ### Tasks
 
@@ -101,11 +101,14 @@ Plans:
 3. Configure `preview.ts`:
    - Import CSS custom property output from `@design-system-x/tokens` (primitive + default brand/light mode)
    - Set global decorator for consistent story background
-4. Configure `storySort` in `preview.ts`: Introduction → Tokens → Styles → Primitives
+4. Configure `storySort` in `preview.ts`: Introduction → Design Purpose → Design Principles → Tokens → Styles → Primitives
 5. Create Introduction MDX page (`Introduction.mdx`) — project overview, links to Figma, how to use the system
-6. Verify: `turbo run dev` in `apps/storybook` starts Storybook with no errors and CSS variables are available in browser DevTools
+6. Create Design Purpose MDX page (`Introduction/DesignPurpose.mdx`) — clearly stated reason the digital platform/product exists
+7. Create Design Principles MDX page (`Introduction/DesignPrinciples.mdx`) — key values as a capitalized Word followed by a definition, capturing what good design means for the project
+8. Create corresponding Figma pages: "Design Purpose" and "Design Principles" — mirror the Storybook MDX content so Figma file and Storybook are in sync (FIGMA-06)
+9. Verify: `turbo run dev` in `apps/storybook` starts Storybook with no errors and CSS variables are available in browser DevTools
 
-**Verification:** Storybook runs. Sidebar shows Introduction. CSS custom properties (`--color-blue-500`, etc.) are visible in browser DevTools. Addon panels (Designs, A11y, Controls) appear.
+**Verification:** Storybook runs. Sidebar shows Introduction → Design Purpose → Design Principles. CSS custom properties (`--color-blue-500`, etc.) are visible in browser DevTools. Addon panels (Designs, A11y, Controls) appear. Figma file has matching Design Purpose and Design Principles pages.
 
 ---
 
@@ -171,11 +174,11 @@ Plans:
 | 1 | Monorepo Foundation | INFRA-01--06 | ○ Planning |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09--10 | ○ Pending |
 | 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, FIGMA-01--03 | ○ Pending |
-| 4 | Storybook Foundation | STORY-01--03 | ○ Pending |
+| 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
 
-**Total v1 requirements:** 27 | **Phases:** 6 | **All requirements mapped** ✓
+**Total v1 requirements:** 30 | **Phases:** 6 | **All requirements mapped** ✓
 
 ---
 
