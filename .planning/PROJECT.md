@@ -21,19 +21,26 @@ A single source of truth for all design decisions — tokens defined once in Fig
 - [x] ESLint 9 flat config with `typescript-eslint` v8 `projectService` auto-discovery
 - [x] Changesets configured with `access: "public"` for `@design-system-x/*` scoped packages
 
+### Validated
+
+**Primitive Token Pipeline (Phase 2 — validated 2026-03-22)**
+- [x] Style Dictionary v4 build pipeline wired into `packages/tokens` (`build:tokens` script, turbo task ordering)
+- [x] `@tokens-studio/sd-transforms` preprocessor configured for DTCG input
+- [x] 5 DTCG-format primitive token JSON files: color (8 hues × 11 steps), spacing (34 steps), typography (13 composite + 2 font families), elevation (5 levels), grid/breakpoints (5)
+- [x] 231 CSS custom properties output to `dist/css/tokens.css` under `--dsx-*` namespace
+- [x] TypeScript breakpoint constants exported from `dist/index.js`
+- [x] Token files version-controlled alongside code
+- [x] `category.property.modifier` naming convention used throughout primitives
+
 ### Active
 
 **Token Architecture**
-- [ ] 3-tier token system: Primitive → Semantic → Component tokens
-- [ ] `category.property.modifier` naming convention throughout
-- [ ] Primitive token categories: color, typography, spacing, elevation, grid/breakpoints
+- [ ] Semantic and Component token tiers (Tier 2 and 3) — primitive tier complete
 - [ ] Multi-brand + light/dark mode support via Figma Variable Collections and modes
 
 **Figma → Code Pipeline**
-- [ ] Figma Variables as design source of truth
+- [ ] Figma Variables as design source of truth (placeholder values in `color.brand.*` pending Figma file key)
 - [ ] Tokens Studio Pro syncs Figma Variables → W3C DTCG JSON
-- [ ] Style Dictionary transforms tokens → CSS custom properties + TypeScript exports
-- [ ] Token files version-controlled alongside code
 
 **Storybook Documentation**
 - [ ] Storybook configured for React + TypeScript with Autodocs
@@ -72,10 +79,10 @@ A single source of truth for all design decisions — tokens defined once in Fig
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | Tokens Studio Pro over Figma REST API | Smoother sync workflow with automatic DTCG export; REST API requires custom scripting | — Pending |
-| Style Dictionary v4 | Native DTCG support, active maintenance, widest platform output support | — Pending |
+| Style Dictionary v4 | Native DTCG support, active maintenance, widest platform output support | ✓ Validated Phase 2 |
 | Storybook over custom docs site | Faster to ship, industry standard, Figma addon ecosystem, Autodocs removes manual work | — Pending |
 | Figma Code Connect + addon-designs | Bidirectional Figma↔Storybook visibility; one shows Figma in Storybook, the other shows code in Figma | — Pending |
 | v1 = tokens + primitives only | Stable token foundation is prerequisite for reliable components; avoids refactoring components when tokens change | — Pending |
 
 ---
-*Last updated: 2026-03-22 — Phase 1 complete (monorepo foundation validated)*
+*Last updated: 2026-03-22 — Phase 2 complete (primitive token pipeline: 231 CSS vars, 5 DTCG JSON files, Style Dictionary v4 build verified)*
