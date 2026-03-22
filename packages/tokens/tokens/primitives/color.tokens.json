@@ -1,19 +1,52 @@
 {
   "color": {
     "$type": "color",
-    "$description": "Source: All color values are from Tailwind v3 default color palette (https://tailwindcss.com/docs/customizing-colors) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). brand palette uses Tailwind violet scale as placeholder for the project brand — replace with actual brand hex values once Figma file key is available. neutral scale is Tailwind gray/zinc. neutral.0=#ffffff and neutral.1000=#000000 are hardcoded white/black endpoints. All interface hues (red, green, yellow, blue, orange, purple) use Tailwind v3 defaults. Per D-01 traceability requirement.",
+    "$description": "Primitive color scales. brand = teal (#4FC4C4 at 500, D-03). secondary = purple (#5944af at 500, D-03 parent-brand secondary). navy = deep navy (#1B3A6B at 500, D-04 child-brand accent). slate = near-black slate (#1C1C28 at 500, D-04 child-brand primary). neutral = Tailwind zinc. neutral.0=#ffffff and neutral.1000=#000000 are hardcoded white/black endpoints. All interface hues (red, green, yellow, blue, orange, purple) use Tailwind v3 defaults. Per D-01 traceability requirement.",
     "brand": {
+      "50":  { "$value": "#f0fdfd" },
+      "100": { "$value": "#ccfbf1" },
+      "200": { "$value": "#99f6e4" },
+      "300": { "$value": "#7de8d6" },
+      "400": { "$value": "#5dd8c8" },
+      "500": { "$value": "#4FC4C4" },
+      "600": { "$value": "#2da3a3" },
+      "700": { "$value": "#1a7f7f" },
+      "800": { "$value": "#115e5e" },
+      "900": { "$value": "#0a4040" },
+      "950": { "$value": "#052525" }
+    },
+    "secondary": {
       "50":  { "$value": "#f5f3ff" },
       "100": { "$value": "#ede9fe" },
       "200": { "$value": "#ddd6fe" },
       "300": { "$value": "#c4b5fd" },
       "400": { "$value": "#a78bfa" },
-      "500": { "$value": "#8b5cf6" },
-      "600": { "$value": "#7c3aed" },
-      "700": { "$value": "#6d28d9" },
-      "800": { "$value": "#5b21b6" },
-      "900": { "$value": "#4c1d95" },
-      "950": { "$value": "#2e1065" }
+      "500": { "$value": "#5944af" },
+      "600": { "$value": "#4c3a99" },
+      "700": { "$value": "#3f2f83" },
+      "800": { "$value": "#32256d" },
+      "900": { "$value": "#261c57" },
+      "950": { "$value": "#1a1240" }
+    },
+    "navy": {
+      "50":  { "$value": "#eef2f7" },
+      "100": { "$value": "#d4deec" },
+      "200": { "$value": "#a9bdd9" },
+      "300": { "$value": "#7e9cc6" },
+      "400": { "$value": "#4c78ad" },
+      "500": { "$value": "#1B3A6B" },
+      "600": { "$value": "#163059" },
+      "700": { "$value": "#112647" },
+      "800": { "$value": "#0c1c35" },
+      "900": { "$value": "#081223" },
+      "950": { "$value": "#040a14" }
+    },
+    "slate": {
+      "100": { "$value": "#c8c8d0" },
+      "300": { "$value": "#6e6e80" },
+      "500": { "$value": "#1C1C28" },
+      "700": { "$value": "#12121a" },
+      "900": { "$value": "#0a0a10" }
     },
     "red": {
       "50":  { "$value": "#fef2f2" },
