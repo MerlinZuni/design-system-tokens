@@ -1,0 +1,12 @@
+{
+  "$description": "Source: Breakpoint values use Tailwind v3 default responsive breakpoints (https://tailwindcss.com/docs/responsive-design) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Per D-15 these should come from the Figma Grids page; update with actual values once Figma file key is available. Breakpoints output as TypeScript constants ONLY (not CSS) per D-17. Per D-01 traceability requirement.",
+  "grid": {
+    "breakpoint": {
+      "sm":  { "$type": "dimension", "$value": "640px" },
+      "md":  { "$type": "dimension", "$value": "768px" },
+      "lg":  { "$type": "dimension", "$value": "1024px" },
+      "xl":  { "$type": "dimension", "$value": "1280px" },
+      "2xl": { "$type": "dimension", "$value": "1536px" }
+    }
+  }
+}

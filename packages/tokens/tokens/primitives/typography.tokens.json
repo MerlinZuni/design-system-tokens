@@ -1,0 +1,150 @@
+{
+  "$description": "Source: Typography scale uses Tailwind v3 type scale defaults (https://tailwindcss.com/docs/font-size) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Font family tokens use Archivo (primary static font, D-07) and Inter Variable (variable font, D-08) as per project decisions. fontWeight defaults to 400 for body/small sizes (xs–lg) and 700 for display sizes (5xl–9xl). letterSpacing defaults to 0px where not specified. lineHeight uses Tailwind defaults (unitless 1 for display sizes text-5xl through text-9xl expressed as the equivalent px value). Per D-01 traceability requirement.",
+  "font": {
+    "family": {
+      "default": {
+        "$type": "fontFamily",
+        "$value": ["Archivo", "sans-serif"],
+        "$description": "Static font — separate @font-face per weight (400, 500, 700). @font-face declarations deferred to Phase 4."
+      },
+      "variable": {
+        "$type": "fontFamily",
+        "$value": ["Inter Variable", "Inter", "sans-serif"],
+        "$description": "Variable font — single @font-face with font-weight: 100 900. @font-face declarations deferred to Phase 4."
+      }
+    }
+  },
+  "typography": {
+    "$type": "typography",
+    "text-xs": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-xs — 0.75rem / 1rem"
+    },
+    "text-sm": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-sm — 0.875rem / 1.25rem"
+    },
+    "text-base": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "400",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-base — 1rem / 1.5rem"
+    },
+    "text-lg": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "400",
+        "fontSize": "18px",
+        "lineHeight": "28px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-lg — 1.125rem / 1.75rem"
+    },
+    "text-xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "500",
+        "fontSize": "20px",
+        "lineHeight": "28px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-xl — 1.25rem / 1.75rem"
+    },
+    "text-2xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "500",
+        "fontSize": "24px",
+        "lineHeight": "32px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-2xl — 1.5rem / 2rem"
+    },
+    "text-3xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "30px",
+        "lineHeight": "36px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-3xl — 1.875rem / 2.25rem"
+    },
+    "text-4xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "36px",
+        "lineHeight": "40px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-4xl — 2.25rem / 2.5rem"
+    },
+    "text-5xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "48px",
+        "lineHeight": "48px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-5xl — 3rem / 1 (lineHeight 1 = 48px at 48px font-size)"
+    },
+    "text-6xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "60px",
+        "lineHeight": "60px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-6xl — 3.75rem / 1 (lineHeight 1 = 60px at 60px font-size)"
+    },
+    "text-7xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "72px",
+        "lineHeight": "72px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-7xl — 4.5rem / 1 (lineHeight 1 = 72px at 72px font-size)"
+    },
+    "text-8xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "96px",
+        "lineHeight": "96px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-8xl — 6rem / 1 (lineHeight 1 = 96px at 96px font-size)"
+    },
+    "text-9xl": {
+      "$value": {
+        "fontFamily": "Archivo",
+        "fontWeight": "700",
+        "fontSize": "128px",
+        "lineHeight": "128px",
+        "letterSpacing": "0px"
+      },
+      "$description": "Tailwind text-9xl — 8rem / 1 (lineHeight 1 = 128px at 128px font-size)"
+    }
+  }
+}
