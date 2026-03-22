@@ -38,14 +38,14 @@ created: 2026-03-22
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | Status |
 |---------|------|------|-------------|-----------|-------------------|--------|
-| 2-01-01 | 01 | 1 | TOKEN-09, TOKEN-10 | build | `cd packages/tokens && npm run build:tokens -- --dry-run` | ⬜ pending |
-| 2-01-02 | 01 | 1 | TOKEN-01 | file+grep | `grep -r '"$type": "color"' packages/tokens/src/tokens/primitive/` | ⬜ pending |
-| 2-01-03 | 01 | 1 | TOKEN-02 | file+grep | `grep -r '"$type": "dimension"' packages/tokens/src/tokens/primitive/spacing*` | ⬜ pending |
-| 2-01-04 | 01 | 1 | TOKEN-03 | file+grep | `grep -r 'breakpoint' packages/tokens/src/tokens/primitive/grid*` | ⬜ pending |
-| 2-01-05 | 01 | 1 | TOKEN-04 | file+grep | `grep -r '"$type": "typography"' packages/tokens/src/tokens/primitive/typography*` | ⬜ pending |
-| 2-01-06 | 01 | 1 | TOKEN-05 | file+grep | `grep -r '"$type": "shadow"' packages/tokens/src/tokens/primitive/elevation*` | ⬜ pending |
+| 2-01-01 | 01 | 1 | TOKEN-09 | syntax | `node --check packages/tokens/style-dictionary.config.mjs` | ⬜ pending |
+| 2-01-02 | 01 | 1 | TOKEN-01 | file+grep | `grep -r '"$type": "color"' packages/tokens/tokens/primitives/` | ⬜ pending |
+| 2-01-03 | 01 | 1 | TOKEN-02 | file+grep | `grep -r '"$type": "dimension"' packages/tokens/tokens/primitives/spacing*` | ⬜ pending |
+| 2-01-04 | 01 | 1 | TOKEN-03 | file+grep | `grep -r 'breakpoint' packages/tokens/tokens/primitives/grid*` | ⬜ pending |
+| 2-01-05 | 01 | 1 | TOKEN-04 | file+grep | `grep -r '"$type": "typography"' packages/tokens/tokens/primitives/typography*` | ⬜ pending |
+| 2-01-06 | 01 | 1 | TOKEN-05 | file+grep | `grep -r '"$type": "shadow"' packages/tokens/tokens/primitives/elevation*` | ⬜ pending |
 | 2-02-01 | 02 | 2 | TOKEN-09 | build+grep | `npx turbo run build --filter=tokens && grep -r '\-\-color-' packages/tokens/dist/css/` | ⬜ pending |
-| 2-02-02 | 02 | 2 | TOKEN-10 | build+grep | `grep 'breakpoints' packages/tokens/dist/index.js` | ⬜ pending |
+| 2-02-02 | 02 | 2 | TOKEN-03 | build+grep | `grep 'GridBreakpoint' packages/tokens/dist/index.js` | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 

@@ -103,7 +103,7 @@
 | TOKEN-04 | Phase 2 | Pending |
 | TOKEN-05 | Phase 2 | Pending |
 | TOKEN-09 | Phase 2 | Pending |
-| TOKEN-10 | Phase 2 | Pending |
+| TOKEN-10 | Phase 3 | Pending |
 | TOKEN-06 | Phase 3 | Pending |
 | TOKEN-07 | Phase 3 | Pending |
 | TOKEN-08 | Phase 3 | Pending |
@@ -135,4 +135,4 @@
 
 ---
 *Requirements defined: 2026-03-22*
-*Last updated: 2026-03-22 after initial definition*
+*Last updated: 2026-03-22 — TOKEN-10 moved from Phase 2 to Phase 3 (multi-instance SD loop pattern belongs with multi-brand/mode semantic token work)*

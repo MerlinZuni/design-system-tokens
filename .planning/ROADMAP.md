@@ -39,7 +39,7 @@ Plans:
 
 **Goal:** Define all primitive (Tier 1) tokens in DTCG format and establish the Style Dictionary v4 build pipeline outputting CSS custom properties and TypeScript.
 
-**Requirements covered:** TOKEN-01, TOKEN-02, TOKEN-03, TOKEN-04, TOKEN-05, TOKEN-09, TOKEN-10
+**Requirements covered:** TOKEN-01, TOKEN-02, TOKEN-03, TOKEN-04, TOKEN-05, TOKEN-09
 
 **Plans:** 2 plans
 
@@ -70,7 +70,7 @@ Plans:
 
 **Goal:** Define Tier 2 semantic tokens with full multi-brand and light/dark mode support. Establish Figma Variables as the canonical source and configure the Tokens Studio Pro sync.
 
-**Requirements covered:** TOKEN-06, TOKEN-07, TOKEN-08, FIGMA-01, FIGMA-02, FIGMA-03
+**Requirements covered:** TOKEN-06, TOKEN-07, TOKEN-08, TOKEN-10, FIGMA-01, FIGMA-02, FIGMA-03
 
 ### Tasks
 
@@ -83,7 +83,7 @@ Plans:
 5. Create `src/tokens/semantic/brand-1/dark.tokens.json` — same structure, different primitive aliases
 6. Create `src/tokens/semantic/brand-2/light.tokens.json`
 7. Create `src/tokens/semantic/brand-2/dark.tokens.json`
-8. Update `style-dictionary.config.mjs` — loop over brand × mode combinations, one StyleDictionary instance per combination, output to `dist/brand-1/light.css`, `dist/brand-1/dark.css`, etc.
+8. Update `style-dictionary.config.mjs` — loop over brand × mode combinations, one StyleDictionary instance per combination, output to `dist/brand-1/light.css`, `dist/brand-1/dark.css`, etc. (TOKEN-10: multi-instance loop pattern)
 9. Verify alias chain: semantic CSS uses `var(--color-blue-500)` not the raw hex (requires `outputReferences: true`)
 10. Document sync workflow: Figma is source of truth → Tokens Studio Pro pull → JSON files updated → `turbo run build` regenerates CSS
 
@@ -178,8 +178,8 @@ Plans:
 | Phase | Name | Requirements | Status |
 |-------|------|-------------|--------|
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
-| 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09--10 | ○ Pending |
-| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, FIGMA-01--03 | ○ Pending |
+| 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ○ Pending |
+| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ○ Pending |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
@@ -206,4 +206,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-22 after Phase 2 planning*
+*Last updated: 2026-03-22 — TOKEN-10 moved to Phase 3 (multi-instance SD loop belongs with multi-brand/mode work)*
