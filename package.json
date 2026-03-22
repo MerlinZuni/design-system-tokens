@@ -17,6 +17,7 @@
     "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.30.0",
     "@eslint/js": "^9.0.0",
     "eslint": "^9.39.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
