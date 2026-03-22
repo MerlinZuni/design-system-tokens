@@ -26,7 +26,7 @@
 - [ ] **TOKEN-06**: Semantic light mode token set — aliases primitive tokens, defines purpose (`color.background.primary`, `color.text.default`, etc.)
 - [ ] **TOKEN-07**: Semantic dark mode token set — same structure as light, different aliases
 - [ ] **TOKEN-08**: Multi-brand semantic token sets — at least 2 brand variants, each with light and dark modes, using Figma Variable Modes (Organization plan supports up to 40 modes)
-- [ ] **TOKEN-09**: Style Dictionary v4 pipeline outputs CSS custom properties with `outputReferences: true` to preserve the alias chain as `var()` references
+- [x] **TOKEN-09**: Style Dictionary v4 pipeline outputs CSS custom properties with `outputReferences: true` to preserve the alias chain as `var()` references
 - [ ] **TOKEN-10**: Style Dictionary v4 pipeline runs one instance per brand × mode combination for correct multi-theme output
 
 ### Figma Pipeline
@@ -102,7 +102,7 @@
 | TOKEN-03 | Phase 2 | Pending |
 | TOKEN-04 | Phase 2 | Pending |
 | TOKEN-05 | Phase 2 | Pending |
-| TOKEN-09 | Phase 2 | Pending |
+| TOKEN-09 | Phase 2 | Complete |
 | TOKEN-10 | Phase 3 | Pending |
 | TOKEN-06 | Phase 3 | Pending |
 | TOKEN-07 | Phase 3 | Pending |

@@ -41,10 +41,10 @@ Plans:
 
 **Requirements covered:** TOKEN-01, TOKEN-02, TOKEN-03, TOKEN-04, TOKEN-05, TOKEN-09
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
-- [ ] 02-01-PLAN.md — Style Dictionary infrastructure (install, config, turbo wiring, tsup fix, index.ts barrel)
+- [x] 02-01-PLAN.md — Style Dictionary infrastructure (install, config, turbo wiring, tsup fix, index.ts barrel)
 - [ ] 02-02-PLAN.md — Author 5 primitive token JSON files from Figma and verify build outputs
 
 ### Tasks
@@ -178,7 +178,7 @@ Plans:
 | Phase | Name | Requirements | Status |
 |-------|------|-------------|--------|
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
-| 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ○ Pending |
+| 2 | 1/2 | In Progress|  |
 | 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ○ Pending |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
