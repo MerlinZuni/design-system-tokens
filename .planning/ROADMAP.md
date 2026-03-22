@@ -105,7 +105,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md — Storybook config: addon-designs, preview.tsx with CSS imports + decorator + storySort
-- [ ] 04-02-PLAN.md — Introduction MDX pages (Introduction, Design Purpose, Design Principles) + Figma page checkpoint
+- [x] 04-02-PLAN.md — Introduction MDX pages (Introduction, Design Purpose, Design Principles) + Figma page checkpoint
 
 ### Tasks
 

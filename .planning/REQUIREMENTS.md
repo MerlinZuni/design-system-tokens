@@ -52,8 +52,8 @@
 - [ ] **STORY-10**: Primitive component stories cover all states and variants using Storybook Controls
 - [ ] **STORY-11**: Each primitive has an MDX documentation file with usage guidelines, props table (via Autodocs), and Figma frame embed
 - [ ] **STORY-12**: Properties preview via Storybook Autodocs auto-generates interactive props tables from TypeScript interfaces (no manual work required if TypeScript interfaces are well-typed)
-- [ ] **STORY-13**: Design Purpose page — MDX page with a clearly stated reason the digital platform/product exists; sits under Introduction in the sidebar
-- [ ] **STORY-14**: Design Principles page — MDX page listing key values as a capitalized Word followed by a definition; captures what good design means for this project; sits under Introduction in the sidebar
+- [x] **STORY-13**: Design Purpose page — MDX page with a clearly stated reason the digital platform/product exists; sits under Introduction in the sidebar
+- [x] **STORY-14**: Design Principles page — MDX page listing key values as a capitalized Word followed by a definition; captures what good design means for this project; sits under Introduction in the sidebar
 
 ---
 
@@ -122,8 +122,8 @@
 | STORY-10 | Phase 6 | Pending |
 | STORY-11 | Phase 6 | Pending |
 | STORY-12 | Phase 6 | Pending |
-| STORY-13 | Phase 4 | Pending |
-| STORY-14 | Phase 4 | Pending |
+| STORY-13 | Phase 4 | Complete |
+| STORY-14 | Phase 4 | Complete |
 | FIGMA-04 | Phase 6 | Pending |
 | FIGMA-05 | Phase 6 | Pending |
 | FIGMA-06 | Phase 4 | Pending |

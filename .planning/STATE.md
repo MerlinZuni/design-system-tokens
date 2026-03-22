@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T21:23:25.531Z"
+last_updated: "2026-03-22T21:28:12.063Z"
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 8
-  completed_plans: 7
+  completed_plans: 8
 ---
 
 # STATE: Design System X
@@ -76,6 +76,8 @@ Current position: Phase 4 Plan 01 COMPLETE — ready to begin Plan 04-02 (Token 
 - [Phase 04-storybook-foundation]: preview.tsx not .ts — JSX global decorator requires .tsx extension (parser error with .ts)
 - [Phase 04-storybook-foundation]: decorators as top-level preview key — Storybook 9+ silently ignores parameters.decorators
 - [Phase 04-storybook-foundation]: Only parent-brand/light CSS imported in preview.tsx — brand/mode switching deferred to Phase 5
+- [Phase 04]: MDX import path is @storybook/addon-docs/blocks confirmed for Storybook 10 monorepo hoist setup
+- [Phase 04]: Nested MDX sidebar: parent page at stories/Parent.mdx, children at stories/Parent/Child.mdx with Meta title using slash notation
 
 ## Open Questions / Risks
 
