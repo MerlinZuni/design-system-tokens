@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T14:48:08Z"
+last_updated: "2026-03-22T14:57:34Z"
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # STATE: Design System X
@@ -28,15 +28,16 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] ROADMAP.md defined (6 phases)
 - [x] Phase 1: Monorepo Foundation — **COMPLETE** (2/2 plans)
 - [x] Phase 2 Plan 01: SD Pipeline Infrastructure — **COMPLETE** (02-01)
+- [x] Phase 2 Plan 02: Token Authoring — **COMPLETE** (02-02)
 
 ## Active Phase
 
-**Phase 2: Primitive Token Pipeline** — in progress
+**Phase 2: Primitive Token Pipeline** — COMPLETE
 
 - Plan 02-01 — Style Dictionary pipeline infrastructure ✓ COMPLETE
-- Plan 02-02 — Token authoring (Wave 2) — PENDING
+- Plan 02-02 — Token authoring (Wave 2) ✓ COMPLETE
 
-Current position: Phase 2 Plan 01 complete — ready for 02-02
+Current position: Phase 2 complete — all primitive tokens authored and build pipeline validated
 
 ## Decisions
 
@@ -57,6 +58,11 @@ Current position: Phase 2 Plan 01 complete — ready for 02-02
 - breakpoints excluded from CSS output — CSS var() cannot be used in @media queries (D-17)
 - outputReferences:true in CSS platform — Phase 3 semantic tokens will emit var(--dsx-*) not raw values
 - prefix dsx for all CSS custom properties — --dsx-color-red-500, --dsx-spacing-4, etc.
+- All token values use Tailwind v3 defaults — no Figma file key was provided; Tailwind is the authorized fallback per Claude's Discretion in CONTEXT.md
+- brand color palette uses Tailwind violet as placeholder — replace with actual brand hex values once Figma file key is available
+- $description at JSON file root causes SD token collisions — $description must be inside the group object, not at file root
+- dist/ is gitignored — build output CSS/JS not committed; only source JSON + SD-generated src/breakpoints.ts committed
+- Typography display lineHeight (text-5xl through text-9xl): unitless 1 expressed as equivalent px (lineHeight = fontSize value)
 
 ## Open Questions / Risks
 
@@ -84,3 +90,4 @@ Current position: Phase 2 Plan 01 complete — ready for 02-02
 *Last session: 2026-03-22 — Completed 01-02-PLAN.md (Storybook, ESLint, and Changesets setup)*
 *Session resumed: 2026-03-22 — Project moved to `/develop/design system tokens/`. Proceeding to execute Phase 2.*
 *Last session: 2026-03-22 — Completed 02-01-PLAN.md (Style Dictionary pipeline infrastructure)*
+*Last session: 2026-03-22 — Completed 02-02-PLAN.md (Token authoring: 5 DTCG JSON files, 231 CSS custom properties, TypeScript breakpoint constants)*

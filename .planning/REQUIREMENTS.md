@@ -18,11 +18,11 @@
 
 ### Token Architecture
 
-- [ ] **TOKEN-01**: Primitive color tokens defined in W3C DTCG format using `color.property.modifier` naming convention
-- [ ] **TOKEN-02**: Primitive spacing tokens defined in DTCG format using `spacing.property.modifier` naming convention
-- [ ] **TOKEN-03**: Primitive grid and breakpoint tokens defined in DTCG format; breakpoints exported as TypeScript constants (not CSS custom properties — cannot be used in `@media` queries)
-- [ ] **TOKEN-04**: Primitive typography composite tokens authored directly in Tokens Studio (not Figma Variables — composite types are unsupported); exported via Style Dictionary
-- [ ] **TOKEN-05**: Primitive elevation/shadow composite tokens authored directly in Tokens Studio; exported via Style Dictionary
+- [x] **TOKEN-01**: Primitive color tokens defined in W3C DTCG format using `color.property.modifier` naming convention
+- [x] **TOKEN-02**: Primitive spacing tokens defined in DTCG format using `spacing.property.modifier` naming convention
+- [x] **TOKEN-03**: Primitive grid and breakpoint tokens defined in DTCG format; breakpoints exported as TypeScript constants (not CSS custom properties — cannot be used in `@media` queries)
+- [x] **TOKEN-04**: Primitive typography composite tokens authored directly in Tokens Studio (not Figma Variables — composite types are unsupported); exported via Style Dictionary
+- [x] **TOKEN-05**: Primitive elevation/shadow composite tokens authored directly in Tokens Studio; exported via Style Dictionary
 - [ ] **TOKEN-06**: Semantic light mode token set — aliases primitive tokens, defines purpose (`color.background.primary`, `color.text.default`, etc.)
 - [ ] **TOKEN-07**: Semantic dark mode token set — same structure as light, different aliases
 - [ ] **TOKEN-08**: Multi-brand semantic token sets — at least 2 brand variants, each with light and dark modes, using Figma Variable Modes (Organization plan supports up to 40 modes)
@@ -97,11 +97,11 @@
 | INFRA-04 | Phase 1 | Complete (01-02) |
 | INFRA-05 | Phase 1 | Complete (01-02) |
 | INFRA-06 | Phase 1 | Complete (01-01, tsconfig.base.json; ESLint in 01-02) |
-| TOKEN-01 | Phase 2 | Pending |
-| TOKEN-02 | Phase 2 | Pending |
-| TOKEN-03 | Phase 2 | Pending |
-| TOKEN-04 | Phase 2 | Pending |
-| TOKEN-05 | Phase 2 | Pending |
+| TOKEN-01 | Phase 2 | Complete |
+| TOKEN-02 | Phase 2 | Complete |
+| TOKEN-03 | Phase 2 | Complete |
+| TOKEN-04 | Phase 2 | Complete |
+| TOKEN-05 | Phase 2 | Complete |
 | TOKEN-09 | Phase 2 | Complete |
 | TOKEN-10 | Phase 3 | Pending |
 | TOKEN-06 | Phase 3 | Pending |
