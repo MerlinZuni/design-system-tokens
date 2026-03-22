@@ -1,55 +1,36 @@
 {
   "version": "1.0",
-  "timestamp": "2026-03-22T11:01:16.239Z",
-  "phase": "1",
-  "phase_name": "Monorepo Foundation",
-  "phase_dir": ".planning/phases/01-monorepo-foundation",
-  "plan": 0,
-  "task": 0,
-  "total_tasks": 6,
-  "status": "paused",
-  "completed_tasks": [],
-  "remaining_tasks": [
-    {"id": 1, "plan": "01-01", "name": "Root workspace init (package.json, turbo.json, tsconfig.base.json)", "status": "not_started"},
-    {"id": 2, "plan": "01-01", "name": "Scaffold packages/tokens with tsup config", "status": "not_started"},
-    {"id": 3, "plan": "01-01", "name": "Scaffold packages/primitives with tsup config + verify build", "status": "not_started"},
-    {"id": 4, "plan": "01-02", "name": "ESLint 9 flat config with typescript-eslint v8", "status": "not_started"},
-    {"id": 5, "plan": "01-02", "name": "Storybook 8 workspace init (apps/storybook)", "status": "not_started"},
-    {"id": 6, "plan": "01-02", "name": "Changesets setup + full phase verification", "status": "not_started"}
+  "timestamp": "2026-03-22T21:58:34.649Z",
+  "phase": "04",
+  "phase_name": "storybook-foundation",
+  "phase_dir": ".planning/phases/04-storybook-foundation",
+  "plan": 2,
+  "task": 3,
+  "total_tasks": 3,
+  "status": "phase_complete",
+  "completed_tasks": [
+    {"id": 1, "name": "Install addon-designs and configure main.ts", "status": "done", "commit": "131f08b"},
+    {"id": 2, "name": "Create preview.tsx with CSS imports, decorator, storySort", "status": "done", "commit": "57f8ad9"},
+    {"id": 3, "name": "Create Introduction.mdx root page", "status": "done", "commit": "4c74cf2"},
+    {"id": 4, "name": "Create Design Purpose and Design Principles MDX pages", "status": "done", "commit": "67e47b9"},
+    {"id": 5, "name": "Verify Storybook sidebar and Figma pages (checkpoint)", "status": "done", "commit": "3265859"}
   ],
+  "remaining_tasks": [],
   "blockers": [],
-  "human_actions_pending": [
-    {
-      "action": "Start a new Claude session — context is full",
-      "context": "User intentionally pausing to clear context before execution. Figma MCP is now connected and will be available in the new session.",
-      "blocking": true
-    }
-  ],
+  "human_actions_pending": [],
   "decisions": [
-    {"decision": "Figma MCP added to user config via SSE at localhost:3845", "rationale": "Figma desktop app runs local MCP server; added to ~/.claude.json for all projects", "phase": "setup"},
-    {"decision": "INFRA-02 CSS output deferred to Phase 2", "rationale": "CSS custom properties come from Style Dictionary (Phase 2), not tsup. Phase 1 only produces TS/ESM/CJS outputs. Fixed requirement mapping.", "phase": "1"},
-    {"decision": "Composite tokens (typography, elevation) authored in Tokens Studio, not Figma Variables", "rationale": "Figma Variables do not support composite types", "phase": "planning"},
-    {"decision": "Turborepo v2 uses `tasks` key (not `pipeline`)", "rationale": "Research confirmed v2 API change; plans reflect this", "phase": "1"},
-    {"decision": "Do not use TypeScript project references with tsup", "rationale": "tsup uses esbuild and does not support composite: true; use npm workspaces symlinks instead", "phase": "1"},
-    {"decision": "Changesets access must be set to 'public'", "rationale": "Default 'restricted' causes 402 on npm publish for @scoped packages", "phase": "1"},
-    {"decision": "Use npx storybook@latest init for Storybook setup", "rationale": "CLI version (10.3.1) and addon version (8.6.14) appear mismatched; init command resolves compatible versions", "phase": "1"}
+    {"decision": "Storybook 10.3.1 (not 8) — installed version wins over stale ROADMAP reference", "rationale": "Already installed and working in Phase 1", "phase": "04"},
+    {"decision": "Import parent-brand/light.css only — not all 4 semantic CSS files", "rationale": "Both light CSS files use :root selector — simultaneous import causes silent last-import-wins collision", "phase": "04"},
+    {"decision": "Global decorator uses var(--dsx-color-background-default) + 2rem padding", "rationale": "Semantic token background is honest to the system; 2rem is industry standard", "phase": "04"},
+    {"decision": "preview.ts renamed to preview.tsx for JSX decorator support", "rationale": "JSX (<Story />) not valid in .ts file — causes parse error at startup", "phase": "04"},
+    {"decision": "addon-designs v11.1.2 for Storybook 10 compatibility", "rationale": "v11.x peer-depends on storybook ^10.0.0", "phase": "04"}
   ],
   "uncommitted_files": [
-    ".planning/PROJECT.md",
-    ".planning/REQUIREMENTS.md",
-    ".planning/ROADMAP.md",
-    ".planning/STATE.md",
     ".planning/config.json",
-    ".planning/phases/01-monorepo-foundation/01-RESEARCH.md",
-    ".planning/phases/01-monorepo-foundation/01-01-PLAN.md",
-    ".planning/phases/01-monorepo-foundation/01-02-PLAN.md",
-    ".planning/phases/01-monorepo-foundation/01-VALIDATION.md",
-    ".planning/research/TOKENS.md",
-    ".planning/research/FIGMA.md",
-    ".planning/research/STORYBOOK.md",
-    ".planning/research/STRUCTURE.md",
-    ".planning/research/SUMMARY.md"
+    ".planning/phases/03-semantic-tokens-figma-pipeline/03-VERIFICATION.md",
+    ".planning/reports/",
+    ".planning/todos/pending/figma-secondary-color-scale.md"
   ],
-  "next_action": "Run /gsd:execute-phase 1 in a fresh Claude session. The project directory is not yet a git repo — Phase 1 execution includes git init.",
-  "context_notes": "Full project setup session completed. New project 'Design System X' initialized from scratch: PROJECT.md, REQUIREMENTS.md (27 v1 reqs), ROADMAP.md (6 phases), full domain research (4 agents), Phase 1 planned (2 plans, 2 waves, research + checker passed). Figma MCP connected at localhost:3845. Ready to execute."
+  "next_action": "Run /gsd:discuss-phase 5 to gather context for Token Documentation Pages — color, typography, spacing, elevation, grid/breakpoints visual reference pages + brand×mode theme switcher",
+  "context_notes": "Phase 4 fully complete and verified. All 4 phases of the first half of v1.0 are done (monorepo → primitives → semantics → Storybook foundation). Phase 5 builds the visual token reference pages that populate the Storybook sidebar categories (Tokens section). Phase 6 builds the primitive React components. The brand×mode theme switcher toolbar was explicitly deferred from Phase 4 to Phase 5 — Phase 5 will need to update the SD config to use brand-scoped CSS selectors before the switcher can work."
 }
