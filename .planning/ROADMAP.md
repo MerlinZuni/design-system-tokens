@@ -97,9 +97,15 @@ Plans:
 
 ## Phase 4 — Storybook Foundation
 
-**Goal:** Configure Storybook 8 with the correct React + TypeScript setup, import token outputs, and establish the documentation structure that token preview pages and component stories will populate.
+**Goal:** Configure Storybook 10 with addon-designs, import token CSS outputs into preview, establish sidebar sort order, and create Introduction/Design Purpose/Design Principles MDX pages. Verify Figma has matching documentation pages.
 
 **Requirements covered:** STORY-01, STORY-02, STORY-03, STORY-13, STORY-14, FIGMA-06
+
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Storybook config: addon-designs, preview.tsx with CSS imports + decorator + storySort
+- [ ] 04-02-PLAN.md — Introduction MDX pages (Introduction, Design Purpose, Design Principles) + Figma page checkpoint
 
 ### Tasks
 
@@ -118,7 +124,7 @@ Plans:
 8. Create corresponding Figma pages: "Design Purpose" and "Design Principles" — mirror the Storybook MDX content so Figma file and Storybook are in sync (FIGMA-06)
 9. Verify: `turbo run dev` in `apps/storybook` starts Storybook with no errors and CSS variables are available in browser DevTools
 
-**Verification:** Storybook runs. Sidebar shows Introduction → Design Purpose → Design Principles. CSS custom properties (`--color-blue-500`, etc.) are visible in browser DevTools. Addon panels (Designs, A11y, Controls) appear. Figma file has matching Design Purpose and Design Principles pages.
+**Verification:** Storybook runs. Sidebar shows Introduction → Design Purpose → Design Principles. CSS custom properties (`--dsx-color-brand-500`, etc.) are visible in browser DevTools. Addon panels (Designs, A11y, Controls) appear. Figma file has matching Design Purpose and Design Principles pages.
 
 ---
 
@@ -183,7 +189,7 @@ Plans:
 |-------|------|-------------|--------|
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ✓ Complete |
-| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ✓ Complete |
+| 3 | Semantic Tokens & Figma Pipeline | Complete    | 2026-03-22 |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
@@ -210,4 +216,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-22 — Phase 3 planned: 2 plans (semantic token authoring + Figma pipeline)*
+*Last updated: 2026-03-22 — Phase 4 planned: 2 plans (Storybook config + MDX pages)*
