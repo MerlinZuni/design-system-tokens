@@ -9,7 +9,11 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./css": "./dist/css/tokens.css"
+    "./css": "./dist/css/tokens.css",
+    "./parent-brand/light": "./dist/parent-brand/light.css",
+    "./parent-brand/dark": "./dist/parent-brand/dark.css",
+    "./child-brand/light": "./dist/child-brand/light.css",
+    "./child-brand/dark": "./dist/child-brand/dark.css"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

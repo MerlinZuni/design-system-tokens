@@ -1,5 +1,11 @@
 // style-dictionary.config.mjs
-// Auto-built output from this config: dist/css/tokens.css + src/breakpoints.ts
+// Auto-built outputs from this config:
+//   dist/css/tokens.css          — primitive CSS vars (Phase 2)
+//   dist/parent-brand/light.css  — semantic vars, parent-brand light mode
+//   dist/parent-brand/dark.css   — semantic vars, parent-brand dark mode
+//   dist/child-brand/light.css   — semantic vars, child-brand light mode
+//   dist/child-brand/dark.css    — semantic vars, child-brand dark mode
+//   src/breakpoints.ts           — TypeScript breakpoint constants
 // DO NOT integrate into tsup — runs as separate build:tokens script
 import StyleDictionary from 'style-dictionary';
 import { register, expandTypesMap } from '@tokens-studio/sd-transforms';
@@ -8,8 +14,13 @@ import { register, expandTypesMap } from '@tokens-studio/sd-transforms';
 // This MUST be called before `new StyleDictionary(...)`.
 register(StyleDictionary);
 
-const sd = new StyleDictionary({
-  // Token source files — populated in Wave 2
+const BRANDS = ['parent-brand', 'child-brand'];
+const MODES = ['light', 'dark'];
+
+// --- Instance 1: Primitives CSS (unchanged from Phase 2) ---
+// Outputs all primitive tokens as CSS custom properties and TS breakpoint constants.
+const sdPrimitives = new StyleDictionary({
+  // Token source files — primitives only
   source: ['tokens/primitives/**/*.tokens.json'],
 
   // REQUIRED: normalizes Tokens Studio Pro export format to DTCG standard.
@@ -61,6 +72,62 @@ const sd = new StyleDictionary({
 });
 
 // cleanAllPlatforms removes stale outputs before rebuilding
-await sd.cleanAllPlatforms();
+await sdPrimitives.cleanAllPlatforms();
 // buildAllPlatforms() is the correct async JS API method (NOT sd.build())
-await sd.buildAllPlatforms();
+await sdPrimitives.buildAllPlatforms();
+
+// --- Instances 2–5: One per brand × mode combination (TOKEN-10) ---
+// Each instance:
+//   - `include` loads primitives for alias resolution but does NOT output them
+//   - `source` loads the brand+mode semantic file — ONLY these tokens appear in output
+// This ensures each semantic CSS file contains only semantic tokens (e.g. --dsx-color-background-default),
+// with alias chains preserved as var(--dsx-color-*) pointing back to primitive vars in tokens.css.
+// Consumers load tokens.css (primitives) + {brand}/{mode}.css (semantics) in that order.
+//
+// CRITICAL: Do NOT use Promise.all() here — sequential execution prevents buildPath overlap issues.
+for (const brand of BRANDS) {
+  for (const mode of MODES) {
+    const selector = mode === 'light' ? ':root' : '[data-theme="dark"]';
+
+    const sd = new StyleDictionary({
+      // Primitives loaded as 'include' so they are available for alias resolution
+      // but are NOT written to the output file (only tokens from 'source' are output)
+      include: ['tokens/primitives/**/*.tokens.json'],
+      // Brand+mode semantic tokens are the 'source' — these ARE written to output
+      source: [`tokens/semantic/${brand}/${mode}.tokens.json`],
+
+      // REQUIRED: normalizes Tokens Studio Pro export format to DTCG standard.
+      preprocessors: ['tokens-studio'],
+
+      expand: {
+        typesMap: expandTypesMap,
+      },
+
+      platforms: {
+        // CSS platform only — no TS platform for semantic instances
+        css: {
+          transformGroup: 'tokens-studio',
+          transforms: ['name/kebab'],
+          prefix: 'dsx',
+          buildPath: `dist/${brand}/`,
+          files: [
+            {
+              destination: `${mode}.css`,
+              format: 'css/variables',
+              options: {
+                outputReferences: true,  // preserve alias chains as var(--dsx-*) references
+                selector,
+              },
+              // Only output tokens from the semantic source file — exclude primitives (from include)
+              // isSource: true means the token came from the 'source' array, not 'include'
+              filter: (token) => token.isSource,
+            },
+          ],
+        },
+      },
+    });
+
+    await sd.cleanAllPlatforms();
+    await sd.buildAllPlatforms();
+  }
+}

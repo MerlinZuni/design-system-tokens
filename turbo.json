@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build:tokens": {
-      "outputs": ["dist/css/**"],
+      "outputs": ["dist/css/**", "dist/parent-brand/**", "dist/child-brand/**"],
       "inputs": [
         "tokens/**/*.tokens.json",
         "style-dictionary.config.mjs",
