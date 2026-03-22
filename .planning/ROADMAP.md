@@ -72,22 +72,26 @@ Plans:
 
 **Requirements covered:** TOKEN-06, TOKEN-07, TOKEN-08, TOKEN-10, FIGMA-01, FIGMA-02, FIGMA-03
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Semantic token authoring (4 brand x mode JSON files), SD multi-instance loop, package exports
+- [ ] 03-02-PLAN.md — Figma pipeline: Tokens Studio Pro sync + Variable Collection bootstrap
+
 ### Tasks
 
-1. **Figma setup (manual):** Create Variable Collections in Figma:
-   - `Primitives` collection — no modes, mirror the primitive token files
-   - `Semantic` collection — modes: `[brand-1]/light`, `[brand-1]/dark`, `[brand-2]/light`, `[brand-2]/dark`
-2. **Figma setup (manual):** Apply naming convention `category/property/modifier` (slash-separated) in all Figma Variable groups
-3. Configure Tokens Studio Pro plugin — connect to repository, set sync target to `packages/tokens/src/tokens/`
-4. Create `src/tokens/semantic/brand-1/light.tokens.json` — aliases to primitives (`color.background.primary → {color.blue.500}`)
-5. Create `src/tokens/semantic/brand-1/dark.tokens.json` — same structure, different primitive aliases
-6. Create `src/tokens/semantic/brand-2/light.tokens.json`
-7. Create `src/tokens/semantic/brand-2/dark.tokens.json`
-8. Update `style-dictionary.config.mjs` — loop over brand × mode combinations, one StyleDictionary instance per combination, output to `dist/brand-1/light.css`, `dist/brand-1/dark.css`, etc. (TOKEN-10: multi-instance loop pattern)
-9. Verify alias chain: semantic CSS uses `var(--color-blue-500)` not the raw hex (requires `outputReferences: true`)
-10. Document sync workflow: Figma is source of truth → Tokens Studio Pro pull → JSON files updated → `turbo run build` regenerates CSS
+1. Update primitive color scales: replace brand (violet placeholder) with teal scale (#4FC4C4), add secondary (purple #5944af), add slate (child-brand #1C1C28)
+2. Author 4 semantic token JSON files (parent-brand/light, parent-brand/dark, child-brand/light, child-brand/dark) with full vocabulary (D-07, D-08)
+3. Create $themes.json for Tokens Studio Pro theme mapping
+4. Refactor style-dictionary.config.mjs to multi-instance loop: one SD instance per brand x mode combination (TOKEN-10)
+5. Update package.json exports map with 4 new CSS paths
+6. Update turbo.json build:tokens outputs for new CSS paths
+7. Configure Tokens Studio Pro GitHub sync (manual — requires GitHub remote + PAT)
+8. Push semantic tokens from code to Figma via Tokens Studio Pro (bootstrap per D-15)
+9. Verify Figma Semantic Variable Collection has 4 modes
+10. Verify round-trip sync: Figma edit -> Push to GitHub -> Pull back
 
-**Verification:** `dist/` contains per-brand per-mode CSS files. Switching CSS file at runtime changes all semantic tokens. No hardcoded values in semantic token files — all are aliases.
+**Verification:** `dist/` contains per-brand per-mode CSS files. Switching CSS file at runtime changes all semantic tokens. No hardcoded values in semantic token files — all are aliases. Figma Semantic collection has 4 modes. Tokens Studio Pro round-trip sync works.
 
 ---
 
@@ -179,7 +183,7 @@ Plans:
 |-------|------|-------------|--------|
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ✓ Complete |
-| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ○ Pending |
+| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ○ Planned |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
@@ -206,4 +210,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-22 — TOKEN-10 moved to Phase 3 (multi-instance SD loop belongs with multi-brand/mode work)*
+*Last updated: 2026-03-22 — Phase 3 planned: 2 plans (semantic token authoring + Figma pipeline)*
