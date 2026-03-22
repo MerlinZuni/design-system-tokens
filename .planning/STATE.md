@@ -30,16 +30,16 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 2 Plan 01: SD Pipeline Infrastructure — **COMPLETE** (02-01)
 - [x] Phase 2 Plan 02: Token Authoring — **COMPLETE** (02-02)
 - [x] Phase 3 Plan 01: Semantic Token Bootstrap — **COMPLETE** (03-01)
-- [ ] Phase 3 Plan 02: Tokens Studio Pro Figma Push — **BLOCKED: awaiting human action**
+- [x] Phase 3 Plan 02: Tokens Studio Pro Figma Push — **COMPLETE** (03-02)
 
 ## Active Phase
 
-**Phase 3: Semantic Tokens & Figma Pipeline** — IN PROGRESS (blocked)
+**Phase 3: Semantic Tokens & Figma Pipeline** — COMPLETE
 
 - Plan 03-01 — Semantic token bootstrap (4 DTCG files, SD multi-instance loop) ✓ COMPLETE
-- Plan 03-02 — Tokens Studio Pro Figma push — BLOCKED: human must create GitHub repo, push code, create PAT, configure Tokens Studio Pro, and push to Figma
+- Plan 03-02 — Tokens Studio Pro Figma push — ✓ COMPLETE (GitHub remote configured, Figma Semantic Collection live with 4 modes, 226 variables each, round-trip sync verified)
 
-Current position: Phase 3 Plan 02 — checkpoint:human-action (Task 1: Configure GitHub remote and Tokens Studio Pro sync)
+Current position: Phase 3 COMPLETE — ready to begin Phase 4 (Storybook Foundation)
 
 ## Decisions
 
@@ -68,6 +68,10 @@ Current position: Phase 3 Plan 02 — checkpoint:human-action (Task 1: Configure
 - [Phase 03-semantic-tokens-figma-pipeline]: SD isSource filter: token.isSource in semantic CSS platform filter excludes primitive tokens from semantic output — SD v4 with outputReferences:true and include would otherwise output all include tokens
 - [Phase 03-semantic-tokens-figma-pipeline]: color.link is standalone top-level under color per D-07 — not nested under color.text to avoid path collision
 - [Phase 03-semantic-tokens-figma-pipeline]: child-brand uses navy for action/focus/link — slate.500 near-black is poor affordance as interactive color
+- [Phase 03-02]: GitHub remote uses SSH (git@github.com:MerlinZuni/design-system-tokens.git) not HTTPS
+- [Phase 03-02]: Tokens Studio Pro Folder storage (not Single file) required for Pro themes/modes multi-mode export
+- [Phase 03-02]: W3C DTCG format in Tokens Studio Pro matches Plan 01 JSON authoring — ensures round-trip fidelity
+- [Phase 03-02]: Figma canonical source of truth (D-14) established — bootstrap complete (D-15), all future token edits in Figma
 
 ## Open Questions / Risks
 
@@ -98,3 +102,4 @@ Current position: Phase 3 Plan 02 — checkpoint:human-action (Task 1: Configure
 *Last session: 2026-03-22 — Completed 02-02-PLAN.md (Token authoring: 5 DTCG JSON files, 231 CSS custom properties, TypeScript breakpoint constants)*
 *Last session: 2026-03-22 — Completed 03-01-PLAN.md (Semantic token bootstrap: 4 DTCG semantic files, SD multi-instance loop, 5 CSS outputs, $themes.json)*
 *Last session: 2026-03-22 — Reached checkpoint in 03-02-PLAN.md: human-action required (GitHub repo + PAT + Tokens Studio Pro sync + Figma push)*
+*Last session: 2026-03-22 — Completed 03-02-PLAN.md (Tokens Studio Pro Figma sync: GitHub remote configured, Semantic Variable Collection live with 4 modes + 226 variables, round-trip sync verified, Phase 3 COMPLETE)*

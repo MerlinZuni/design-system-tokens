@@ -183,7 +183,7 @@ Plans:
 |-------|------|-------------|--------|
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ✓ Complete |
-| 3 | 2/2 | Complete   | 2026-03-22 |
+| 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, TOKEN-10, FIGMA-01--03 | ✓ Complete |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
