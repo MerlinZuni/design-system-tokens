@@ -41,6 +41,12 @@ Plans:
 
 **Requirements covered:** TOKEN-01, TOKEN-02, TOKEN-03, TOKEN-04, TOKEN-05, TOKEN-09, TOKEN-10
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Style Dictionary infrastructure (install, config, turbo wiring, tsup fix, index.ts barrel)
+- [ ] 02-02-PLAN.md — Author 5 primitive token JSON files from Figma and verify build outputs
+
 ### Tasks
 
 1. Install Style Dictionary v4 in `packages/tokens/`
@@ -200,4 +206,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-22 after Phase 1 planning*
+*Last updated: 2026-03-22 after Phase 2 planning*
