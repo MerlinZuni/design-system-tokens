@@ -101,7 +101,7 @@ Plans:
 
 **Requirements covered:** STORY-01, STORY-02, STORY-03, STORY-13, STORY-14, FIGMA-06
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 04-01-PLAN.md — Storybook config: addon-designs, preview.tsx with CSS imports + decorator + storySort
@@ -190,7 +190,7 @@ Plans:
 | 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ✓ Complete |
 | 3 | Semantic Tokens & Figma Pipeline | Complete    | 2026-03-22 |
-| 4 | 1/2 | In Progress|  |
+| 4 | 2/2 | Complete   | 2026-03-22 |
 | 5 | Token Documentation Pages | STORY-04--09 | ○ Pending |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
 

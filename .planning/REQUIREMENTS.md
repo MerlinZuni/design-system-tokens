@@ -36,7 +36,7 @@
 - [x] **FIGMA-03**: Tokens Studio Pro sync configured — Figma is canonical source of truth; JSON files are read-only output and never hand-edited
 - [ ] **FIGMA-04**: `@storybook/addon-designs` (version matching Storybook major version) configured; Figma frames embedded in primitive component stories
 - [ ] **FIGMA-05**: Figma Code Connect (`.figma.tsx` files) set up for each primitive component, linking Figma master components to React code
-- [ ] **FIGMA-06**: Figma file has dedicated pages for Design Purpose (clearly stated product reason) and Design Principles (Word + definition format), mirroring the Storybook MDX pages
+- [x] **FIGMA-06**: Figma file has dedicated pages for Design Purpose (clearly stated product reason) and Design Principles (Word + definition format), mirroring the Storybook MDX pages
 
 ### Storybook Documentation
 
@@ -126,7 +126,7 @@
 | STORY-14 | Phase 4 | Complete |
 | FIGMA-04 | Phase 6 | Pending |
 | FIGMA-05 | Phase 6 | Pending |
-| FIGMA-06 | Phase 4 | Pending |
+| FIGMA-06 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 30 total

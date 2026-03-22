@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T21:28:12.063Z"
+last_updated: "2026-03-22T21:49:55.902Z"
 progress:
   total_phases: 4
   completed_phases: 4
@@ -32,15 +32,16 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 3 Plan 01: Semantic Token Bootstrap — **COMPLETE** (03-01)
 - [x] Phase 3 Plan 02: Tokens Studio Pro Figma Push — **COMPLETE** (03-02)
 - [x] Phase 4 Plan 01: Storybook Config (addon-designs, preview.tsx) — **COMPLETE** (04-01)
+- [x] Phase 4 Plan 02: Introduction MDX pages (Introduction, Design Purpose, Design Principles) — **COMPLETE** (04-02)
 
 ## Active Phase
 
-**Phase 4: Storybook Foundation** — IN PROGRESS (1/2 plans complete)
+**Phase 4: Storybook Foundation** — COMPLETE (2/2 plans complete)
 
 - Plan 04-01 — Storybook config: addon-designs, token CSS imports, global decorator, storySort — ✓ COMPLETE
-- Plan 04-02 — Token preview stories — pending
+- Plan 04-02 — Introduction MDX pages: Introduction root, Design Purpose, Design Principles — ✓ COMPLETE
 
-Current position: Phase 4 Plan 01 COMPLETE — ready to begin Plan 04-02 (Token preview stories)
+Current position: Phase 4 COMPLETE — ready to begin Phase 5
 
 ## Decisions
 
@@ -78,6 +79,7 @@ Current position: Phase 4 Plan 01 COMPLETE — ready to begin Plan 04-02 (Token 
 - [Phase 04-storybook-foundation]: Only parent-brand/light CSS imported in preview.tsx — brand/mode switching deferred to Phase 5
 - [Phase 04]: MDX import path is @storybook/addon-docs/blocks confirmed for Storybook 10 monorepo hoist setup
 - [Phase 04]: Nested MDX sidebar: parent page at stories/Parent.mdx, children at stories/Parent/Child.mdx with Meta title using slash notation
+- [Phase 04-storybook-foundation]: Figma pages (Design Purpose, Design Principles) created manually mirroring MDX content — FIGMA-06 satisfied
 
 ## Open Questions / Risks
 
@@ -110,3 +112,4 @@ Current position: Phase 4 Plan 01 COMPLETE — ready to begin Plan 04-02 (Token 
 *Last session: 2026-03-22 — Reached checkpoint in 03-02-PLAN.md: human-action required (GitHub repo + PAT + Tokens Studio Pro sync + Figma push)*
 *Last session: 2026-03-22 — Completed 03-02-PLAN.md (Tokens Studio Pro Figma sync: GitHub remote configured, Semantic Variable Collection live with 4 modes + 226 variables, round-trip sync verified, Phase 3 COMPLETE)*
 *Last session: 2026-03-22 — Completed 04-01-PLAN.md (Storybook config: addon-designs registered, preview.tsx with CSS imports + global decorator + storySort, turbo build passing)*
+*Last session: 2026-03-22 — Completed 04-02-PLAN.md (Introduction MDX pages: Introduction root, Design Purpose, Design Principles — sidebar verified, FIGMA-06 satisfied, Phase 4 COMPLETE)*
