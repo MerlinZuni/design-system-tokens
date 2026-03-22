@@ -1,0 +1,124 @@
+{
+  "color": {
+    "$type": "color",
+    "background": {
+      "default":  { "$value": "{color.brand.950}", "$description": "Page canvas background (deepest teal-tinted, D-10)" },
+      "subtle":   { "$value": "{color.brand.900}", "$description": "Recessed background, alternate rows" },
+      "surface":  { "$value": "{color.brand.900}", "$description": "Component surface background" },
+      "overlay":  { "$value": "{color.brand.800}", "$description": "Overlay/scrim region" },
+      "inverse":  { "$value": "{color.neutral.50}", "$description": "Inverse/light-on-dark region" }
+    },
+    "surface": {
+      "card":    { "$value": "{color.brand.900}", "$description": "Card background — 1 level above canvas" },
+      "panel":   { "$value": "{color.brand.800}", "$description": "Side panel/drawer background — 2 levels above" },
+      "popover": { "$value": "{color.brand.700}", "$description": "Popover/dropdown background — highest elevation" },
+      "tooltip": { "$value": "{color.neutral.50}", "$description": "Tooltip background (light on dark)" },
+      "sunken":  { "$value": "{color.brand.950}", "$description": "Sunken well — deepest inset" }
+    },
+    "text": {
+      "default":  { "$value": "{color.neutral.50}",  "$description": "Primary body text (near-white on dark)" },
+      "muted":    { "$value": "{color.neutral.300}", "$description": "Secondary/supporting text" },
+      "subtle":   { "$value": "{color.neutral.500}", "$description": "Placeholder text, captions" },
+      "inverse":  { "$value": "{color.neutral.900}", "$description": "Text on light/inverse surfaces" },
+      "disabled": { "$value": "{color.neutral.600}", "$description": "Disabled state text" }
+    },
+    "link": {
+      "default":  { "$value": "{color.brand.400}",   "$description": "Default link color (lighter teal for dark-mode legibility)" },
+      "hover":    { "$value": "{color.brand.300}",   "$description": "Link hover state" },
+      "visited":  { "$value": "{color.purple.300}",  "$description": "Visited link" },
+      "disabled": { "$value": "{color.neutral.600}", "$description": "Disabled link" }
+    },
+    "action": {
+      "default":  { "$value": "{color.brand.400}",   "$description": "Primary interactive element (lighter teal for dark mode)" },
+      "hover":    { "$value": "{color.brand.300}",   "$description": "Hover state" },
+      "pressed":  { "$value": "{color.brand.200}",   "$description": "Pressed/active state" },
+      "disabled": { "$value": "{color.neutral.700}", "$description": "Disabled interactive element" },
+      "subtle":   { "$value": "{color.brand.900}",   "$description": "Subtle/ghost action background" }
+    },
+    "focus": {
+      "ring": { "$value": "{color.brand.400}", "$description": "Focus ring for keyboard navigation (WCAG AA on dark)" }
+    },
+    "border": {
+      "default": { "$value": "{color.neutral.700}", "$description": "Default border/outline" },
+      "subtle":  { "$value": "{color.neutral.800}", "$description": "Subtle separator" },
+      "strong":  { "$value": "{color.neutral.500}", "$description": "Emphasized border" },
+      "inverse": { "$value": "{color.neutral.200}", "$description": "Border on inverse/light surfaces" },
+      "focus":   { "$value": "{color.brand.400}",   "$description": "Keyboard focus ring border" }
+    },
+    "divider": {
+      "default": { "$value": "{color.neutral.700}", "$description": "Horizontal rule / section divider" }
+    },
+    "icon": {
+      "default":  { "$value": "{color.neutral.200}", "$description": "Default icon" },
+      "muted":    { "$value": "{color.neutral.500}", "$description": "Secondary icon" },
+      "inverse":  { "$value": "{color.neutral.900}", "$description": "Icon on light/inverse surfaces" },
+      "disabled": { "$value": "{color.neutral.600}", "$description": "Disabled icon" },
+      "action":   { "$value": "{color.brand.400}",   "$description": "Interactive/brand icon" }
+    },
+    "status": {
+      "error": {
+        "background": { "$value": "{color.red.900}",   "$description": "Error state background (dark mode)" },
+        "text":       { "$value": "{color.red.200}",   "$description": "Error text (AA on red.900)" },
+        "border":     { "$value": "{color.red.700}",   "$description": "Error border" },
+        "icon":       { "$value": "{color.red.400}",   "$description": "Error icon" }
+      },
+      "warning": {
+        "background": { "$value": "{color.yellow.900}", "$description": "Warning state background (dark mode)" },
+        "text":       { "$value": "{color.yellow.200}", "$description": "Warning text (AA on yellow.900)" },
+        "border":     { "$value": "{color.yellow.700}", "$description": "Warning border" },
+        "icon":       { "$value": "{color.yellow.400}", "$description": "Warning icon" }
+      },
+      "success": {
+        "background": { "$value": "{color.green.900}", "$description": "Success state background (dark mode)" },
+        "text":       { "$value": "{color.green.200}", "$description": "Success text (AA on green.900)" },
+        "border":     { "$value": "{color.green.700}", "$description": "Success border" },
+        "icon":       { "$value": "{color.green.400}", "$description": "Success icon" }
+      },
+      "info": {
+        "background": { "$value": "{color.blue.900}", "$description": "Info state background (dark mode)" },
+        "text":       { "$value": "{color.blue.200}", "$description": "Info text (AA on blue.900)" },
+        "border":     { "$value": "{color.blue.700}", "$description": "Info border" },
+        "icon":       { "$value": "{color.blue.400}", "$description": "Info icon" }
+      }
+    },
+    "overlay": {
+      "scrim": { "$value": "{color.neutral.950}", "$description": "Modal/drawer scrim — apply opacity in CSS (e.g. 60%)" }
+    },
+    "skeleton": {
+      "base":      { "$value": "{color.neutral.800}", "$description": "Skeleton loader base (dark mode)" },
+      "highlight": { "$value": "{color.neutral.700}", "$description": "Skeleton shimmer highlight (dark mode)" }
+    },
+    "highlight": {
+      "selected": { "$value": "{color.brand.800}", "$description": "Selected text / search match highlight (dark mode)" }
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": { "$value": "{elevation.sm}", "$description": "Small shadow — cards, buttons" },
+    "md": { "$value": "{elevation.md}", "$description": "Medium shadow — dropdowns, dialogs" },
+    "lg": { "$value": "{elevation.lg}", "$description": "Large shadow — modals, sheets" }
+  },
+  "space": {
+    "$type": "dimension",
+    "component": {
+      "xs": { "$value": "{spacing.1}", "$description": "4px — tight internal padding" },
+      "sm": { "$value": "{spacing.2}", "$description": "8px — compact component padding" },
+      "md": { "$value": "{spacing.4}", "$description": "16px — standard component padding" },
+      "lg": { "$value": "{spacing.6}", "$description": "24px — generous component padding" },
+      "xl": { "$value": "{spacing.8}", "$description": "32px — extra-large component padding" }
+    },
+    "layout": {
+      "xs": { "$value": "{spacing.4}",  "$description": "16px — tight section gap" },
+      "sm": { "$value": "{spacing.8}",  "$description": "32px — compact section gap" },
+      "md": { "$value": "{spacing.16}", "$description": "64px — standard section gap" },
+      "lg": { "$value": "{spacing.24}", "$description": "96px — wide section gap" },
+      "xl": { "$value": "{spacing.32}", "$description": "128px — page-level gap" }
+    },
+    "inline": {
+      "xs": { "$value": "{spacing.1}", "$description": "4px — icon to label in tight contexts" },
+      "sm": { "$value": "{spacing.2}", "$description": "8px — icon to label standard" },
+      "md": { "$value": "{spacing.3}", "$description": "12px — inline element gap" },
+      "lg": { "$value": "{spacing.4}", "$description": "16px — generous inline gap" }
+    }
+  }
+}

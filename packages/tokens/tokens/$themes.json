@@ -1,0 +1,54 @@
+[
+  {
+    "id": "parent-brand-light",
+    "name": "light",
+    "group": "parent-brand",
+    "selectedTokenSets": {
+      "primitives/color": "source",
+      "primitives/spacing": "source",
+      "primitives/typography": "source",
+      "primitives/elevation": "source",
+      "primitives/grid": "source",
+      "semantic/parent-brand/light": "enabled"
+    }
+  },
+  {
+    "id": "parent-brand-dark",
+    "name": "dark",
+    "group": "parent-brand",
+    "selectedTokenSets": {
+      "primitives/color": "source",
+      "primitives/spacing": "source",
+      "primitives/typography": "source",
+      "primitives/elevation": "source",
+      "primitives/grid": "source",
+      "semantic/parent-brand/dark": "enabled"
+    }
+  },
+  {
+    "id": "child-brand-light",
+    "name": "light",
+    "group": "child-brand",
+    "selectedTokenSets": {
+      "primitives/color": "source",
+      "primitives/spacing": "source",
+      "primitives/typography": "source",
+      "primitives/elevation": "source",
+      "primitives/grid": "source",
+      "semantic/child-brand/light": "enabled"
+    }
+  },
+  {
+    "id": "child-brand-dark",
+    "name": "dark",
+    "group": "child-brand",
+    "selectedTokenSets": {
+      "primitives/color": "source",
+      "primitives/spacing": "source",
+      "primitives/typography": "source",
+      "primitives/elevation": "source",
+      "primitives/grid": "source",
+      "semantic/child-brand/dark": "enabled"
+    }
+  }
+]
