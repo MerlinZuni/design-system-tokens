@@ -12,8 +12,8 @@
 - [x] **INFRA-01**: Monorepo is scaffolded with npm workspaces and Turborepo for dependency-ordered task execution
 - [x] **INFRA-02**: `@design-system-x/tokens` package exists with tsup build producing TypeScript/ESM/CJS outputs (Phase 1); CSS custom property output added in Phase 2 once Style Dictionary pipeline is configured
 - [x] **INFRA-03**: `@design-system-x/primitives` package exists with tsup build producing React + TypeScript components
-- [ ] **INFRA-04**: `apps/storybook` workspace hosts the documentation site, separate from library packages
-- [ ] **INFRA-05**: Changesets configured for versioning and changelog generation across workspaces
+- [x] **INFRA-04**: `apps/storybook` workspace hosts the documentation site, separate from library packages
+- [x] **INFRA-05**: Changesets configured for versioning and changelog generation across workspaces
 - [x] **INFRA-06**: Shared `tsconfig.base.json` and ESLint flat config used across all packages
 
 ### Token Architecture

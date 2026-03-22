@@ -16,7 +16,7 @@
 
 Plans:
 - [x] 01-01-PLAN.md — Root workspace + package scaffolding (tokens, primitives, Turborepo, TypeScript)
-- [ ] 01-02-PLAN.md — Storybook, ESLint, and Changesets setup
+- [x] 01-02-PLAN.md — Storybook, ESLint, and Changesets setup
 
 ### Tasks
 
@@ -171,7 +171,7 @@ Plans:
 
 | Phase | Name | Requirements | Status |
 |-------|------|-------------|--------|
-| 1 | Monorepo Foundation | INFRA-01--06 | ○ Planning |
+| 1 | Monorepo Foundation | INFRA-01--06 | ✓ Complete |
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09--10 | ○ Pending |
 | 3 | Semantic Tokens & Figma Pipeline | TOKEN-06--08, FIGMA-01--03 | ○ Pending |
 | 4 | Storybook Foundation | STORY-01--03, STORY-13--14, FIGMA-06 | ○ Pending |
