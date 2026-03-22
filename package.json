@@ -2,6 +2,7 @@
   "name": "design-system-x",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "npm@11.11.0",
   "workspaces": [
     "packages/*",
     "apps/*"
@@ -16,6 +17,7 @@
     "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
+    "tsup": "^8.5.1",
     "turbo": "^2.8.20",
     "typescript": "^5.9.3"
   }

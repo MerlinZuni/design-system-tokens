@@ -1,5 +1,5 @@
 {
-  "name": "@design-system-x/tokens",
+  "name": "@design-system-x/primitives",
   "version": "0.0.0",
   "private": false,
   "type": "module",
@@ -8,13 +8,21 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    },
-    "./css": "./dist/css/tokens.css"
+    }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@design-system-x/tokens": "*"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
