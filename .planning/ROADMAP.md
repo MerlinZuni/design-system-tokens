@@ -75,7 +75,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Semantic token authoring (4 brand x mode JSON files), SD multi-instance loop, package exports
+- [x] 03-01-PLAN.md — Semantic token authoring (4 brand x mode JSON files), SD multi-instance loop, package exports
 - [ ] 03-02-PLAN.md — Figma pipeline: Tokens Studio Pro sync + Variable Collection bootstrap
 
 ### Tasks

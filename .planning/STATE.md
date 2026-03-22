@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T15:05:06.002Z"
+last_updated: "2026-03-22T17:05:39.026Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 6
+  completed_plans: 5
 ---
 
 # STATE: Design System X
@@ -18,7 +18,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A single source of truth for all design decisions — tokens defined once in Figma, consumed reliably in code, with Storybook as the living reference that bridges design and development.
-**Current focus:** Phase 02 — Primitive Token Pipeline
+**Current focus:** Phase 03 — semantic-tokens-figma-pipeline
 
 ## Current Status
 
@@ -29,15 +29,16 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 1: Monorepo Foundation — **COMPLETE** (2/2 plans)
 - [x] Phase 2 Plan 01: SD Pipeline Infrastructure — **COMPLETE** (02-01)
 - [x] Phase 2 Plan 02: Token Authoring — **COMPLETE** (02-02)
+- [x] Phase 3 Plan 01: Semantic Token Bootstrap — **COMPLETE** (03-01)
 
 ## Active Phase
 
-**Phase 2: Primitive Token Pipeline** — COMPLETE
+**Phase 3: Semantic Tokens & Figma Pipeline** — IN PROGRESS
 
-- Plan 02-01 — Style Dictionary pipeline infrastructure ✓ COMPLETE
-- Plan 02-02 — Token authoring (Wave 2) ✓ COMPLETE
+- Plan 03-01 — Semantic token bootstrap (4 DTCG files, SD multi-instance loop) ✓ COMPLETE
+- Plan 03-02 — Tokens Studio Pro Figma push — PENDING
 
-Current position: Phase 2 complete — all primitive tokens authored and build pipeline validated
+Current position: Phase 3 Plan 01 complete — 4 semantic JSON files, SD multi-instance loop, 5 CSS outputs
 
 ## Decisions
 
@@ -63,6 +64,9 @@ Current position: Phase 2 complete — all primitive tokens authored and build p
 - $description at JSON file root causes SD token collisions — $description must be inside the group object, not at file root
 - dist/ is gitignored — build output CSS/JS not committed; only source JSON + SD-generated src/breakpoints.ts committed
 - Typography display lineHeight (text-5xl through text-9xl): unitless 1 expressed as equivalent px (lineHeight = fontSize value)
+- [Phase 03-semantic-tokens-figma-pipeline]: SD isSource filter: token.isSource in semantic CSS platform filter excludes primitive tokens from semantic output — SD v4 with outputReferences:true and include would otherwise output all include tokens
+- [Phase 03-semantic-tokens-figma-pipeline]: color.link is standalone top-level under color per D-07 — not nested under color.text to avoid path collision
+- [Phase 03-semantic-tokens-figma-pipeline]: child-brand uses navy for action/focus/link — slate.500 near-black is poor affordance as interactive color
 
 ## Open Questions / Risks
 
@@ -91,3 +95,4 @@ Current position: Phase 2 complete — all primitive tokens authored and build p
 *Session resumed: 2026-03-22 — Project moved to `/develop/design system tokens/`. Proceeding to execute Phase 2.*
 *Last session: 2026-03-22 — Completed 02-01-PLAN.md (Style Dictionary pipeline infrastructure)*
 *Last session: 2026-03-22 — Completed 02-02-PLAN.md (Token authoring: 5 DTCG JSON files, 231 CSS custom properties, TypeScript breakpoint constants)*
+*Last session: 2026-03-22 — Completed 03-01-PLAN.md (Semantic token bootstrap: 4 DTCG semantic files, SD multi-instance loop, 5 CSS outputs, $themes.json)*
