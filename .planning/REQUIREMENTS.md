@@ -94,8 +94,8 @@
 | INFRA-01 | Phase 1 | Complete (01-01) |
 | INFRA-02 | Phase 1 (TS/ESM/CJS), Phase 2 (CSS) | Complete (01-01, scaffold) |
 | INFRA-03 | Phase 1 | Complete (01-01) |
-| INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Complete (01-02) |
+| INFRA-05 | Phase 1 | Complete (01-02) |
 | INFRA-06 | Phase 1 | Complete (01-01, tsconfig.base.json; ESLint in 01-02) |
 | TOKEN-01 | Phase 2 | Pending |
 | TOKEN-02 | Phase 2 | Pending |
