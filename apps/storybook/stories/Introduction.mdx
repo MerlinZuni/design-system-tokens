@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Introduction" />
+
+# Design System X
+
+A token-based design system connecting Figma and React.
+Built on a three-tier token architecture — primitives, semantics, and components —
+so every visual decision has a single source of truth.
+
+## Getting started
+
+- Browse the design rationale under **Design Purpose** and **Design Principles**
+- Browse token references under **Tokens**
+- See composed styles under **Styles**
+- Explore React primitives under **Primitives**
+
+## Architecture
+
+| Tier | Purpose | Example |
+|------|---------|---------|
+| Primitive | Raw values | `--dsx-color-brand-500`, `--dsx-spacing-4` |
+| Semantic | Purpose-named aliases | `--dsx-color-background-default`, `--dsx-color-text-primary` |
+| Component | Component-scoped (v2) | `--dsx-button-bg`, `--dsx-input-border` |
+
+## Links
+
+- **Figma** — Canonical source of truth for all tokens
+- **Tokens Studio Pro** — Syncs Figma Variables to code via GitHub
+- **Style Dictionary v4** — Transforms DTCG JSON into CSS custom properties
