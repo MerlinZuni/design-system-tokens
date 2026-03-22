@@ -4,3 +4,5 @@ dist/
 storybook-static/
 *.tsbuildinfo
 .DS_Store
+
+*storybook.log

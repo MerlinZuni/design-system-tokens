@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
+import storybook from 'eslint-plugin-storybook'
 
 export default tseslint.config(
   // Global ignores -- no other keys in this object
@@ -45,4 +46,6 @@ export default tseslint.config(
       react: { version: 'detect' },
     },
   },
+  // Storybook-specific rules for story files
+  storybook.configs['flat/recommended'],
 )
