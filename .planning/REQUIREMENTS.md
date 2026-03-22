@@ -31,9 +31,9 @@
 
 ### Figma Pipeline
 
-- [ ] **FIGMA-01**: Figma Variable Collections established — one Collection per tier: Primitive (no modes), Semantic (light/dark per brand)
-- [ ] **FIGMA-02**: Figma variable naming uses slash-separated convention (`color/background/primary`) that auto-translates to dot notation in DTCG JSON
-- [ ] **FIGMA-03**: Tokens Studio Pro sync configured — Figma is canonical source of truth; JSON files are read-only output and never hand-edited
+- [x] **FIGMA-01**: Figma Variable Collections established — one Collection per tier: Primitive (no modes), Semantic (light/dark per brand)
+- [x] **FIGMA-02**: Figma variable naming uses slash-separated convention (`color/background/primary`) that auto-translates to dot notation in DTCG JSON
+- [x] **FIGMA-03**: Tokens Studio Pro sync configured — Figma is canonical source of truth; JSON files are read-only output and never hand-edited
 - [ ] **FIGMA-04**: `@storybook/addon-designs` (version matching Storybook major version) configured; Figma frames embedded in primitive component stories
 - [ ] **FIGMA-05**: Figma Code Connect (`.figma.tsx` files) set up for each primitive component, linking Figma master components to React code
 - [ ] **FIGMA-06**: Figma file has dedicated pages for Design Purpose (clearly stated product reason) and Design Principles (Word + definition format), mirroring the Storybook MDX pages
@@ -107,9 +107,9 @@
 | TOKEN-06 | Phase 3 | Complete |
 | TOKEN-07 | Phase 3 | Complete |
 | TOKEN-08 | Phase 3 | Complete |
-| FIGMA-01 | Phase 3 | Pending |
-| FIGMA-02 | Phase 3 | Pending |
-| FIGMA-03 | Phase 3 | Pending |
+| FIGMA-01 | Phase 3 | Complete |
+| FIGMA-02 | Phase 3 | Complete |
+| FIGMA-03 | Phase 3 | Complete |
 | STORY-01 | Phase 4 | Pending |
 | STORY-02 | Phase 4 | Pending |
 | STORY-03 | Phase 4 | Pending |
