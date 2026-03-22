@@ -1,6 +1,6 @@
 {
-  "$description": "Source: Elevation shadow values use Tailwind v3 box-shadow defaults as reference (none, sm, DEFAULT/md, lg, xl) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Shadow properties use DTCG standard names (offsetX/offsetY, NOT x/y). Multi-layer shadows for md/lg/xl match Tailwind's layered shadow approach. Per D-01 traceability requirement.",
   "elevation": {
+    "$description": "Source: Shadow values use Tailwind v3 box-shadow defaults (none, sm, DEFAULT/md, lg, xl) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). DTCG standard names used: offsetX/offsetY (NOT x/y). Per D-01 traceability requirement.",
     "none": {
       "$type": "shadow",
       "$value": {

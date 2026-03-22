@@ -1,7 +1,7 @@
 {
-  "$description": "Source: All color values are from Tailwind v3 default color palette (https://tailwindcss.com/docs/customizing-colors) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). brand palette uses Tailwind violet scale as placeholder for the project brand — replace with actual brand hex values once Figma file key is available. neutral scale is Tailwind gray/zinc. neutral.0=#ffffff and neutral.1000=#000000 are hardcoded white/black endpoints. All interface hues (red, green, yellow, blue, orange, purple) use Tailwind v3 defaults. Per D-01 traceability requirement.",
   "color": {
     "$type": "color",
+    "$description": "Source: All color values are from Tailwind v3 default color palette (https://tailwindcss.com/docs/customizing-colors) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). brand palette uses Tailwind violet scale as placeholder for the project brand — replace with actual brand hex values once Figma file key is available. neutral scale is Tailwind gray/zinc. neutral.0=#ffffff and neutral.1000=#000000 are hardcoded white/black endpoints. All interface hues (red, green, yellow, blue, orange, purple) use Tailwind v3 defaults. Per D-01 traceability requirement.",
     "brand": {
       "50":  { "$value": "#f5f3ff" },
       "100": { "$value": "#ede9fe" },

@@ -1,7 +1,7 @@
 {
-  "$description": "Source: All spacing values use Tailwind v3 spacing scale exactly (https://tailwindcss.com/docs/customizing-spacing). Values are in px (1 spacing unit = 4px). No Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Per D-01 traceability requirement.",
   "spacing": {
     "$type": "dimension",
+    "$description": "Source: All spacing values use Tailwind v3 spacing scale exactly (https://tailwindcss.com/docs/customizing-spacing). Values are in px (1 spacing unit = 4px). No Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Per D-01 traceability requirement.",
     "0":   { "$value": "0px" },
     "0.5": { "$value": "2px" },
     "1":   { "$value": "4px" },

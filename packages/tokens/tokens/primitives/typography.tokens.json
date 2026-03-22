@@ -1,5 +1,4 @@
 {
-  "$description": "Source: Typography scale uses Tailwind v3 type scale defaults (https://tailwindcss.com/docs/font-size) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). Font family tokens use Archivo (primary static font, D-07) and Inter Variable (variable font, D-08) as per project decisions. fontWeight defaults to 400 for body/small sizes (xs–lg) and 700 for display sizes (5xl–9xl). letterSpacing defaults to 0px where not specified. lineHeight uses Tailwind defaults (unitless 1 for display sizes text-5xl through text-9xl expressed as the equivalent px value). Per D-01 traceability requirement.",
   "font": {
     "family": {
       "default": {
@@ -16,6 +15,7 @@
   },
   "typography": {
     "$type": "typography",
+    "$description": "Source: Typography scale uses Tailwind v3 type scale defaults (https://tailwindcss.com/docs/font-size) — no Figma file key was available to read from Figma MCP at time of authoring (2026-03-22). fontWeight defaults to 400 for body/small sizes (xs-lg) and 700 for display sizes (5xl-9xl). letterSpacing defaults to 0px. lineHeight uses Tailwind defaults. Per D-01 traceability requirement.",
     "text-xs": {
       "$value": {
         "fontFamily": "Archivo",
