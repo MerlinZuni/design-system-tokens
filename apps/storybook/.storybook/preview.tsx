@@ -1,19 +1,61 @@
-import React from 'react'
-import type { Preview } from '@storybook/react'
+import React, { useEffect } from 'react'
+import type { Preview, Decorator } from '@storybook/react'
 
-// Primitive tokens (--dsx-color-*, --dsx-spacing-*, etc.) — must import first
+// Primitive tokens (--dsx-color-*, --dsx-spacing-*, etc.) — always loaded
 import '@design-system-x/tokens/css'
-// Default semantic layer — Phase 5 will replace this static import with dynamic switcher
+// All four semantic theme files — data-attribute selectors control which one applies
 import '@design-system-x/tokens/parent-brand/light'
+import '@design-system-x/tokens/parent-brand/dark'
+import '@design-system-x/tokens/child-brand/light'
+import '@design-system-x/tokens/child-brand/dark'
+
+const withThemeAttributes: Decorator = (Story, context) => {
+  const { brand = 'parent', mode = 'light' } = context.globals
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-brand', brand)
+    document.documentElement.setAttribute('data-theme', mode)
+  }, [brand, mode])
+
+  return (
+    <div style={{ background: 'var(--dsx-color-background-default)', padding: '2rem' }}>
+      <Story />
+    </div>
+  )
+}
 
 const preview: Preview = {
-  decorators: [
-    (Story) => (
-      <div style={{ background: 'var(--dsx-color-background-default)', padding: '2rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+  globalTypes: {
+    brand: {
+      description: 'Brand token set',
+      toolbar: {
+        title: 'Brand',
+        icon: 'paintbrush',
+        items: [
+          { value: 'parent', title: 'Parent Brand' },
+          { value: 'child', title: 'Child Brand' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    mode: {
+      description: 'Color mode',
+      toolbar: {
+        title: 'Mode',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', title: 'Light' },
+          { value: 'dark', title: 'Dark' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: {
+    brand: 'parent',
+    mode: 'light',
+  },
+  decorators: [withThemeAttributes],
   parameters: {
     controls: {
       matchers: {
@@ -27,7 +69,9 @@ const preview: Preview = {
           'Introduction',
           ['Design Purpose', 'Design Principles'],
           'Tokens',
+          ['Colors', 'Typography', 'Spacing', 'Elevation', 'Grid'],
           'Styles',
+          ['Headings', 'Body Text', 'Surfaces', 'Interactive States', 'Feedback'],
           'Primitives',
         ],
       },
