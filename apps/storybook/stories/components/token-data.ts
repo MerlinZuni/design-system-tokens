@@ -6,11 +6,17 @@ import primitiveColors from '../../../../packages/tokens/tokens/primitives/color
 import primitiveSpacing from '../../../../packages/tokens/tokens/primitives/spacing.tokens.json'
 import primitiveTypography from '../../../../packages/tokens/tokens/primitives/typography.tokens.json'
 import primitiveElevation from '../../../../packages/tokens/tokens/primitives/elevation.tokens.json'
-import primitiveGrid from '../../../../packages/tokens/tokens/primitives/grid.tokens.json'
 import semanticParentLight from '../../../../packages/tokens/tokens/semantic/parent-brand/light.tokens.json'
 import semanticParentDark from '../../../../packages/tokens/tokens/semantic/parent-brand/dark.tokens.json'
 import semanticChildLight from '../../../../packages/tokens/tokens/semantic/child-brand/light.tokens.json'
 import semanticChildDark from '../../../../packages/tokens/tokens/semantic/child-brand/dark.tokens.json'
+import {
+  GridBreakpointSm,
+  GridBreakpointMd,
+  GridBreakpointLg,
+  GridBreakpointXl,
+  GridBreakpoint2xl,
+} from '@design-system-x/tokens'
 
 // ---------------------------------------------------------------------------
 // Interfaces
@@ -389,11 +395,11 @@ export function getSemanticTokensForTheme(brand: string, mode: string): Semantic
  * These are TypeScript constants only — CSS var() cannot be used in @media queries.
  */
 export const BREAKPOINTS: Record<string, string> = {
-  sm: '640px',
-  md: '768px',
-  lg: '1024px',
-  xl: '1280px',
-  '2xl': '1536px',
+  sm: GridBreakpointSm,
+  md: GridBreakpointMd,
+  lg: GridBreakpointLg,
+  xl: GridBreakpointXl,
+  '2xl': GridBreakpoint2xl,
 }
 
 // ---------------------------------------------------------------------------
