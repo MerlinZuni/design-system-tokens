@@ -32,23 +32,33 @@ A single source of truth for all design decisions — tokens defined once in Fig
 - [x] Token files version-controlled alongside code
 - [x] `category.property.modifier` naming convention used throughout primitives
 
-### Active
+### Validated
 
-**Token Architecture**
-- [ ] Semantic and Component token tiers (Tier 2 and 3) — primitive tier complete
-- [ ] Multi-brand + light/dark mode support via Figma Variable Collections and modes
+**Semantic Token Pipeline (Phase 3 — validated 2026-03-22)**
+- [x] Semantic token tier with 4 DTCG JSON files (parent-brand light/dark, child-brand light/dark)
+- [x] Multi-brand + light/dark mode support via Style Dictionary multi-file output
+- [x] Compound `[data-brand][data-theme]` CSS selectors for semantic tokens
+
+**Primitive Components (Phase 4 — validated 2026-03-22)**
+- [x] Storybook configured for React + TypeScript with Autodocs
+- [x] Primitive component stories with all states and variants
+- [x] Component MDX documentation files per primitive
+- [x] Properties preview via Storybook Controls + Autodocs
+
+**Token Documentation Pages (Phase 5 — validated 2026-03-23)**
+- [x] Token preview pages: color palette, typography scale, spacing scale, elevation, grid/breakpoints
+- [x] Styles preview section showing composed primitive styles (Headings, BodyText, Surfaces, InteractiveStates, Feedback)
+- [x] Multi-brand theme switching toolbar in Storybook (Brand + Mode dropdowns)
+- [x] Shared visualization components (TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection)
+- [x] All specimens use `var(--dsx-*)` semantic CSS variables — live-reactive to theme switcher
+
+### Active
 
 **Figma → Code Pipeline**
 - [ ] Figma Variables as design source of truth (placeholder values in `color.brand.*` pending Figma file key)
 - [ ] Tokens Studio Pro syncs Figma Variables → W3C DTCG JSON
 
-**Storybook Documentation**
-- [ ] Storybook configured for React + TypeScript with Autodocs
-- [ ] Token preview pages: color palette, typography scale, spacing scale, elevation, grid/breakpoints
-- [ ] Styles preview section showing composed primitive styles
-- [ ] Properties preview via Storybook Controls + Autodocs (auto-generated from TypeScript interfaces)
-- [ ] Primitive component stories with all states and variants
-- [ ] Component MDX documentation files per primitive
+**Storybook Enhancements**
 - [ ] `@storybook/addon-designs` for Figma frame embedding in stories
 - [ ] Figma Code Connect for displaying component code inside Figma Dev Mode
 
@@ -80,9 +90,9 @@ A single source of truth for all design decisions — tokens defined once in Fig
 |----------|-----------|---------|
 | Tokens Studio Pro over Figma REST API | Smoother sync workflow with automatic DTCG export; REST API requires custom scripting | — Pending |
 | Style Dictionary v4 | Native DTCG support, active maintenance, widest platform output support | ✓ Validated Phase 2 |
-| Storybook over custom docs site | Faster to ship, industry standard, Figma addon ecosystem, Autodocs removes manual work | — Pending |
+| Storybook over custom docs site | Faster to ship, industry standard, Figma addon ecosystem, Autodocs removes manual work | ✓ Validated Phase 5 |
 | Figma Code Connect + addon-designs | Bidirectional Figma↔Storybook visibility; one shows Figma in Storybook, the other shows code in Figma | — Pending |
 | v1 = tokens + primitives only | Stable token foundation is prerequisite for reliable components; avoids refactoring components when tokens change | — Pending |
 
 ---
-*Last updated: 2026-03-22 — Phase 2 complete (primitive token pipeline: 231 CSS vars, 5 DTCG JSON files, Style Dictionary v4 build verified)*
+*Last updated: 2026-03-23 — Phase 5 complete (token documentation pages: 5 token category pages, 5 styles composition pages, theme switcher, shared visualization components)*
