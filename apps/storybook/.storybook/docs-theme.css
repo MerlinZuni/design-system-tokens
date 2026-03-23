@@ -36,6 +36,20 @@
   color: var(--dsx-color-text-default);
 }
 
+/* Inline code / token names — add visible border to the light grey boxes */
+.sbdocs-wrapper code,
+.sb-unstyled code {
+  border: 1px solid var(--dsx-color-border-default);
+  border-radius: 4px;
+}
+
+/* Story Canvas containers */
+.sbdocs-wrapper .docs-story,
+.sbdocs-wrapper .sb-story {
+  border: 1px solid var(--dsx-color-border-default);
+  border-radius: 4px;
+}
+
 /* Body text */
 .sbdocs-wrapper p,
 .sbdocs-wrapper li,
