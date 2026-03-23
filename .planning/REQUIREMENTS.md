@@ -34,8 +34,8 @@
 - [x] **FIGMA-01**: Figma Variable Collections established — one Collection per tier: Primitive (no modes), Semantic (light/dark per brand)
 - [x] **FIGMA-02**: Figma variable naming uses slash-separated convention (`color/background/primary`) that auto-translates to dot notation in DTCG JSON
 - [x] **FIGMA-03**: Tokens Studio Pro sync configured — Figma is canonical source of truth; JSON files are read-only output and never hand-edited
-- [ ] **FIGMA-04**: `@storybook/addon-designs` (version matching Storybook major version) configured; Figma frames embedded in primitive component stories
-- [ ] **FIGMA-05**: Figma Code Connect (`.figma.tsx` files) set up for each primitive component, linking Figma master components to React code
+- [x] **FIGMA-04**: `@storybook/addon-designs` (version matching Storybook major version) configured; Figma frames embedded in primitive component stories
+- [x] **FIGMA-05**: Figma Code Connect (`.figma.tsx` files) set up for each primitive component, linking Figma master components to React code
 - [x] **FIGMA-06**: Figma file has dedicated pages for Design Purpose (clearly stated product reason) and Design Principles (Word + definition format), mirroring the Storybook MDX pages
 
 ### Storybook Documentation
@@ -50,7 +50,7 @@
 - [x] **STORY-08**: Token preview page — Grid/Breakpoints: displays breakpoint values and grid column configurations
 - [x] **STORY-09**: Styles preview section — shows composed primitive styles (e.g. heading styles, body text styles, surface styles)
 - [x] **STORY-10**: Primitive component stories cover all states and variants using Storybook Controls
-- [ ] **STORY-11**: Each primitive has an MDX documentation file with usage guidelines, props table (via Autodocs), and Figma frame embed
+- [x] **STORY-11**: Each primitive has an MDX documentation file with usage guidelines, props table (via Autodocs), and Figma frame embed
 - [x] **STORY-12**: Properties preview via Storybook Autodocs auto-generates interactive props tables from TypeScript interfaces (no manual work required if TypeScript interfaces are well-typed)
 - [x] **STORY-13**: Design Purpose page — MDX page with a clearly stated reason the digital platform/product exists; sits under Introduction in the sidebar
 - [x] **STORY-14**: Design Principles page — MDX page listing key values as a capitalized Word followed by a definition; captures what good design means for this project; sits under Introduction in the sidebar
@@ -120,12 +120,12 @@
 | STORY-08 | Phase 5 | Complete |
 | STORY-09 | Phase 5 | Complete |
 | STORY-10 | Phase 6 | Complete |
-| STORY-11 | Phase 6 | Pending |
+| STORY-11 | Phase 6 | Complete |
 | STORY-12 | Phase 6 | Complete |
 | STORY-13 | Phase 4 | Complete |
 | STORY-14 | Phase 4 | Complete |
-| FIGMA-04 | Phase 6 | Pending |
-| FIGMA-05 | Phase 6 | Pending |
+| FIGMA-04 | Phase 6 | Complete |
+| FIGMA-05 | Phase 6 | Complete |
 | FIGMA-06 | Phase 4 | Complete |
 
 **Coverage:**

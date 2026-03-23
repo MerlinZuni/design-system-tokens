@@ -165,11 +165,11 @@ Plans:
 
 **Gap closure:** Closes all 5 unsatisfied requirements + 2 integration fixes from v1.0 audit
 
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [x] 06-01-PLAN.md — Integration fixes (BREAKPOINTS import, theme-reactive Styles pages) + all 6 component implementations
-- [ ] 06-02-PLAN.md — Storybook stories + MDX documentation for all 6 primitives with Figma embeds
+- [x] 06-02-PLAN.md — Storybook stories + MDX documentation for all 6 primitives with Figma embeds
 - [x] 06-03-PLAN.md — Figma Code Connect .figma.tsx files + release checklist
 
 ### Tasks
@@ -212,7 +212,7 @@ Plans:
 | 3 | Semantic Tokens & Figma Pipeline | Complete    | 2026-03-22 |
 | 4 | 2/2 | Complete   | 2026-03-22 |
 | 5 | Token Documentation Pages | STORY-04--09 | ✓ Complete |
-| 6 | 2/3 | In Progress|  |
+| 6 | 3/3 | Complete   | 2026-03-23 |
 
 **Total v1 requirements:** 30 | **Phases:** 6 | **All requirements mapped** ✓
 
