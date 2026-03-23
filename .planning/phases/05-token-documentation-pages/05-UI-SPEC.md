@@ -1,7 +1,8 @@
 ---
 phase: 5
 slug: token-documentation-pages
-status: draft
+status: approved
+reviewed_at: 2026-03-23
 shadcn_initialized: false
 preset: none
 created: 2026-03-23
