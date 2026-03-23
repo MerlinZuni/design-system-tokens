@@ -10,7 +10,6 @@ const Placeholder = ({ label }: { label: string }) => (
 const meta = {
   title: 'Primitives/Stack',
   component: Stack,
-  tags: ['autodocs'],
   argTypes: {
     gap: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] },
     align: { control: 'select', options: ['start', 'center', 'end', 'stretch'] },

@@ -4,7 +4,6 @@ import { Surface } from '@design-system-x/primitives'
 const meta = {
   title: 'Primitives/Surface',
   component: Surface,
-  tags: ['autodocs'],
   argTypes: {
     elevation: { control: 'select', options: ['none', 'sm', 'md', 'lg'] },
     background: { control: 'select', options: ['default', 'subtle', 'card', 'inverse'] },

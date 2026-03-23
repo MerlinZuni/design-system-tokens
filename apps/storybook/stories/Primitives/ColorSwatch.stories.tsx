@@ -4,7 +4,6 @@ import { ColorSwatch } from '@design-system-x/primitives'
 const meta = {
   title: 'Primitives/ColorSwatch',
   component: ColorSwatch,
-  tags: ['autodocs'],
   argTypes: {
     tokenVar: { control: 'text' },
     label: { control: 'text' },

@@ -4,7 +4,6 @@ import { Text } from '@design-system-x/primitives'
 const meta = {
   title: 'Primitives/Text',
   component: Text,
-  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: 'select',
