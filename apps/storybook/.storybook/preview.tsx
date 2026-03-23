@@ -22,7 +22,7 @@ const withThemeAttributes: Decorator = (Story, context) => {
   }, [brand, mode])
 
   return (
-    <div style={{ background: 'var(--dsx-color-background-default)', padding: '2rem' }}>
+    <div style={{ background: 'var(--dsx-color-background-default)', color: 'var(--dsx-color-text-default)', padding: '2rem' }}>
       <Story />
     </div>
   )
@@ -58,6 +58,11 @@ const preview: Preview = {
   initialGlobals: {
     brand: 'parent',
     mode: 'light',
+  },
+  beforeEach: (context) => {
+    const { brand = 'parent', mode = 'light' } = context.globals
+    document.documentElement.setAttribute('data-brand', brand)
+    document.documentElement.setAttribute('data-theme', mode)
   },
   decorators: [withThemeAttributes],
   parameters: {
