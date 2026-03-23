@@ -48,6 +48,12 @@ export function TypographySpecimen({
     color: 'var(--dsx-color-text-default)',
   }
 
+  const detailValueStyle: React.CSSProperties = {
+    fontSize: '12px',
+    fontFamily: 'monospace',
+    color: 'var(--dsx-color-text-default)',
+  }
+
   const detailLabelStyle: React.CSSProperties = {
     fontSize: '12px',
     color: 'var(--dsx-color-text-muted)',
@@ -79,7 +85,7 @@ export function TypographySpecimen({
         </div>
 
         <p style={detailLabelStyle}>
-          Font size: <code style={codeTagStyle}>{rawFontSize || '—'}</code>
+          Font size: <span style={detailValueStyle}>{rawFontSize || '—'}</span>
           {fontSize && (
             <>
               {' '}
@@ -90,10 +96,10 @@ export function TypographySpecimen({
           )}
         </p>
         <p style={detailLabelStyle}>
-          Font weight: <code style={codeTagStyle}>{rawFontWeight || '—'}</code>
+          Font weight: <span style={detailValueStyle}>{rawFontWeight || '—'}</span>
         </p>
         <p style={detailLabelStyle}>
-          Line height: <code style={codeTagStyle}>{rawLineHeight || '—'}</code>
+          Line height: <span style={detailValueStyle}>{rawLineHeight || '—'}</span>
         </p>
       </div>
     </div>
