@@ -31,7 +31,7 @@ export function SpacingBar({ name, cssVar, rawValue }: SpacingBarProps) {
       {/* Left side — token label */}
       <div
         style={{
-          width: '160px',
+          width: '280px',
           flexShrink: 0,
           display: 'flex',
           alignItems: 'center',
