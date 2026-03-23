@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-23T10:43:04.317Z"
+last_updated: "2026-03-23T16:21:08.631Z"
 progress:
-  total_phases: 5
+  total_phases: 6
   completed_phases: 5
-  total_plans: 13
-  completed_plans: 13
+  total_plans: 16
+  completed_plans: 14
 ---
 
 # STATE: Design System X
@@ -18,7 +18,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A single source of truth for all design decisions — tokens defined once in Figma, consumed reliably in code, with Storybook as the living reference that bridges design and development.
-**Current focus:** Phase 05 — token-documentation-pages
+**Current focus:** Phase 06 — primitive-components-figma-integration
 
 ## Current Status
 
@@ -38,18 +38,17 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 5 Plan 03: Color, Typography, Spacing documentation pages — **COMPLETE** (05-03)
 - [x] Phase 5 Plan 04: Elevation, Grid documentation pages — **COMPLETE** (05-04)
 - [x] Phase 5 Plan 05: Styles pages (Headings, Body Text, Surfaces, Interactive States, Feedback) — **COMPLETE** (05-05)
+- [x] Phase 6 Plan 01: Primitive components + integration fixes — **COMPLETE** (06-01)
 
 ## Active Phase
 
-**Phase 5: Token Documentation Pages** — COMPLETE (5/5 plans complete)
+**Phase 6: Primitive Components + Figma Integration** — IN PROGRESS (1/3 plans complete)
 
-- Plan 05-01 — SD compound selectors + Storybook Brand/Mode toolbar — ✓ COMPLETE
-- Plan 05-02 — Shared components (TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection) + token-data.ts — ✓ COMPLETE
-- Plan 05-03 — Color, Typography, Spacing documentation pages (SemanticColorTable, TypographySpecimen, SpacingBar) — ✓ COMPLETE
-- Plan 05-04 — Elevation, Grid documentation pages (ElevationCard, BreakpointRuler) — ✓ COMPLETE
-- Plan 05-05 — Styles section (Headings, Body Text, Surfaces, Interactive States, Feedback) — ✓ COMPLETE
+- Plan 06-01 — BREAKPOINTS fix, StylesTokenTable, 6 primitive components — ✓ COMPLETE
+- Plan 06-02 — Component stories (CSF + Autodocs) — pending
+- Plan 06-03 — Figma Code Connect + addon-designs integration — pending
 
-Current position: Phase 5 COMPLETE — all 5 plans done, all 13 plans across all phases complete
+Current position: Phase 6 Plan 01 COMPLETE — 14/16 plans done across all phases
 
 ## Decisions
 
@@ -98,6 +97,8 @@ Current position: Phase 5 COMPLETE — all 5 plans done, all 13 plans across all
 - [Phase 05-05]: Styles pages use specimen divs instead of semantic HTML elements (h1-h6) to avoid Storybook MDX h1 promotion conflicts
 - [Phase 05-05]: Interactive state specimens are static div elements — not button elements — to prevent accidental interaction in Storybook docs
 - [Phase 05-05]: Feedback alert icon placeholders use colored circle divs with var(--dsx-color-status-*-icon) — no external icon dependency required
+- [Phase 06-01]: StylesTokenTable uses same useGlobals try/catch require() pattern as SemanticTokenSection for Storybook 10 monorepo compatibility
+- [Phase 06-01]: Headings/BodyText Styles pages show only semantic color tokens in StylesTokenTable — typography primitive tokens not in getSemanticTokensForTheme
 
 ## Open Questions / Risks
 
@@ -136,3 +137,4 @@ Current position: Phase 5 COMPLETE — all 5 plans done, all 13 plans across all
 *Last session: 2026-03-23 — Completed 05-03-PLAN.md (Colors.mdx + SemanticColorTable, Typography.mdx + TypographySpecimen, Spacing.mdx + SpacingBar — three token documentation pages live in Storybook)*
 *Last session: 2026-03-23 — Completed 05-04-PLAN.md (Elevation.mdx + ElevationCard with shadow decomposition, Grid.mdx + BreakpointRuler with proportional ruler — all 5 Tokens/ pages now live in Storybook)*
 *Last session: 2026-03-23 — Completed 05-05-PLAN.md (Styles/Headings, Styles/Body Text, Styles/Surfaces, Styles/Interactive States, Styles/Feedback — all 5 Styles/ pages live, Phase 5 COMPLETE, STORY-09 satisfied)*
+*Last session: 2026-03-23 — Completed 06-01-PLAN.md (BREAKPOINTS import from @design-system-x/tokens, StylesTokenTable theme-reactive wrapper, 6 primitive components — Text/ColorSwatch/Surface/Stack/Inline/VisuallyHidden — with TypeScript interfaces and barrel exports, STORY-10 + STORY-12 satisfied)*
