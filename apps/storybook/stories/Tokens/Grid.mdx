@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { BreakpointRuler } from '../components/BreakpointRuler'
+import { BREAKPOINTS } from '../components/token-data'
+
+<Meta title="Tokens/Grid" />
+
+# Grid & Breakpoints
+
+Breakpoints define responsive layout boundaries. They are exported as **TypeScript constants** (not CSS custom properties) because CSS `var()` cannot be used inside `@media` queries.
+
+> **Note:** Breakpoints are primitive-only tokens. The theme switcher has no effect on this page.
+
+## Breakpoint Scale
+
+<BreakpointRuler breakpoints={BREAKPOINTS} />
+
+## TypeScript Usage
+
+Import breakpoint constants in your application code:
+
+```tsx
+import { GridBreakpointSm, GridBreakpointMd, GridBreakpointLg } from '@design-system-x/tokens'
+
+const query = `@media (min-width: ${GridBreakpointMd})`
+```
+
+## Token Reference
+
+| Name | TS Constant | CSS Token | Value |
+|------|------------|-----------|-------|
+| sm | `GridBreakpointSm` | N/A (not a CSS var) | 640px |
+| md | `GridBreakpointMd` | N/A (not a CSS var) | 768px |
+| lg | `GridBreakpointLg` | N/A (not a CSS var) | 1024px |
+| xl | `GridBreakpointXl` | N/A (not a CSS var) | 1280px |
+| 2xl | `GridBreakpoint2xl` | N/A (not a CSS var) | 1536px |
