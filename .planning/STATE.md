@@ -39,15 +39,15 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 
 ## Active Phase
 
-**Phase 5: Token Documentation Pages** — In Progress (3/5 plans complete)
+**Phase 5: Token Documentation Pages** — In Progress (4/5 plans complete)
 
 - Plan 05-01 — SD compound selectors + Storybook Brand/Mode toolbar — ✓ COMPLETE
 - Plan 05-02 — Shared components (TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection) + token-data.ts — ✓ COMPLETE
 - Plan 05-03 — Color, Typography, Spacing documentation pages (SemanticColorTable, TypographySpecimen, SpacingBar) — ✓ COMPLETE
-- Plan 05-04 — Elevation, Grid documentation pages — pending
+- Plan 05-04 — Elevation, Grid documentation pages (ElevationCard, BreakpointRuler) — ✓ COMPLETE
 - Plan 05-05 — Styles section (Headings, Body Text, Surfaces, Interactive States, Feedback) — pending
 
-Current position: Phase 5, Plan 03 COMPLETE — ready to begin Plan 05-04
+Current position: Phase 5, Plan 04 COMPLETE — ready to begin Plan 05-05
 
 ## Decisions
 
@@ -129,3 +129,4 @@ Current position: Phase 5, Plan 03 COMPLETE — ready to begin Plan 05-04
 *Last session: 2026-03-23 — Completed 05-01-PLAN.md (SD compound [data-brand][data-theme] selectors, Storybook Brand+Mode toolbar, withThemeAttributes decorator, all 4 semantic CSS files imported)*
 *Last session: 2026-03-23 — Completed 05-02-PLAN.md (token-data.ts DTCG parsing utilities, TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection components — shared layer for all token pages)*
 *Last session: 2026-03-23 — Completed 05-03-PLAN.md (Colors.mdx + SemanticColorTable, Typography.mdx + TypographySpecimen, Spacing.mdx + SpacingBar — three token documentation pages live in Storybook)*
+*Last session: 2026-03-23 — Completed 05-04-PLAN.md (Elevation.mdx + ElevationCard with shadow decomposition, Grid.mdx + BreakpointRuler with proportional ruler — all 5 Tokens/ pages now live in Storybook)*
