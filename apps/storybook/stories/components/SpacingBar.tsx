@@ -7,50 +7,49 @@ interface SpacingBarProps {
   rawValue: string   // e.g. "16px"
 }
 
+const codeTagStyle: React.CSSProperties = {
+  backgroundColor: 'var(--dsx-color-background-subtle)',
+  border: '1px solid var(--dsx-color-border-default)',
+  borderRadius: '4px',
+  padding: '2px 6px',
+  fontFamily: 'monospace',
+  fontSize: '14px',
+  color: 'var(--dsx-color-text-default)',
+}
+
 export function SpacingBar({ name, cssVar, rawValue }: SpacingBarProps) {
   return (
     <div
       style={{
         display: 'flex',
         alignItems: 'center',
-        gap: '8px',
-        padding: '4px 0',
+        gap: '12px',
+        padding: '6px 0',
         borderBottom: '1px solid var(--dsx-color-border-subtle)',
       }}
     >
       {/* Left side — token label */}
       <div
         style={{
-          width: '120px',
+          width: '160px',
           flexShrink: 0,
           display: 'flex',
-          flexDirection: 'column',
-          gap: '2px',
+          alignItems: 'center',
+          gap: '8px',
         }}
       >
         <CopyToClipboard text={name}>
-          <span
-            style={{
-              fontSize: '12px',
-              fontFamily: 'monospace',
-              color: 'var(--dsx-color-text-default)',
-              fontWeight: 500,
-            }}
-          >
-            {name}
-          </span>
+          <code style={codeTagStyle}>{name}</code>
         </CopyToClipboard>
-        <CopyToClipboard text={rawValue}>
-          <span
-            style={{
-              fontSize: '11px',
-              fontFamily: 'monospace',
-              color: 'var(--dsx-color-text-muted)',
-            }}
-          >
-            {rawValue}
-          </span>
-        </CopyToClipboard>
+        <span
+          style={{
+            fontSize: '14px',
+            fontFamily: 'monospace',
+            color: 'var(--dsx-color-text-muted)',
+          }}
+        >
+          {rawValue}
+        </span>
       </div>
 
       {/* Right side — horizontal bar */}
