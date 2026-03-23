@@ -1,2 +1,12 @@
-// Empty barrel for Phase 1 — component exports populated in Phase 6
-export {}
+export { Text } from './Text'
+export type { TextProps, TextVariant } from './Text'
+export { ColorSwatch } from './ColorSwatch'
+export type { ColorSwatchProps, ColorSwatchSize } from './ColorSwatch'
+export { Surface } from './Surface'
+export type { SurfaceProps, SurfaceElevation, SurfaceBackground } from './Surface'
+export { Stack } from './Stack'
+export type { StackProps, StackAlign } from './Stack'
+export { Inline } from './Inline'
+export type { InlineProps, InlineAlign, InlineJustify } from './Inline'
+export { VisuallyHidden } from './VisuallyHidden'
+export type { VisuallyHiddenProps } from './VisuallyHidden'
