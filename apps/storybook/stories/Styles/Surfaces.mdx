@@ -1,0 +1,114 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../components/TokenTable'
+
+<Meta title="Styles/Surfaces" />
+
+# Surfaces
+
+Surface patterns combine background color, border, and elevation tokens to create distinct visual layers. Switch the Brand or Mode toolbar to see all surfaces update together.
+
+---
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', marginBottom: '48px' }}>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-surface-card)',
+      border: '1px solid var(--dsx-color-border-default)',
+      boxShadow: '0px 1px 2px 0px rgba(0,0,0,0.05)',
+      borderRadius: '8px',
+      padding: '24px',
+      marginBottom: '8px',
+    }}>
+      <div style={{ fontWeight: 600, color: 'var(--dsx-color-text-default)', marginBottom: '8px', fontSize: '16px' }}>Card</div>
+      <div style={{ color: 'var(--dsx-color-text-muted)', fontSize: '14px' }}>The default elevated surface for containing related content. Uses a subtle shadow to lift off the page background.</div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      surface.card · border.default · shadow.sm
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-surface-panel)',
+      border: '1px solid var(--dsx-color-border-subtle)',
+      borderRadius: '8px',
+      padding: '24px',
+      marginBottom: '8px',
+    }}>
+      <div style={{ fontWeight: 600, color: 'var(--dsx-color-text-default)', marginBottom: '8px', fontSize: '16px' }}>Panel</div>
+      <div style={{ color: 'var(--dsx-color-text-muted)', fontSize: '14px' }}>A flat surface for sidebars, toolbars, and grouped content areas. No shadow — subtle border only.</div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      surface.panel · border.subtle
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-surface-popover)',
+      border: '1px solid var(--dsx-color-border-default)',
+      boxShadow: '0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -1px rgba(0,0,0,0.06)',
+      borderRadius: '8px',
+      padding: '16px',
+      marginBottom: '8px',
+    }}>
+      <div style={{ fontWeight: 600, color: 'var(--dsx-color-text-default)', marginBottom: '8px', fontSize: '16px' }}>Popover</div>
+      <div style={{ color: 'var(--dsx-color-text-muted)', fontSize: '14px' }}>Floating overlays like dropdowns and menus. Medium shadow elevates above other content.</div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      surface.popover · border.default · shadow.md
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-surface-tooltip)',
+      color: 'var(--dsx-color-text-inverse)',
+      borderRadius: '4px',
+      padding: '8px 12px',
+      fontSize: '12px',
+      marginBottom: '8px',
+    }}>
+      Tooltip surface — appears above all other layers
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      surface.tooltip · text.inverse
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-surface-sunken)',
+      border: '1px solid var(--dsx-color-border-subtle)',
+      borderRadius: '4px',
+      padding: '16px',
+      marginBottom: '8px',
+    }}>
+      <div style={{ fontWeight: 600, color: 'var(--dsx-color-text-default)', marginBottom: '8px', fontSize: '16px' }}>Sunken</div>
+      <div style={{ color: 'var(--dsx-color-text-muted)', fontSize: '14px' }}>Recessed surface for code blocks, input fields, and inset areas. Sits below the default background.</div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      surface.sunken · border.subtle
+    </div>
+  </div>
+
+</div>
+
+---
+
+### Tokens Used
+
+<TokenTable tokens={[
+  { name: 'color.surface.card', cssVar: '--dsx-color-surface-card', rawValue: 'var(--dsx-color-neutral-0)', description: 'Card surface background' },
+  { name: 'color.surface.panel', cssVar: '--dsx-color-surface-panel', rawValue: 'var(--dsx-color-neutral-50)', description: 'Panel surface background' },
+  { name: 'color.surface.popover', cssVar: '--dsx-color-surface-popover', rawValue: 'var(--dsx-color-neutral-0)', description: 'Popover/dropdown surface background' },
+  { name: 'color.surface.tooltip', cssVar: '--dsx-color-surface-tooltip', rawValue: 'var(--dsx-color-neutral-900)', description: 'Tooltip surface background' },
+  { name: 'color.surface.sunken', cssVar: '--dsx-color-surface-sunken', rawValue: 'var(--dsx-color-neutral-100)', description: 'Sunken/inset surface background' },
+  { name: 'color.border.default', cssVar: '--dsx-color-border-default', rawValue: 'var(--dsx-color-neutral-200)', description: 'Default border color' },
+  { name: 'color.border.subtle', cssVar: '--dsx-color-border-subtle', rawValue: 'var(--dsx-color-neutral-100)', description: 'Subtle border color' },
+  { name: 'color.text.default', cssVar: '--dsx-color-text-default', rawValue: 'var(--dsx-color-neutral-900)', description: 'Surface content text' },
+  { name: 'color.text.muted', cssVar: '--dsx-color-text-muted', rawValue: 'var(--dsx-color-neutral-500)', description: 'Surface secondary text' },
+  { name: 'color.text.inverse', cssVar: '--dsx-color-text-inverse', rawValue: 'var(--dsx-color-neutral-0)', description: 'Tooltip text (on dark background)' },
+]} />

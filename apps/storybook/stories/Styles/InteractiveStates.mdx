@@ -1,0 +1,152 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../components/TokenTable'
+
+<Meta title="Styles/Interactive States" />
+
+# Interactive States
+
+Interactive elements progress through five states: default, hover, active, focus, and disabled. A sixth subtle/ghost variant provides a secondary action style. All specimens are static visual references — not live interactive elements.
+
+---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', marginBottom: '48px', alignItems: 'flex-start' }}>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-default)',
+      color: 'var(--dsx-color-text-inverse)',
+      border: 'none',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: 600,
+      marginBottom: '8px',
+    }}>
+      Default
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.default
+    </div>
+  </div>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-hover)',
+      color: 'var(--dsx-color-text-inverse)',
+      border: 'none',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: 600,
+      marginBottom: '8px',
+    }}>
+      Hover
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.hover
+    </div>
+  </div>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-pressed)',
+      color: 'var(--dsx-color-text-inverse)',
+      border: 'none',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: 600,
+      marginBottom: '8px',
+    }}>
+      Active
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.pressed
+    </div>
+  </div>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-default)',
+      color: 'var(--dsx-color-text-inverse)',
+      border: 'none',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: 600,
+      outline: '2px solid var(--dsx-color-focus-ring)',
+      outlineOffset: '2px',
+      marginBottom: '8px',
+    }}>
+      Focus
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.default · focus-ring
+    </div>
+  </div>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-disabled)',
+      color: 'var(--dsx-color-text-disabled)',
+      border: 'none',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'not-allowed',
+      fontSize: '14px',
+      fontWeight: 600,
+      marginBottom: '8px',
+    }}>
+      Disabled
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.disabled · text.disabled
+    </div>
+  </div>
+
+  <div style={{ textAlign: 'center' }}>
+    <div style={{
+      display: 'inline-block',
+      backgroundColor: 'var(--dsx-color-action-subtle)',
+      color: 'var(--dsx-color-action-default)',
+      border: '1px solid var(--dsx-color-border-default)',
+      borderRadius: '6px',
+      padding: '10px 20px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: 600,
+      marginBottom: '8px',
+    }}>
+      Subtle
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      action.subtle · border.default
+    </div>
+  </div>
+
+</div>
+
+---
+
+### Tokens Used
+
+<TokenTable tokens={[
+  { name: 'color.action.default', cssVar: '--dsx-color-action-default', rawValue: 'var(--dsx-color-brand-500)', description: 'Default action / primary button background' },
+  { name: 'color.action.hover', cssVar: '--dsx-color-action-hover', rawValue: 'var(--dsx-color-brand-600)', description: 'Hover state background' },
+  { name: 'color.action.pressed', cssVar: '--dsx-color-action-pressed', rawValue: 'var(--dsx-color-brand-700)', description: 'Active/pressed state background' },
+  { name: 'color.action.disabled', cssVar: '--dsx-color-action-disabled', rawValue: 'var(--dsx-color-neutral-200)', description: 'Disabled state background' },
+  { name: 'color.action.subtle', cssVar: '--dsx-color-action-subtle', rawValue: 'var(--dsx-color-brand-50)', description: 'Subtle/ghost variant background' },
+  { name: 'color.focus-ring', cssVar: '--dsx-color-focus-ring', rawValue: 'var(--dsx-color-brand-400)', description: 'Focus ring outline color' },
+  { name: 'color.text.inverse', cssVar: '--dsx-color-text-inverse', rawValue: 'var(--dsx-color-neutral-0)', description: 'Text on dark action backgrounds' },
+  { name: 'color.text.disabled', cssVar: '--dsx-color-text-disabled', rawValue: 'var(--dsx-color-neutral-400)', description: 'Disabled state text color' },
+  { name: 'color.border.default', cssVar: '--dsx-color-border-default', rawValue: 'var(--dsx-color-neutral-200)', description: 'Subtle variant border' },
+]} />

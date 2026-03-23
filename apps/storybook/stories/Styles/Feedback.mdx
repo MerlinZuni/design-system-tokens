@@ -1,0 +1,157 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../components/TokenTable'
+
+<Meta title="Styles/Feedback" />
+
+# Feedback Patterns
+
+Feedback patterns communicate status through color: success, warning, error, and info. Each pattern uses four tokens — background, text, border, and icon — so every element of the alert is consistently themed.
+
+---
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '48px' }}>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-status-success-background)',
+      color: 'var(--dsx-color-status-success-text)',
+      border: '1px solid var(--dsx-color-status-success-border)',
+      borderRadius: '6px',
+      padding: '16px',
+      display: 'flex',
+      alignItems: 'flex-start',
+      gap: '12px',
+      marginBottom: '8px',
+    }}>
+      <div style={{
+        width: '16px',
+        height: '16px',
+        borderRadius: '50%',
+        backgroundColor: 'var(--dsx-color-status-success-icon)',
+        flexShrink: 0,
+        marginTop: '2px',
+      }} />
+      <div>
+        <div style={{ fontWeight: 600, marginBottom: '4px' }}>Success</div>
+        <div style={{ fontSize: '14px' }}>Operation completed successfully.</div>
+      </div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      status.success.background · status.success.text · status.success.border · status.success.icon
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-status-warning-background)',
+      color: 'var(--dsx-color-status-warning-text)',
+      border: '1px solid var(--dsx-color-status-warning-border)',
+      borderRadius: '6px',
+      padding: '16px',
+      display: 'flex',
+      alignItems: 'flex-start',
+      gap: '12px',
+      marginBottom: '8px',
+    }}>
+      <div style={{
+        width: '16px',
+        height: '16px',
+        borderRadius: '50%',
+        backgroundColor: 'var(--dsx-color-status-warning-icon)',
+        flexShrink: 0,
+        marginTop: '2px',
+      }} />
+      <div>
+        <div style={{ fontWeight: 600, marginBottom: '4px' }}>Warning</div>
+        <div style={{ fontSize: '14px' }}>This action may have unintended consequences. Please review before proceeding.</div>
+      </div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      status.warning.background · status.warning.text · status.warning.border · status.warning.icon
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-status-error-background)',
+      color: 'var(--dsx-color-status-error-text)',
+      border: '1px solid var(--dsx-color-status-error-border)',
+      borderRadius: '6px',
+      padding: '16px',
+      display: 'flex',
+      alignItems: 'flex-start',
+      gap: '12px',
+      marginBottom: '8px',
+    }}>
+      <div style={{
+        width: '16px',
+        height: '16px',
+        borderRadius: '50%',
+        backgroundColor: 'var(--dsx-color-status-error-icon)',
+        flexShrink: 0,
+        marginTop: '2px',
+      }} />
+      <div>
+        <div style={{ fontWeight: 600, marginBottom: '4px' }}>Error</div>
+        <div style={{ fontSize: '14px' }}>Something went wrong. Please try again or contact support.</div>
+      </div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      status.error.background · status.error.text · status.error.border · status.error.icon
+    </div>
+  </div>
+
+  <div>
+    <div style={{
+      backgroundColor: 'var(--dsx-color-status-info-background)',
+      color: 'var(--dsx-color-status-info-text)',
+      border: '1px solid var(--dsx-color-status-info-border)',
+      borderRadius: '6px',
+      padding: '16px',
+      display: 'flex',
+      alignItems: 'flex-start',
+      gap: '12px',
+      marginBottom: '8px',
+    }}>
+      <div style={{
+        width: '16px',
+        height: '16px',
+        borderRadius: '50%',
+        backgroundColor: 'var(--dsx-color-status-info-icon)',
+        flexShrink: 0,
+        marginTop: '2px',
+      }} />
+      <div>
+        <div style={{ fontWeight: 600, marginBottom: '4px' }}>Info</div>
+        <div style={{ fontSize: '14px' }}>Here is some helpful information to guide your next step.</div>
+      </div>
+    </div>
+    <div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)' }}>
+      status.info.background · status.info.text · status.info.border · status.info.icon
+    </div>
+  </div>
+
+</div>
+
+---
+
+### Tokens Used
+
+<TokenTable tokens={[
+  { name: 'color.status.success.background', cssVar: '--dsx-color-status-success-background', rawValue: 'var(--dsx-color-green-50)', description: 'Success background' },
+  { name: 'color.status.success.text', cssVar: '--dsx-color-status-success-text', rawValue: 'var(--dsx-color-green-700)', description: 'Success text' },
+  { name: 'color.status.success.border', cssVar: '--dsx-color-status-success-border', rawValue: 'var(--dsx-color-green-300)', description: 'Success border' },
+  { name: 'color.status.success.icon', cssVar: '--dsx-color-status-success-icon', rawValue: 'var(--dsx-color-green-500)', description: 'Success icon' },
+  { name: 'color.status.warning.background', cssVar: '--dsx-color-status-warning-background', rawValue: 'var(--dsx-color-yellow-50)', description: 'Warning background' },
+  { name: 'color.status.warning.text', cssVar: '--dsx-color-status-warning-text', rawValue: 'var(--dsx-color-yellow-800)', description: 'Warning text' },
+  { name: 'color.status.warning.border', cssVar: '--dsx-color-status-warning-border', rawValue: 'var(--dsx-color-yellow-300)', description: 'Warning border' },
+  { name: 'color.status.warning.icon', cssVar: '--dsx-color-status-warning-icon', rawValue: 'var(--dsx-color-yellow-500)', description: 'Warning icon' },
+  { name: 'color.status.error.background', cssVar: '--dsx-color-status-error-background', rawValue: 'var(--dsx-color-red-50)', description: 'Error background' },
+  { name: 'color.status.error.text', cssVar: '--dsx-color-status-error-text', rawValue: 'var(--dsx-color-red-700)', description: 'Error text' },
+  { name: 'color.status.error.border', cssVar: '--dsx-color-status-error-border', rawValue: 'var(--dsx-color-red-300)', description: 'Error border' },
+  { name: 'color.status.error.icon', cssVar: '--dsx-color-status-error-icon', rawValue: 'var(--dsx-color-red-500)', description: 'Error icon' },
+  { name: 'color.status.info.background', cssVar: '--dsx-color-status-info-background', rawValue: 'var(--dsx-color-blue-50)', description: 'Info background' },
+  { name: 'color.status.info.text', cssVar: '--dsx-color-status-info-text', rawValue: 'var(--dsx-color-blue-700)', description: 'Info text' },
+  { name: 'color.status.info.border', cssVar: '--dsx-color-status-info-border', rawValue: 'var(--dsx-color-blue-300)', description: 'Info border' },
+  { name: 'color.status.info.icon', cssVar: '--dsx-color-status-info-icon', rawValue: 'var(--dsx-color-blue-500)', description: 'Info icon' },
+]} />
