@@ -1,0 +1,48 @@
+/**
+ * Storybook docs page typography overrides.
+ * Uses design system token scale with Archivo Black (900) for headers,
+ * matching the Figma page header styles.
+ */
+
+/* Page title — H1 */
+.sbdocs-wrapper h1,
+.sb-unstyled h1 {
+  font-family: var(--dsx-font-family-default);
+  font-weight: 900;
+  font-size: var(--dsx-typography-text-4xl-font-size);
+  line-height: var(--dsx-typography-text-4xl-line-height);
+  letter-spacing: var(--dsx-typography-text-4xl-letter-spacing);
+  color: var(--dsx-color-text-default);
+}
+
+/* Section header — H2 */
+.sbdocs-wrapper h2,
+.sb-unstyled h2 {
+  font-family: var(--dsx-font-family-default);
+  font-weight: 900;
+  font-size: var(--dsx-typography-text-2xl-font-size);
+  line-height: var(--dsx-typography-text-2xl-line-height);
+  letter-spacing: var(--dsx-typography-text-2xl-letter-spacing);
+  color: var(--dsx-color-text-default);
+}
+
+/* Subsection header — H3 */
+.sbdocs-wrapper h3,
+.sb-unstyled h3 {
+  font-family: var(--dsx-font-family-default);
+  font-weight: 700;
+  font-size: var(--dsx-typography-text-xl-font-size);
+  line-height: var(--dsx-typography-text-xl-line-height);
+  color: var(--dsx-color-text-default);
+}
+
+/* Body text */
+.sbdocs-wrapper p,
+.sbdocs-wrapper li,
+.sb-unstyled p,
+.sb-unstyled li {
+  font-family: var(--dsx-font-family-default);
+  font-size: var(--dsx-typography-text-base-font-size);
+  line-height: var(--dsx-typography-text-base-line-height);
+  color: var(--dsx-color-text-default);
+}
