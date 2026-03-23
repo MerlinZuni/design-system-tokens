@@ -37,7 +37,7 @@ export const AllGaps: Story = {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
       {(['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'] as const).map((gap) => (
         <div key={gap}>
-          <span style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', display: 'block', marginBottom: '8px' }}>
+          <span style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', display: 'block', marginBottom: '8px' }}>
             gap="{gap}"
           </span>
           <Stack gap={gap}>
@@ -55,7 +55,7 @@ export const WithAlignment: Story = {
     <div style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'flex-start' }}>
       {(['start', 'center', 'end'] as const).map((align) => (
         <div key={align} style={{ flex: 1 }}>
-          <span style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', display: 'block', marginBottom: '8px' }}>
+          <span style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', display: 'block', marginBottom: '8px' }}>
             align="{align}"
           </span>
           <Stack gap="sm" align={align}>

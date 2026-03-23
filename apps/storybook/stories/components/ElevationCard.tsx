@@ -65,12 +65,12 @@ function LayerRow({ layer, layerIndex, totalLayers, cssVarPrefix }: LayerRowProp
                 </td>
                 <td style={{ padding: '2px 8px 2px 0' }}>
                   <CopyToClipboard text={cssVar}>
-                    <code style={{ fontFamily: 'monospace', fontSize: 11, color: 'var(--dsx-color-text-default)' }}>
+                    <code style={{ fontFamily: "'Google Sans Code', monospace", fontSize: 11, color: 'var(--dsx-color-text-default)' }}>
                       {cssVar}
                     </code>
                   </CopyToClipboard>
                 </td>
-                <td style={{ padding: '2px 0', color: 'var(--dsx-color-text-muted)', fontFamily: 'monospace', fontSize: 11 }}>
+                <td style={{ padding: '2px 0', color: 'var(--dsx-color-text-muted)', fontFamily: "'Google Sans Code', monospace", fontSize: 11 }}>
                   {value}
                 </td>
               </tr>
@@ -119,7 +119,7 @@ export function ElevationCard({ token }: ElevationCardProps) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <CopyToClipboard text={token.name}>
             <code style={{
-              fontFamily: 'monospace',
+              fontFamily: "'Google Sans Code', monospace",
               fontSize: 13,
               fontWeight: 600,
               color: 'var(--dsx-color-text-default)',
@@ -130,7 +130,7 @@ export function ElevationCard({ token }: ElevationCardProps) {
         </div>
 
         {/* CSS var prefix */}
-        <div style={{ fontFamily: 'monospace', fontSize: 11, color: 'var(--dsx-color-text-muted)' }}>
+        <div style={{ fontFamily: "'Google Sans Code', monospace", fontSize: 11, color: 'var(--dsx-color-text-muted)' }}>
           {token.cssVarPrefix}-*
         </div>
 
@@ -172,7 +172,7 @@ export function ElevationCard({ token }: ElevationCardProps) {
             <CopyToClipboard text={token.boxShadowString}>
               <code style={{
                 display: 'block',
-                fontFamily: 'monospace',
+                fontFamily: "'Google Sans Code', monospace",
                 fontSize: 11,
                 padding: '6px 8px',
                 backgroundColor: 'var(--dsx-color-surface-panel)',

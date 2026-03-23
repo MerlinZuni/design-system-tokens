@@ -12,7 +12,7 @@ const codeTagStyle: React.CSSProperties = {
   border: '1px solid var(--dsx-color-border-default)',
   borderRadius: '4px',
   padding: '2px 6px',
-  fontFamily: 'monospace',
+  fontFamily: "'Google Sans Code', monospace",
   fontSize: '14px',
   color: 'var(--dsx-color-text-default)',
 }
@@ -44,7 +44,7 @@ export function SpacingBar({ name, cssVar, rawValue }: SpacingBarProps) {
         <span
           style={{
             fontSize: '14px',
-            fontFamily: 'monospace',
+            fontFamily: "'Google Sans Code', monospace",
             color: 'var(--dsx-color-text-muted)',
           }}
         >

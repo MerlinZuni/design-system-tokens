@@ -83,7 +83,7 @@ export function BreakpointRuler({ breakpoints }: BreakpointRulerProps) {
               {/* px value label below bar */}
               <div style={{
                 fontSize: 12,
-                fontFamily: 'monospace',
+                fontFamily: "'Google Sans Code', monospace",
                 color: 'var(--dsx-color-text-muted)',
                 marginTop: 4,
                 textAlign: 'center',
@@ -145,10 +145,10 @@ export function BreakpointRuler({ breakpoints }: BreakpointRulerProps) {
                 <td style={{ padding: '8px 12px', fontWeight: 600 }}>{bp.name}</td>
                 <td style={{ padding: '8px 12px' }}>
                   <CopyToClipboard text={tsConstant}>
-                    <code style={{ fontFamily: 'monospace', fontSize: 13 }}>{tsConstant}</code>
+                    <code style={{ fontFamily: "'Google Sans Code', monospace", fontSize: 13 }}>{tsConstant}</code>
                   </CopyToClipboard>
                 </td>
-                <td style={{ padding: '8px 12px', fontFamily: 'monospace', fontSize: 13 }}>{bp.rawValue}</td>
+                <td style={{ padding: '8px 12px', fontFamily: "'Google Sans Code', monospace", fontSize: 13 }}>{bp.rawValue}</td>
               </tr>
             )
           })}

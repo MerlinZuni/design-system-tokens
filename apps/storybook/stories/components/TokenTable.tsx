@@ -54,7 +54,7 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
 
   const codeCellStyle: React.CSSProperties = {
     ...cellStyle,
-    fontFamily: 'monospace',
+    fontFamily: "'Google Sans Code', monospace",
   }
 
   const codeTagStyle: React.CSSProperties = {
@@ -62,7 +62,7 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
     border: '1px solid var(--dsx-color-border-default)',
     borderRadius: '4px',
     padding: '2px 6px',
-    fontFamily: 'monospace',
+    fontFamily: "'Google Sans Code', monospace",
     fontSize: '14px',
     color: 'var(--dsx-color-text-default)',
   }

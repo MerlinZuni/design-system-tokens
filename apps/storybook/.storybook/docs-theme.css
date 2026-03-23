@@ -2,6 +2,7 @@
  * Storybook docs page typography overrides.
  * Uses design system token scale with Archivo Black (900) for headers,
  * matching the Figma page header styles.
+ * Monospace: Google Sans Code.
  */
 
 /* Page title — H1 */
@@ -43,9 +44,25 @@
   border: 1px solid var(--dsx-color-border-default) !important;
   border-radius: 4px !important;
   padding: 2px 6px !important;
-  font-family: monospace !important;
+  font-family: 'Google Sans Code', monospace !important;
   font-size: 14px !important;
   color: var(--dsx-color-text-default) !important;
+}
+
+/* Code blocks (pre > code) in story source and MDX fenced blocks */
+.sbdocs-wrapper pre,
+.sb-unstyled pre,
+.docblock-source pre {
+  font-family: 'Google Sans Code', monospace !important;
+}
+
+.sbdocs-wrapper pre code,
+.sb-unstyled pre code,
+.docblock-source pre code {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: 'Google Sans Code', monospace !important;
 }
 
 /* Story Canvas containers */

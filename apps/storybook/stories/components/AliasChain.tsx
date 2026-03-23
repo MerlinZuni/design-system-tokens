@@ -12,7 +12,7 @@ export function AliasChain({ chain }: AliasChainProps) {
         alignItems: 'center',
         gap: '4px',
         fontSize: '12px',
-        fontFamily: 'monospace',
+        fontFamily: "'Google Sans Code', monospace",
         color: 'var(--dsx-color-text-muted)',
         backgroundColor: 'var(--dsx-color-surface-panel)',
         padding: '2px 6px',
