@@ -52,6 +52,19 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
     verticalAlign: 'middle',
   }
 
+  const codeCellStyle: React.CSSProperties = {
+    ...cellStyle,
+    fontFamily: 'monospace',
+  }
+
+  const codeTagStyle: React.CSSProperties = {
+    backgroundColor: 'var(--dsx-color-background-subtle)',
+    border: '1px solid var(--dsx-color-border-default)',
+    borderRadius: '4px',
+    padding: '2px 6px',
+    fontSize: '13px',
+  }
+
   return (
     <table
       style={{
@@ -76,20 +89,19 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
             {renderPreview && (
               <td style={cellStyle}>{renderPreview(token)}</td>
             )}
-            <td style={{ ...cellStyle, fontFamily: 'monospace' }}>
-              <CopyToClipboard text={token.name}>{token.name}</CopyToClipboard>
+            <td style={codeCellStyle}>
+              <CopyToClipboard text={token.name}><code style={codeTagStyle}>{token.name}</code></CopyToClipboard>
             </td>
             <td
               style={{
-                ...cellStyle,
-                fontFamily: 'monospace',
+                ...codeCellStyle,
                 color: 'var(--dsx-color-text-muted)',
               }}
             >
-              <CopyToClipboard text={token.cssVar}>{token.cssVar}</CopyToClipboard>
+              <CopyToClipboard text={token.cssVar}><code style={codeTagStyle}>{token.cssVar}</code></CopyToClipboard>
             </td>
-            <td style={{ ...cellStyle, fontFamily: 'monospace' }}>
-              <CopyToClipboard text={token.rawValue}>{token.rawValue}</CopyToClipboard>
+            <td style={codeCellStyle}>
+              <CopyToClipboard text={token.rawValue}><code style={codeTagStyle}>{token.rawValue}</code></CopyToClipboard>
             </td>
             {showAliasChain && (
               <td style={cellStyle}>
