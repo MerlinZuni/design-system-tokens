@@ -121,6 +121,16 @@
   fill: currentColor !important;
 }
 
+/* Storybook ColorPalette/ColorItem — all text including swatch labels and hex values */
+.sbdocs-wrapper [class^="css-"] {
+  color: var(--dsx-color-text-default) !important;
+}
+
+/* Protect Material Symbols icon font from being overridden */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+}
+
 /* Remove any zebra striping from tables */
 .sbdocs-wrapper table tbody tr,
 .sb-unstyled table tbody tr {

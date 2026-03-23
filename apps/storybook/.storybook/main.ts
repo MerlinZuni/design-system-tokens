@@ -39,7 +39,24 @@ const config: StorybookConfig = {
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Google+Sans+Code:wght@400;500;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy,check,code" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<script>
+  // Sync Brand/Mode toolbar globals to data attributes on pure MDX pages
+  // (decorator only fires on pages with stories)
+  (function() {
+    var poll = setInterval(function() {
+      var ch = window.__STORYBOOK_ADDONS_CHANNEL__;
+      if (ch) {
+        clearInterval(poll);
+        ch.on('updateGlobals', function(e) {
+          var g = e.globals;
+          if (g.mode !== undefined) document.documentElement.setAttribute('data-theme', g.mode);
+          if (g.brand !== undefined) document.documentElement.setAttribute('data-brand', g.brand);
+        });
+      }
+    }, 100);
+  })();
+</script>
 `,
   typescript: {
     reactDocgen: 'react-docgen',
