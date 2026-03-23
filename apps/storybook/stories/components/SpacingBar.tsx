@@ -24,7 +24,7 @@ export function SpacingBar({ name, cssVar, rawValue }: SpacingBarProps) {
         display: 'flex',
         alignItems: 'center',
         gap: '12px',
-        padding: '6px 0',
+        padding: '12px 0',
         borderBottom: '1px solid var(--dsx-color-border-subtle)',
       }}
     >
