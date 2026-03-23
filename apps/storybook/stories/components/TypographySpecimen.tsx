@@ -38,6 +38,15 @@ export function TypographySpecimen({
     overflow: 'hidden',
   }
 
+  const codeTagStyle: React.CSSProperties = {
+    backgroundColor: 'var(--dsx-color-background-subtle)',
+    border: '1px solid var(--dsx-color-border-default)',
+    borderRadius: '4px',
+    padding: '2px 6px',
+    fontFamily: 'monospace',
+    fontSize: '13px',
+  }
+
   const detailLabelStyle: React.CSSProperties = {
     fontSize: '11px',
     color: 'var(--dsx-color-text-muted)',
@@ -71,24 +80,19 @@ export function TypographySpecimen({
       {/* Right column — token details */}
       <div style={{ flex: '0 0 40%', minWidth: 0, paddingTop: '4px' }}>
         <div style={{ marginBottom: '6px' }}>
-          <span
-            style={{
-              fontFamily: 'monospace',
-              fontSize: '13px',
-              fontWeight: 600,
-              color: 'var(--dsx-color-text-default)',
-            }}
-          >
-            <CopyToClipboard text={name}>{name}</CopyToClipboard>
-          </span>
+          <CopyToClipboard text={name}>
+            <code style={{ ...codeTagStyle, fontWeight: 600 }}>{name}</code>
+          </CopyToClipboard>
         </div>
 
         <p style={detailLabelStyle}>
           Font size:{' '}
           <span style={detailValueStyle}>{rawFontSize || '—'}</span>
           {fontSize && (
-            <span style={{ color: 'var(--dsx-color-text-subtle)', marginLeft: '6px' }}>
-              <CopyToClipboard text={fontSize}>{fontSize}</CopyToClipboard>
+            <span style={{ marginLeft: '6px' }}>
+              <CopyToClipboard text={fontSize}>
+                <code style={{ ...codeTagStyle, fontSize: '11px', color: 'var(--dsx-color-text-subtle)' }}>{fontSize}</code>
+              </CopyToClipboard>
             </span>
           )}
         </p>
