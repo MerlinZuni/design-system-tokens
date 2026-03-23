@@ -87,7 +87,7 @@ await sdPrimitives.buildAllPlatforms();
 // CRITICAL: Do NOT use Promise.all() here — sequential execution prevents buildPath overlap issues.
 for (const brand of BRANDS) {
   for (const mode of MODES) {
-    const selector = mode === 'light' ? ':root' : '[data-theme="dark"]';
+    const selector = `[data-brand="${brand.replace('-brand', '')}"][data-theme="${mode}"]`;
 
     const sd = new StyleDictionary({
       // Primitives loaded as 'include' so they are available for alias resolution
