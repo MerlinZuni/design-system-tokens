@@ -5,6 +5,14 @@
  * Monospace: Google Sans Code.
  */
 
+/* Docs page background — must follow brand/mode so dark mode text is readable */
+.sbdocs-wrapper,
+.sb-unstyled {
+  background-color: var(--dsx-color-background-default) !important;
+  color: var(--dsx-color-text-default);
+  transition: background-color 0.2s, color 0.2s;
+}
+
 /* Page title — H1 */
 .sbdocs-wrapper h1,
 .sb-unstyled h1 {
@@ -70,6 +78,47 @@
 .sbdocs-wrapper .sb-story {
   border: 1px solid var(--dsx-color-border-default);
   border-radius: 4px;
+}
+
+/* Canvas toolbar buttons (Show code, Copy code) */
+.sbdocs-wrapper .docblock-code-toggle,
+.sbdocs-wrapper [class*="ActionButton"],
+.sbdocs-wrapper button[title="Show code"],
+.sbdocs-wrapper button[title="Copy code"],
+.sbdocs-wrapper .docs-story ~ div button,
+.sbdocs-wrapper .sb-bar button,
+.sbdocs-wrapper .sb-bar a {
+  color: var(--dsx-color-text-default) !important;
+}
+
+.sbdocs-wrapper .sb-bar,
+.sbdocs-wrapper .docs-story ~ div {
+  background-color: var(--dsx-color-background-subtle) !important;
+  border-top: 1px solid var(--dsx-color-border-default) !important;
+}
+
+/* Canvas toolbar SVG icons */
+.sbdocs-wrapper .sb-bar svg,
+.sbdocs-wrapper .docs-story ~ div svg,
+.sbdocs-wrapper button[title="Show code"] svg,
+.sbdocs-wrapper button[title="Copy code"] svg {
+  color: var(--dsx-color-text-default) !important;
+  fill: currentColor !important;
+}
+
+/* Catch-all: any button/anchor inside the Canvas wrapper below each story */
+.sbdocs-wrapper [id^="anchor-"] ~ div button,
+.sbdocs-wrapper [id^="anchor-"] ~ div a,
+.sbdocs-wrapper .docblock-source button,
+.sbdocs-wrapper [data-docs-source] button {
+  color: var(--dsx-color-text-default) !important;
+}
+
+.sbdocs-wrapper [id^="anchor-"] ~ div button svg,
+.sbdocs-wrapper .docblock-source button svg,
+.sbdocs-wrapper [data-docs-source] button svg {
+  color: var(--dsx-color-text-default) !important;
+  fill: currentColor !important;
 }
 
 /* Remove any zebra striping from tables */

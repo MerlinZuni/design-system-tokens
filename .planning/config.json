@@ -5,7 +5,8 @@
   "workflow": {
     "research": true,
     "autoApprove": false,
-    "commitAfterPhase": true
+    "commitAfterPhase": true,
+    "_auto_chain_active": false
   },
   "stack": {
     "framework": "React",
