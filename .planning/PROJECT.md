@@ -2,65 +2,36 @@
 
 ## What This Is
 
-A full design system built for a team, centered on a 3-tier design token architecture (Primitive → Semantic → Component) using a `category.property.modifier` naming convention. Tokens are authored in Figma Variables, synced via Tokens Studio Pro to W3C DTCG-format JSON, and transformed by Style Dictionary into CSS custom properties and TypeScript for consumption by React applications. Storybook serves as the living documentation site with Figma integration.
+A full design system built for a team, centered on a 3-tier design token architecture (Primitive → Semantic → Component) using a `category.property.modifier` naming convention. Tokens are authored in Figma Variables, synced via Tokens Studio Pro to W3C DTCG-format JSON, and transformed by Style Dictionary into CSS custom properties and TypeScript for consumption by React applications. Storybook serves as the living documentation site with Figma integration. Six primitive React components (Text, ColorSwatch, Surface, Stack, Inline, VisuallyHidden) provide the foundational building blocks.
 
 ## Core Value
 
 A single source of truth for all design decisions — tokens defined once in Figma, consumed reliably in code, with Storybook as the living reference that bridges design and development.
 
+## Current State
+
+**v1.0 shipped 2026-03-24** — Token Foundation + Storybook Documentation
+
+- 2 packages: `@design-system-x/tokens` (231 CSS custom properties, TypeScript breakpoints) + `@design-system-x/primitives` (6 React components)
+- 3-tier token architecture: Primitive → Semantic (multi-brand × light/dark)
+- Storybook 10 with 10 documentation pages, theme switcher, Figma embed placeholders
+- Figma Code Connect files ready (pending real node IDs)
+- ~4,960 lines of source code across 163 files
+
 ## Requirements
 
-### Validated
+### Validated (v1.0)
 
-**Infrastructure (Phase 1 — validated 2026-03-22)**
-- [x] npm workspaces monorepo with Turborepo v2 dependency-ordered builds
-- [x] `@design-system-x/tokens` package with dual ESM/CJS tsup output
-- [x] `@design-system-x/primitives` package with React + TypeScript tsup output
-- [x] `apps/storybook` workspace running Storybook 10 (`@storybook/react-vite`)
-- [x] Shared `tsconfig.base.json` strict TypeScript config across all packages
-- [x] ESLint 9 flat config with `typescript-eslint` v8 `projectService` auto-discovery
-- [x] Changesets configured with `access: "public"` for `@design-system-x/*` scoped packages
-
-### Validated
-
-**Primitive Token Pipeline (Phase 2 — validated 2026-03-22)**
-- [x] Style Dictionary v4 build pipeline wired into `packages/tokens` (`build:tokens` script, turbo task ordering)
-- [x] `@tokens-studio/sd-transforms` preprocessor configured for DTCG input
-- [x] 5 DTCG-format primitive token JSON files: color (8 hues × 11 steps), spacing (34 steps), typography (13 composite + 2 font families), elevation (5 levels), grid/breakpoints (5)
-- [x] 231 CSS custom properties output to `dist/css/tokens.css` under `--dsx-*` namespace
-- [x] TypeScript breakpoint constants exported from `dist/index.js`
-- [x] Token files version-controlled alongside code
-- [x] `category.property.modifier` naming convention used throughout primitives
-
-### Validated
-
-**Semantic Token Pipeline (Phase 3 — validated 2026-03-22)**
-- [x] Semantic token tier with 4 DTCG JSON files (parent-brand light/dark, child-brand light/dark)
-- [x] Multi-brand + light/dark mode support via Style Dictionary multi-file output
-- [x] Compound `[data-brand][data-theme]` CSS selectors for semantic tokens
-
-**Primitive Components (Phase 4 — validated 2026-03-22)**
-- [x] Storybook configured for React + TypeScript with Autodocs
-- [x] Primitive component stories with all states and variants
-- [x] Component MDX documentation files per primitive
-- [x] Properties preview via Storybook Controls + Autodocs
-
-**Token Documentation Pages (Phase 5 — validated 2026-03-23)**
-- [x] Token preview pages: color palette, typography scale, spacing scale, elevation, grid/breakpoints
-- [x] Styles preview section showing composed primitive styles (Headings, BodyText, Surfaces, InteractiveStates, Feedback)
-- [x] Multi-brand theme switching toolbar in Storybook (Brand + Mode dropdowns)
-- [x] Shared visualization components (TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection)
-- [x] All specimens use `var(--dsx-*)` semantic CSS variables — live-reactive to theme switcher
+- [x] INFRA-01–06: Monorepo, packages, Storybook, ESLint, Changesets — v1.0
+- [x] TOKEN-01–10: Primitive + semantic tokens, SD pipeline, multi-brand/mode — v1.0
+- [x] FIGMA-01–06: Variable Collections, naming, Tokens Studio sync, addon-designs, Code Connect, design pages — v1.0
+- [x] STORY-01–14: Storybook config, token pages, styles pages, component stories, MDX docs, Autodocs — v1.0
 
 ### Active
 
-**Figma → Code Pipeline**
-- [ ] Figma Variables as design source of truth (placeholder values in `color.brand.*` pending Figma file key)
-- [ ] Tokens Studio Pro syncs Figma Variables → W3C DTCG JSON
-
-**Storybook Enhancements**
-- [ ] `@storybook/addon-designs` for Figma frame embedding in stories
-- [ ] Figma Code Connect for displaying component code inside Figma Dev Mode
+- [ ] Replace TODO Figma node IDs in `.figma.tsx` files (requires real Figma file key)
+- [ ] Publish Code Connect once node IDs are real
+- [ ] Replace placeholder brand colors with actual brand hex values from Figma
 
 ### Out of Scope
 
@@ -75,6 +46,7 @@ A single source of truth for all design decisions — tokens defined once in Fig
 - Figma Variables (introduced 2023) now support Collections (token tiers) and Modes (themes) natively — this project builds from that foundation
 - Tokens Studio Pro is the sync layer between Figma and code; it exports to W3C DTCG format which Style Dictionary v4 supports natively
 - The `category.property.modifier` convention in code maps to Figma's `category/property/modifier` slash-separated group naming
+- v1.0 shipped in 2 days (2026-03-22 → 2026-03-24) with 122 commits across 6 phases
 
 ## Constraints
 
@@ -82,17 +54,19 @@ A single source of truth for all design decisions — tokens defined once in Fig
 - **Figma sync**: Tokens Studio Pro required (paid plugin) — team must have access
 - **Stack**: React + TypeScript — component stories and token exports target this environment
 - **Token format**: W3C DTCG (Design Tokens Community Group) — ensures forward compatibility with the emerging standard
-- **v1 boundary**: Primitive tokens and their Storybook documentation only — no application-level components until tokens are stable
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Tokens Studio Pro over Figma REST API | Smoother sync workflow with automatic DTCG export; REST API requires custom scripting | — Pending |
-| Style Dictionary v4 | Native DTCG support, active maintenance, widest platform output support | ✓ Validated Phase 2 |
-| Storybook over custom docs site | Faster to ship, industry standard, Figma addon ecosystem, Autodocs removes manual work | ✓ Validated Phase 5 |
-| Figma Code Connect + addon-designs | Bidirectional Figma↔Storybook visibility; one shows Figma in Storybook, the other shows code in Figma | — Pending |
-| v1 = tokens + primitives only | Stable token foundation is prerequisite for reliable components; avoids refactoring components when tokens change | — Pending |
+| Tokens Studio Pro over Figma REST API | Smoother sync workflow with automatic DTCG export; REST API requires custom scripting | ✓ Validated v1.0 |
+| Style Dictionary v4 (not v5) | Native DTCG support; v5 incompatible with sd-transforms v1.x | ✓ Validated v1.0 |
+| Storybook over custom docs site | Faster to ship, industry standard, Figma addon ecosystem, Autodocs removes manual work | ✓ Validated v1.0 |
+| Figma Code Connect + addon-designs | Bidirectional Figma↔Storybook visibility | ✓ Scaffolded v1.0 (pending real node IDs) |
+| v1 = tokens + primitives only | Stable token foundation is prerequisite for reliable components | ✓ Validated v1.0 |
+| react-docgen over react-docgen-typescript | react-docgen reliably extracts JSDoc props with Vite source alias | ✓ Validated v1.0 |
+| Compound [data-brand][data-theme] CSS selectors | Enables multi-brand + light/dark with pure CSS, no JS runtime | ✓ Validated v1.0 |
+| ESLint 9 (not 10) | eslint-plugin-react uses API removed in ESLint 10 | ✓ Validated v1.0 |
 
 ---
-*Last updated: 2026-03-23 — Phase 5 complete (token documentation pages: 5 token category pages, 5 styles composition pages, theme switcher, shared visualization components)*
+*Last updated: 2026-03-24 after v1.0 milestone*
