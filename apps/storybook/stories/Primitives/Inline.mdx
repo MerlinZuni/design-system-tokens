@@ -1,0 +1,37 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as InlineStories from './Inline.stories'
+
+<Meta of={InlineStories} />
+
+# Inline
+
+Inline arranges children horizontally with wrapping and consistent spacing.
+
+## When to use
+
+Use Inline for horizontal layouts like tag lists, button groups, or navigation items. Children wrap automatically when they exceed the container width. The `justify` prop controls main-axis distribution — use `justify='between'` to spread items across the full width of the container.
+
+## Primary example
+
+<Canvas of={InlineStories.Default} />
+
+## Wrapping
+
+<Canvas of={InlineStories.Wrapping} />
+
+## Justified
+
+<Canvas of={InlineStories.Justified} />
+
+## Props
+
+<ArgTypes of={InlineStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>

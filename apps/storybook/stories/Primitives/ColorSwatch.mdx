@@ -1,0 +1,41 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as ColorSwatchStories from './ColorSwatch.stories'
+
+<Meta of={ColorSwatchStories} />
+
+# ColorSwatch
+
+ColorSwatch displays a color token visually as a square swatch with a label.
+
+## When to use
+
+Use ColorSwatch in documentation pages to preview color tokens. It is a documentation primitive, not intended for production UI. Pass a CSS custom property reference via `tokenVar` and a human-readable `label` to give context. Use the `size` prop to fit different documentation grid layouts.
+
+## Primary example
+
+<Canvas of={ColorSwatchStories.Default} />
+
+## Size variants
+
+<Canvas of={ColorSwatchStories.AllSizes} />
+
+## Semantic token
+
+<Canvas of={ColorSwatchStories.SemanticToken} />
+
+## Color grid
+
+<Canvas of={ColorSwatchStories.Grid} />
+
+## Props
+
+<ArgTypes of={ColorSwatchStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>

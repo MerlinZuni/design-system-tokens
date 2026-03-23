@@ -1,0 +1,35 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as VisuallyHiddenStories from './VisuallyHidden.stories'
+
+<Meta of={VisuallyHiddenStories} />
+
+# VisuallyHidden
+
+VisuallyHidden renders content invisible to sighted users but accessible to screen readers.
+
+## When to use
+
+Use VisuallyHidden to provide screen reader labels for icon-only buttons, decorative images with context, or skip navigation links. Never use it to hide content that should be visible — it is specifically for supplemental screen-reader-only text that would be redundant or distracting to sighted users.
+
+## Primary example
+
+<Canvas of={VisuallyHiddenStories.Default} />
+
+## Accessible button pattern
+
+<Canvas of={VisuallyHiddenStories.Focusable} />
+
+VisuallyHidden uses the standard CSS clip pattern recommended by WCAG. Content is positioned absolutely at 1x1px with overflow hidden.
+
+## Props
+
+<ArgTypes of={VisuallyHiddenStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>

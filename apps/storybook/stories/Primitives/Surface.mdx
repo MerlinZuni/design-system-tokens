@@ -1,0 +1,43 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as SurfaceStories from './Surface.stories'
+
+<Meta of={SurfaceStories} />
+
+# Surface
+
+Surface renders a semantic container with background, border, and elevation from the design token system.
+
+## When to use
+
+Use Surface when you need a container whose visual properties adapt to the active brand and color mode. Pair `elevation` with `background` to create distinct visual layers. Use `background='card'` with `border={true}` for card-style surfaces, and `background='inverse'` for dark panels within a light-mode layout.
+
+## Primary example
+
+<Canvas of={SurfaceStories.Default} />
+
+## Elevation variants
+
+<Canvas of={SurfaceStories.WithElevation} />
+
+## Bordered surface
+
+<Canvas of={SurfaceStories.WithBorder} />
+
+## Inverse surface
+
+<Canvas of={SurfaceStories.Inverse} />
+
+When using `background='inverse'`, ensure child text uses `var(--dsx-color-text-inverse)` for sufficient contrast.
+
+## Props
+
+<ArgTypes of={SurfaceStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>

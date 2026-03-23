@@ -1,0 +1,37 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as StackStories from './Stack.stories'
+
+<Meta of={StackStories} />
+
+# Stack
+
+Stack arranges children vertically with consistent spacing from the design token scale.
+
+## When to use
+
+Use Stack for any vertical layout — form fields, card content, page sections. The `gap` prop maps to spacing tokens, ensuring consistent rhythm. Prefer Stack over raw flexbox with `flex-direction: column` so spacing is always sourced from the token system and reacts correctly to theme changes.
+
+## Primary example
+
+<Canvas of={StackStories.Default} />
+
+## All gap values
+
+<Canvas of={StackStories.AllGaps} />
+
+## Alignment variants
+
+<Canvas of={StackStories.WithAlignment} />
+
+## Props
+
+<ArgTypes of={StackStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>

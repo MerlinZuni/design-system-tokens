@@ -1,0 +1,49 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks'
+import { Figma } from 'storybook-addon-designs/blocks'
+import * as TextStories from './Text.stories'
+
+<Meta of={TextStories} />
+
+# Text
+
+Text renders typographically styled text using the design system type scale.
+
+## When to use
+
+Use Text when you need to apply a design system type scale step to any text content. Pair with the `as` prop to render the semantically correct HTML element for accessibility and SEO. Choose `variant` to communicate visual hierarchy, and always use a semantic HTML element (`h1`–`h6`, `p`, `label`) when context demands it.
+
+## Primary example
+
+<Canvas of={TextStories.Default} />
+
+## All variants
+
+<Canvas of={TextStories.AllVariants} />
+
+## Semantic element
+
+<Canvas of={TextStories.WithSemanticElement} />
+
+### Variant guidance
+
+- `heading-lg` — Use with `as='h2'` for second-level section headings.
+- `heading-md` — Use with `as='h3'` for third-level headings.
+- `body-md` — Default variant. Use for all standard prose.
+- `caption` — Use for supplemental metadata, timestamps, or helper text.
+- `code` — Use for inline code fragments; renders in monospace.
+
+## Truncation
+
+<Canvas of={TextStories.Truncated} />
+
+## Props
+
+<ArgTypes of={TextStories} />
+
+## Figma
+
+<Figma
+  url="https://www.figma.com/design/PLACEHOLDER/Design-System-X?node-id=TODO"
+  collapsable
+  defaultCollapsed={false}
+/>
