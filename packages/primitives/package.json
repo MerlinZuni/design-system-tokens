@@ -27,5 +27,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@figma/code-connect": "^1.4.2"
   }
 }
