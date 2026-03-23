@@ -22,7 +22,7 @@ const withThemeAttributes: Decorator = (Story, context) => {
   }, [brand, mode])
 
   return (
-    <div style={{ background: 'var(--dsx-color-background-default)', color: 'var(--dsx-color-text-default)', padding: '2rem' }}>
+    <div style={{ background: 'var(--dsx-color-background-default)', color: 'var(--dsx-color-text-default)', fontFamily: 'var(--dsx-font-family-default)', padding: '2rem' }}>
       <Story />
     </div>
   )
