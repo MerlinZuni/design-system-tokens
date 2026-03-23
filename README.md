@@ -1,4 +1,7 @@
-# Design System X
+# Design System Token Upgrade
+
+Project goal: GitHub/JSON and Figma bidirectional integration scaffolding
+Approach: Code base first, pull in Figma. Update file from code base.
 
 A design token system and primitive component library built on a **3-tier token architecture** (Primitive → Semantic → Component). Tokens are authored in Figma Variables, synced via Tokens Studio Pro to W3C DTCG-format JSON, and transformed by Style Dictionary into CSS custom properties and TypeScript constants. Storybook serves as the living documentation site.
 
