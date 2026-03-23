@@ -165,7 +165,12 @@ Plans:
 
 **Gap closure:** Closes all 5 unsatisfied requirements + 2 integration fixes from v1.0 audit
 
-**Plans:** 0 plans (not yet planned)
+**Plans:** 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Integration fixes (BREAKPOINTS import, theme-reactive Styles pages) + all 6 component implementations
+- [ ] 06-02-PLAN.md — Storybook stories + MDX documentation for all 6 primitives with Figma embeds
+- [ ] 06-03-PLAN.md — Figma Code Connect .figma.tsx files + release checklist
 
 ### Tasks
 
@@ -231,4 +236,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-23 — Phase 6 updated with gap closure tasks from v1.0 audit (2 integration fixes added)*
+*Last updated: 2026-03-23 — Phase 6 planned: 3 plans in 2 waves*
