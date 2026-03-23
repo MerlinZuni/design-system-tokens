@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-23T16:27:06.417Z"
+last_updated: "2026-03-23T16:35:20.199Z"
 progress:
   total_phases: 6
   completed_phases: 6
@@ -40,17 +40,17 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 5 Plan 05: Styles pages (Headings, Body Text, Surfaces, Interactive States, Feedback) — **COMPLETE** (05-05)
 - [x] Phase 6 Plan 01: Primitive components + integration fixes — **COMPLETE** (06-01)
 - [x] Phase 6 Plan 02: Component stories (CSF + Autodocs, MDX docs with Figma embeds) — **COMPLETE** (06-02)
-- [x] Phase 6 Plan 03: Figma Code Connect files + release checklist — **COMPLETE** (06-03) [CHECKPOINT: awaiting human-verify]
+- [x] Phase 6 Plan 03: Figma Code Connect files + release checklist — **COMPLETE** (06-03) [checkpoint approved 2026-03-23]
 
 ## Active Phase
 
-**Phase 6: Primitive Components + Figma Integration** — IN PROGRESS (2/3 plans complete)
+**Phase 6: Primitive Components + Figma Integration** — COMPLETE (3/3 plans)
 
 - Plan 06-01 — BREAKPOINTS fix, StylesTokenTable, 6 primitive components — ✓ COMPLETE
 - Plan 06-02 — Component stories (CSF + Autodocs) — ✓ COMPLETE
-- Plan 06-03 — Figma Code Connect + addon-designs integration — ✓ COMPLETE (checkpoint: human-verify pending)
+- Plan 06-03 — Figma Code Connect + release checklist — ✓ COMPLETE
 
-Current position: Phase 6 Plan 03 CHECKPOINT (human-verify) — 15/16 plans done across all phases
+Current position: All 16/16 plans complete — v1.0 milestone code-complete
 
 ## Decisions
 
@@ -104,6 +104,8 @@ Current position: Phase 6 Plan 03 CHECKPOINT (human-verify) — 15/16 plans done
 - [Phase 06-03]: figma.children() used for slot-type props in container components (Surface/Stack/Inline) vs figma.string() for text content (Text content/VisuallyHidden label)
 - [Phase 06-03]: Code Connect publish deliberately gated on real Figma node IDs — DO NOT publish with TODO placeholder node IDs (D-09, Pitfall 4)
 - [Phase 06]: Figma embed URLs use PLACEHOLDER/TODO in MDX docs — actual Figma node IDs provided when file key is available (D-06 pattern)
+- [Phase 06]: figma.children() used for slot-type props in container components (Surface/Stack/Inline) vs figma.string() for text content (Text content/VisuallyHidden label)
+- [Phase 06]: Code Connect publish deliberately gated on real Figma node IDs — DO NOT publish with TODO placeholder node IDs (D-09, Pitfall 4)
 
 ## Open Questions / Risks
 
@@ -144,3 +146,4 @@ Current position: Phase 6 Plan 03 CHECKPOINT (human-verify) — 15/16 plans done
 *Last session: 2026-03-23 — Completed 05-05-PLAN.md (Styles/Headings, Styles/Body Text, Styles/Surfaces, Styles/Interactive States, Styles/Feedback — all 5 Styles/ pages live, Phase 5 COMPLETE, STORY-09 satisfied)*
 *Last session: 2026-03-23 — Completed 06-01-PLAN.md (BREAKPOINTS import from @design-system-x/tokens, StylesTokenTable theme-reactive wrapper, 6 primitive components — Text/ColorSwatch/Surface/Stack/Inline/VisuallyHidden — with TypeScript interfaces and barrel exports, STORY-10 + STORY-12 satisfied)*
 *Last session: 2026-03-23 — Completed 06-02-PLAN.md (12 Storybook files: 6 CSF story files + 6 MDX docs for all primitive components, Figma embed placeholders in all MDX docs, STORY-11 + FIGMA-04 satisfied)*
+*Last session: 2026-03-23 — Completed 06-03-PLAN.md (6 .figma.tsx Code Connect files colocated with primitives, RELEASE_CHECKLIST.md at project root — FIGMA-05 satisfied, Phase 6 COMPLETE, v1.0 milestone code-complete)*
