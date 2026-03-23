@@ -44,18 +44,18 @@ export function TypographySpecimen({
     borderRadius: '4px',
     padding: '2px 6px',
     fontFamily: 'monospace',
-    fontSize: '12px',
+    fontSize: '14px',
     color: 'var(--dsx-color-text-default)',
   }
 
   const detailValueStyle: React.CSSProperties = {
-    fontSize: '12px',
+    fontSize: '14px',
     fontFamily: 'monospace',
     color: 'var(--dsx-color-text-default)',
   }
 
   const detailLabelStyle: React.CSSProperties = {
-    fontSize: '12px',
+    fontSize: '14px',
     color: 'var(--dsx-color-text-muted)',
     margin: 0,
     lineHeight: '1.8',
