@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { SpacingBar } from '../components/SpacingBar'
+import { TokenTable } from '../components/TokenTable'
+import { SemanticTokenSection } from '../components/SemanticTokenSection'
+import { getPrimitiveSpacingTokens } from '../components/token-data'
+
+<Meta title="Tokens/Spacing" />
+
+# Spacing
+
+The spacing scale provides consistent whitespace values. Spacing tokens range from `spacing.0` (0px) to `spacing.96` (384px).
+
+## Primitive Tokens
+
+{getPrimitiveSpacingTokens().map((t) => (
+  <SpacingBar key={t.name} name={t.name} cssVar={t.cssVar} rawValue={t.rawValue} />
+))}
+
+### Full Reference
+
+<TokenTable tokens={getPrimitiveSpacingTokens()} />
+
+## Semantic Tokens
+
+Semantic spacing tokens provide purpose-specific spacing aliases. Switch the **Brand** and **Mode** toolbar to see how they resolve.
+
+<SemanticTokenSection prefix="space." />
