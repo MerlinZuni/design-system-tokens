@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-22T21:54:50.522Z"
+last_updated: "2026-03-23T10:19:55.429Z"
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 4
-  total_plans: 8
-  completed_plans: 8
+  total_plans: 13
+  completed_plans: 9
 ---
 
 # STATE: Design System X
@@ -18,7 +18,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** A single source of truth for all design decisions — tokens defined once in Figma, consumed reliably in code, with Storybook as the living reference that bridges design and development.
-**Current focus:** Phase 04 — storybook-foundation
+**Current focus:** Phase 05 — token-documentation-pages
 
 ## Current Status
 
@@ -33,15 +33,19 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 3 Plan 02: Tokens Studio Pro Figma Push — **COMPLETE** (03-02)
 - [x] Phase 4 Plan 01: Storybook Config (addon-designs, preview.tsx) — **COMPLETE** (04-01)
 - [x] Phase 4 Plan 02: Introduction MDX pages (Introduction, Design Purpose, Design Principles) — **COMPLETE** (04-02)
+- [x] Phase 5 Plan 01: SD compound selectors + Storybook theme switcher toolbar — **COMPLETE** (05-01)
 
 ## Active Phase
 
-**Phase 4: Storybook Foundation** — COMPLETE (2/2 plans complete)
+**Phase 5: Token Documentation Pages** — In Progress (1/5 plans complete)
 
-- Plan 04-01 — Storybook config: addon-designs, token CSS imports, global decorator, storySort — ✓ COMPLETE
-- Plan 04-02 — Introduction MDX pages: Introduction root, Design Purpose, Design Principles — ✓ COMPLETE
+- Plan 05-01 — SD compound selectors + Storybook Brand/Mode toolbar — ✓ COMPLETE
+- Plan 05-02 — Colors documentation page — pending
+- Plan 05-03 — Typography documentation page — pending
+- Plan 05-04 — Spacing, Elevation, Grid documentation pages — pending
+- Plan 05-05 — Styles section (Headings, Body Text, Surfaces, Interactive States, Feedback) — pending
 
-Current position: Phase 4 COMPLETE — ready to begin Phase 5
+Current position: Phase 5, Plan 01 COMPLETE — ready to begin Plan 05-02
 
 ## Decisions
 
@@ -80,6 +84,8 @@ Current position: Phase 4 COMPLETE — ready to begin Phase 5
 - [Phase 04]: MDX import path is @storybook/addon-docs/blocks confirmed for Storybook 10 monorepo hoist setup
 - [Phase 04]: Nested MDX sidebar: parent page at stories/Parent.mdx, children at stories/Parent/Child.mdx with Meta title using slash notation
 - [Phase 04-storybook-foundation]: Figma pages (Design Purpose, Design Principles) created manually mirroring MDX content — FIGMA-06 satisfied
+- [Phase 05-token-documentation-pages]: Compound [data-brand][data-theme] CSS selectors: light mode off :root, both attributes required
+- [Phase 05-token-documentation-pages]: context.globals in Storybook decorator instead of useGlobals hook — avoids import path ambiguity in Storybook 10 monorepo
 
 ## Open Questions / Risks
 
@@ -113,3 +119,4 @@ Current position: Phase 4 COMPLETE — ready to begin Phase 5
 *Last session: 2026-03-22 — Completed 03-02-PLAN.md (Tokens Studio Pro Figma sync: GitHub remote configured, Semantic Variable Collection live with 4 modes + 226 variables, round-trip sync verified, Phase 3 COMPLETE)*
 *Last session: 2026-03-22 — Completed 04-01-PLAN.md (Storybook config: addon-designs registered, preview.tsx with CSS imports + global decorator + storySort, turbo build passing)*
 *Last session: 2026-03-22 — Completed 04-02-PLAN.md (Introduction MDX pages: Introduction root, Design Purpose, Design Principles — sidebar verified, FIGMA-06 satisfied, Phase 4 COMPLETE)*
+*Last session: 2026-03-23 — Completed 05-01-PLAN.md (SD compound [data-brand][data-theme] selectors, Storybook Brand+Mode toolbar, withThemeAttributes decorator, all 4 semantic CSS files imported)*

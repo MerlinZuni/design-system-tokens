@@ -137,7 +137,7 @@ Plans:
 **Plans:** 5 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — SD selector refactor (compound [data-brand][data-theme]) + preview.tsx theme switcher
+- [x] 05-01-PLAN.md — SD selector refactor (compound [data-brand][data-theme]) + preview.tsx theme switcher
 - [ ] 05-02-PLAN.md — Shared visualization components (TokenTable, AliasChain, CopyToClipboard) + token-data utilities
 - [ ] 05-03-PLAN.md — Token pages: Colors, Typography, Spacing (STORY-04, STORY-05, STORY-06)
 - [ ] 05-04-PLAN.md — Token pages: Elevation, Grid/Breakpoints (STORY-07, STORY-08)
