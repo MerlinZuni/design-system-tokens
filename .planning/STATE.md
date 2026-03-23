@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-23T16:21:08.631Z"
+last_updated: "2026-03-23T16:25:42.654Z"
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 16
-  completed_plans: 14
+  completed_plans: 15
 ---
 
 # STATE: Design System X
@@ -39,16 +39,17 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 5 Plan 04: Elevation, Grid documentation pages — **COMPLETE** (05-04)
 - [x] Phase 5 Plan 05: Styles pages (Headings, Body Text, Surfaces, Interactive States, Feedback) — **COMPLETE** (05-05)
 - [x] Phase 6 Plan 01: Primitive components + integration fixes — **COMPLETE** (06-01)
+- [x] Phase 6 Plan 03: Figma Code Connect files + release checklist — **COMPLETE** (06-03) [CHECKPOINT: awaiting human-verify]
 
 ## Active Phase
 
-**Phase 6: Primitive Components + Figma Integration** — IN PROGRESS (1/3 plans complete)
+**Phase 6: Primitive Components + Figma Integration** — IN PROGRESS (2/3 plans complete)
 
 - Plan 06-01 — BREAKPOINTS fix, StylesTokenTable, 6 primitive components — ✓ COMPLETE
 - Plan 06-02 — Component stories (CSF + Autodocs) — pending
-- Plan 06-03 — Figma Code Connect + addon-designs integration — pending
+- Plan 06-03 — Figma Code Connect + addon-designs integration — ✓ COMPLETE (checkpoint: human-verify pending)
 
-Current position: Phase 6 Plan 01 COMPLETE — 14/16 plans done across all phases
+Current position: Phase 6 Plan 03 CHECKPOINT (human-verify) — 15/16 plans done across all phases
 
 ## Decisions
 
@@ -99,6 +100,8 @@ Current position: Phase 6 Plan 01 COMPLETE — 14/16 plans done across all phase
 - [Phase 05-05]: Feedback alert icon placeholders use colored circle divs with var(--dsx-color-status-*-icon) — no external icon dependency required
 - [Phase 06-01]: StylesTokenTable uses same useGlobals try/catch require() pattern as SemanticTokenSection for Storybook 10 monorepo compatibility
 - [Phase 06-01]: Headings/BodyText Styles pages show only semantic color tokens in StylesTokenTable — typography primitive tokens not in getSemanticTokensForTheme
+- [Phase 06-03]: figma.children() used for slot-type props in container components (Surface/Stack/Inline) vs figma.string() for text content (Text content/VisuallyHidden label)
+- [Phase 06-03]: Code Connect publish deliberately gated on real Figma node IDs — DO NOT publish with TODO placeholder node IDs (D-09, Pitfall 4)
 
 ## Open Questions / Risks
 
