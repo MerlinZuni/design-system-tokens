@@ -159,9 +159,13 @@ Plans:
 
 ## Phase 6 — Primitive Components & Figma Integration
 
-**Goal:** Build the primitive React components with full Storybook stories, Figma frame embeds, and Code Connect setup. This completes the bidirectional Figma ↔ Storybook integration.
+**Goal:** Build the primitive React components with full Storybook stories, Figma frame embeds, and Code Connect setup. Fix Phase 5 integration wiring gaps. This completes the bidirectional Figma ↔ Storybook integration and closes all v1.0 milestone gaps.
 
 **Requirements covered:** STORY-10, STORY-11, STORY-12, FIGMA-04, FIGMA-05
+
+**Gap closure:** Closes all 5 unsatisfied requirements + 2 integration fixes from v1.0 audit
+
+**Plans:** 0 plans (not yet planned)
 
 ### Tasks
 
@@ -187,8 +191,10 @@ Plans:
    - Map Figma property enums to React prop values (case-sensitive)
 6. Publish Code Connect: `npx @figma/code-connect publish` (manual step; add to release checklist)
 7. Write release checklist documenting: `changeset` → `changeset version` → `turbo run build` → Code Connect publish → npm publish
+8. **Integration fix:** Import BREAKPOINTS from `@design-system-x/tokens` in `token-data.ts` instead of hardcoded values; remove unused `primitiveGrid` import
+9. **Integration fix:** Make Styles page TokenTable rows theme-reactive by using `getSemanticTokensForTheme()` instead of hardcoded parent-brand/light rawValues
 
-**Verification:** Each primitive has stories covering all states. Props tables auto-populate from TypeScript. Figma frames visible in Designs panel in Storybook. Code Connect shows component code in Figma Dev Mode.
+**Verification:** Each primitive has stories covering all states. Props tables auto-populate from TypeScript. Figma frames visible in Designs panel in Storybook. Code Connect shows component code in Figma Dev Mode. BREAKPOINTS sourced from package. Styles page TokenTable updates with theme switcher.
 
 ---
 
@@ -225,4 +231,4 @@ Phase 6 (Primitive Components) — depends on all token tiers and Storybook setu
 
 ---
 *Roadmap created: 2026-03-22*
-*Last updated: 2026-03-23 — Phase 5 planned: 5 plans (SD refactor + shared components + 3 token page plans + styles pages)*
+*Last updated: 2026-03-23 — Phase 6 updated with gap closure tasks from v1.0 audit (2 integration fixes added)*
