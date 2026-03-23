@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TokenTable } from '../components/TokenTable'
+import { StylesTokenTable } from '../components/StylesTokenTable'
 
 <Meta title="Styles/Feedback" />
 
@@ -137,21 +137,4 @@ Feedback patterns communicate status through color: success, warning, error, and
 
 ### Tokens Used
 
-<TokenTable tokens={[
-  { name: 'color.status.success.background', cssVar: '--dsx-color-status-success-background', rawValue: 'var(--dsx-color-green-50)', description: 'Success background' },
-  { name: 'color.status.success.text', cssVar: '--dsx-color-status-success-text', rawValue: 'var(--dsx-color-green-700)', description: 'Success text' },
-  { name: 'color.status.success.border', cssVar: '--dsx-color-status-success-border', rawValue: 'var(--dsx-color-green-300)', description: 'Success border' },
-  { name: 'color.status.success.icon', cssVar: '--dsx-color-status-success-icon', rawValue: 'var(--dsx-color-green-500)', description: 'Success icon' },
-  { name: 'color.status.warning.background', cssVar: '--dsx-color-status-warning-background', rawValue: 'var(--dsx-color-yellow-50)', description: 'Warning background' },
-  { name: 'color.status.warning.text', cssVar: '--dsx-color-status-warning-text', rawValue: 'var(--dsx-color-yellow-800)', description: 'Warning text' },
-  { name: 'color.status.warning.border', cssVar: '--dsx-color-status-warning-border', rawValue: 'var(--dsx-color-yellow-300)', description: 'Warning border' },
-  { name: 'color.status.warning.icon', cssVar: '--dsx-color-status-warning-icon', rawValue: 'var(--dsx-color-yellow-500)', description: 'Warning icon' },
-  { name: 'color.status.error.background', cssVar: '--dsx-color-status-error-background', rawValue: 'var(--dsx-color-red-50)', description: 'Error background' },
-  { name: 'color.status.error.text', cssVar: '--dsx-color-status-error-text', rawValue: 'var(--dsx-color-red-700)', description: 'Error text' },
-  { name: 'color.status.error.border', cssVar: '--dsx-color-status-error-border', rawValue: 'var(--dsx-color-red-300)', description: 'Error border' },
-  { name: 'color.status.error.icon', cssVar: '--dsx-color-status-error-icon', rawValue: 'var(--dsx-color-red-500)', description: 'Error icon' },
-  { name: 'color.status.info.background', cssVar: '--dsx-color-status-info-background', rawValue: 'var(--dsx-color-blue-50)', description: 'Info background' },
-  { name: 'color.status.info.text', cssVar: '--dsx-color-status-info-text', rawValue: 'var(--dsx-color-blue-700)', description: 'Info text' },
-  { name: 'color.status.info.border', cssVar: '--dsx-color-status-info-border', rawValue: 'var(--dsx-color-blue-300)', description: 'Info border' },
-  { name: 'color.status.info.icon', cssVar: '--dsx-color-status-info-icon', rawValue: 'var(--dsx-color-blue-500)', description: 'Info icon' },
-]} />
+<StylesTokenTable tokenNames={['color.status.success.background', 'color.status.success.text', 'color.status.success.border', 'color.status.success.icon', 'color.status.warning.background', 'color.status.warning.text', 'color.status.warning.border', 'color.status.warning.icon', 'color.status.error.background', 'color.status.error.text', 'color.status.error.border', 'color.status.error.icon', 'color.status.info.background', 'color.status.info.text', 'color.status.info.border', 'color.status.info.icon']} />

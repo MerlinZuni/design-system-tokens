@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TokenTable } from '../components/TokenTable'
+import { StylesTokenTable } from '../components/StylesTokenTable'
 
 <Meta title="Styles/Body Text" />
 
@@ -96,14 +96,4 @@ Form labels, navigation items, and interactive element text.
 
 ### Tokens Used
 
-<TokenTable tokens={[
-  { name: 'typography.text-base.font-size', cssVar: '--dsx-typography-text-base-font-size', rawValue: '16px', description: 'Body font size' },
-  { name: 'typography.text-base.line-height', cssVar: '--dsx-typography-text-base-line-height', rawValue: '24px', description: 'Body line height' },
-  { name: 'typography.text-sm.font-size', cssVar: '--dsx-typography-text-sm-font-size', rawValue: '14px', description: 'Caption and label font size' },
-  { name: 'typography.text-sm.line-height', cssVar: '--dsx-typography-text-sm-line-height', rawValue: '20px', description: 'Caption and label line height' },
-  { name: 'typography.text-xs.font-size', cssVar: '--dsx-typography-text-xs-font-size', rawValue: '12px', description: 'Overline font size' },
-  { name: 'typography.text-xs.line-height', cssVar: '--dsx-typography-text-xs-line-height', rawValue: '16px', description: 'Overline line height' },
-  { name: 'color.text.default', cssVar: '--dsx-color-text-default', rawValue: 'var(--dsx-color-neutral-900)', description: 'Body and label text color (semantic — theme-reactive)' },
-  { name: 'color.text.muted', cssVar: '--dsx-color-text-muted', rawValue: 'var(--dsx-color-neutral-500)', description: 'Caption text color (semantic — theme-reactive)' },
-  { name: 'color.text.subtle', cssVar: '--dsx-color-text-subtle', rawValue: 'var(--dsx-color-neutral-400)', description: 'Overline text color (semantic — theme-reactive)' },
-]} />
+<StylesTokenTable tokenNames={['color.text.default', 'color.text.muted', 'color.text.subtle']} />

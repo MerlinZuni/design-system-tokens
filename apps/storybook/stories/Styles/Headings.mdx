@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TokenTable } from '../components/TokenTable'
+import { StylesTokenTable } from '../components/StylesTokenTable'
 
 <Meta title="Styles/Headings" />
 
@@ -107,12 +107,4 @@ Headings h1 through h6 use the typography scale with the semantic text color tok
 
 ### Tokens Used
 
-<TokenTable tokens={[
-  { name: 'typography.text-5xl', cssVar: '--dsx-typography-text-5xl-font-size', rawValue: '48px', description: 'h1 font size' },
-  { name: 'typography.text-4xl', cssVar: '--dsx-typography-text-4xl-font-size', rawValue: '36px', description: 'h2 font size' },
-  { name: 'typography.text-3xl', cssVar: '--dsx-typography-text-3xl-font-size', rawValue: '30px', description: 'h3 font size' },
-  { name: 'typography.text-2xl', cssVar: '--dsx-typography-text-2xl-font-size', rawValue: '24px', description: 'h4 font size' },
-  { name: 'typography.text-xl', cssVar: '--dsx-typography-text-xl-font-size', rawValue: '20px', description: 'h5 font size' },
-  { name: 'typography.text-lg', cssVar: '--dsx-typography-text-lg-font-size', rawValue: '18px', description: 'h6 font size' },
-  { name: 'color.text.default', cssVar: '--dsx-color-text-default', rawValue: 'var(--dsx-color-neutral-900)', description: 'Heading text color (semantic — theme-reactive)' },
-]} />
+<StylesTokenTable tokenNames={['color.text.default']} />

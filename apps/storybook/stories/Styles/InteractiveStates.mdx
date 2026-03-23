@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TokenTable } from '../components/TokenTable'
+import { StylesTokenTable } from '../components/StylesTokenTable'
 
 <Meta title="Styles/Interactive States" />
 
@@ -139,14 +139,4 @@ Interactive elements progress through five states: default, hover, active, focus
 
 ### Tokens Used
 
-<TokenTable tokens={[
-  { name: 'color.action.default', cssVar: '--dsx-color-action-default', rawValue: 'var(--dsx-color-brand-500)', description: 'Default action / primary button background' },
-  { name: 'color.action.hover', cssVar: '--dsx-color-action-hover', rawValue: 'var(--dsx-color-brand-600)', description: 'Hover state background' },
-  { name: 'color.action.pressed', cssVar: '--dsx-color-action-pressed', rawValue: 'var(--dsx-color-brand-700)', description: 'Active/pressed state background' },
-  { name: 'color.action.disabled', cssVar: '--dsx-color-action-disabled', rawValue: 'var(--dsx-color-neutral-200)', description: 'Disabled state background' },
-  { name: 'color.action.subtle', cssVar: '--dsx-color-action-subtle', rawValue: 'var(--dsx-color-brand-50)', description: 'Subtle/ghost variant background' },
-  { name: 'color.focus-ring', cssVar: '--dsx-color-focus-ring', rawValue: 'var(--dsx-color-brand-400)', description: 'Focus ring outline color' },
-  { name: 'color.text.inverse', cssVar: '--dsx-color-text-inverse', rawValue: 'var(--dsx-color-neutral-0)', description: 'Text on dark action backgrounds' },
-  { name: 'color.text.disabled', cssVar: '--dsx-color-text-disabled', rawValue: 'var(--dsx-color-neutral-400)', description: 'Disabled state text color' },
-  { name: 'color.border.default', cssVar: '--dsx-color-border-default', rawValue: 'var(--dsx-color-neutral-200)', description: 'Subtle variant border' },
-]} />
+<StylesTokenTable tokenNames={['color.action.default', 'color.action.hover', 'color.action.pressed', 'color.action.disabled', 'color.action.subtle', 'color.focus-ring', 'color.text.inverse', 'color.text.disabled', 'color.border.default']} />

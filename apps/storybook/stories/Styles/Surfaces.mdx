@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TokenTable } from '../components/TokenTable'
+import { StylesTokenTable } from '../components/StylesTokenTable'
 
 <Meta title="Styles/Surfaces" />
 
@@ -100,15 +100,4 @@ Surface patterns combine background color, border, and elevation tokens to creat
 
 ### Tokens Used
 
-<TokenTable tokens={[
-  { name: 'color.surface.card', cssVar: '--dsx-color-surface-card', rawValue: 'var(--dsx-color-neutral-0)', description: 'Card surface background' },
-  { name: 'color.surface.panel', cssVar: '--dsx-color-surface-panel', rawValue: 'var(--dsx-color-neutral-50)', description: 'Panel surface background' },
-  { name: 'color.surface.popover', cssVar: '--dsx-color-surface-popover', rawValue: 'var(--dsx-color-neutral-0)', description: 'Popover/dropdown surface background' },
-  { name: 'color.surface.tooltip', cssVar: '--dsx-color-surface-tooltip', rawValue: 'var(--dsx-color-neutral-900)', description: 'Tooltip surface background' },
-  { name: 'color.surface.sunken', cssVar: '--dsx-color-surface-sunken', rawValue: 'var(--dsx-color-neutral-100)', description: 'Sunken/inset surface background' },
-  { name: 'color.border.default', cssVar: '--dsx-color-border-default', rawValue: 'var(--dsx-color-neutral-200)', description: 'Default border color' },
-  { name: 'color.border.subtle', cssVar: '--dsx-color-border-subtle', rawValue: 'var(--dsx-color-neutral-100)', description: 'Subtle border color' },
-  { name: 'color.text.default', cssVar: '--dsx-color-text-default', rawValue: 'var(--dsx-color-neutral-900)', description: 'Surface content text' },
-  { name: 'color.text.muted', cssVar: '--dsx-color-text-muted', rawValue: 'var(--dsx-color-neutral-500)', description: 'Surface secondary text' },
-  { name: 'color.text.inverse', cssVar: '--dsx-color-text-inverse', rawValue: 'var(--dsx-color-neutral-0)', description: 'Tooltip text (on dark background)' },
-]} />
+<StylesTokenTable tokenNames={['color.surface.card', 'color.surface.panel', 'color.surface.popover', 'color.surface.tooltip', 'color.surface.sunken', 'color.border.default', 'color.border.subtle', 'color.text.default', 'color.text.muted', 'color.text.inverse']} />
