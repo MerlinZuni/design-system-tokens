@@ -48,7 +48,7 @@
 - [x] **STORY-06**: Token preview page — Spacing: visual scale showing all spacing steps with pixel values and token names
 - [x] **STORY-07**: Token preview page — Elevation: displays all shadow levels with visual examples
 - [x] **STORY-08**: Token preview page — Grid/Breakpoints: displays breakpoint values and grid column configurations
-- [ ] **STORY-09**: Styles preview section — shows composed primitive styles (e.g. heading styles, body text styles, surface styles)
+- [x] **STORY-09**: Styles preview section — shows composed primitive styles (e.g. heading styles, body text styles, surface styles)
 - [ ] **STORY-10**: Primitive component stories cover all states and variants using Storybook Controls
 - [ ] **STORY-11**: Each primitive has an MDX documentation file with usage guidelines, props table (via Autodocs), and Figma frame embed
 - [ ] **STORY-12**: Properties preview via Storybook Autodocs auto-generates interactive props tables from TypeScript interfaces (no manual work required if TypeScript interfaces are well-typed)
@@ -118,7 +118,7 @@
 | STORY-06 | Phase 5 | Complete |
 | STORY-07 | Phase 5 | Complete |
 | STORY-08 | Phase 5 | Complete |
-| STORY-09 | Phase 5 | Pending |
+| STORY-09 | Phase 5 | Complete |
 | STORY-10 | Phase 6 | Pending |
 | STORY-11 | Phase 6 | Pending |
 | STORY-12 | Phase 6 | Pending |
