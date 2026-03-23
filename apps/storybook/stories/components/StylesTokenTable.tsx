@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TokenTable } from './TokenTable'
 import { getSemanticTokensForTheme } from './token-data'
 import type { SemanticTokenRow } from './token-data'
@@ -31,6 +31,14 @@ export function StylesTokenTable({ tokenNames }: StylesTokenTableProps) {
       // fallback to defaults
     }
   }
+
+  // Sync data attributes on the document root so CSS custom properties update on
+  // docs-only MDX pages where the Story decorator doesn't run.
+  useEffect(() => {
+    document.documentElement.setAttribute('data-brand', brand)
+    document.documentElement.setAttribute('data-theme', mode)
+  }, [brand, mode])
+
   const allTokens = getSemanticTokensForTheme(brand, mode)
   const tokens: SemanticTokenRow[] = tokenNames
     .map((name) => allTokens.find((t) => t.name === name))

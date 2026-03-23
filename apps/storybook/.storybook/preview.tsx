@@ -9,6 +9,10 @@ import '@design-system-x/tokens/parent-brand/dark'
 import '@design-system-x/tokens/child-brand/light'
 import '@design-system-x/tokens/child-brand/dark'
 
+// Set initial theme attributes so docs-only pages get themed CSS vars on first load
+document.documentElement.setAttribute('data-brand', 'parent')
+document.documentElement.setAttribute('data-theme', 'light')
+
 const withThemeAttributes: Decorator = (Story, context) => {
   const { brand = 'parent', mode = 'light' } = context.globals
 
