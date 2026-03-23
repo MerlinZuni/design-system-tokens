@@ -55,6 +55,12 @@
   border-radius: 4px;
 }
 
+/* Remove any zebra striping from tables */
+.sbdocs-wrapper table tbody tr,
+.sb-unstyled table tbody tr {
+  background-color: transparent !important;
+}
+
 /* Body text */
 .sbdocs-wrapper p,
 .sbdocs-wrapper li,
