@@ -1,36 +1,41 @@
 {
   "version": "1.0",
-  "timestamp": "2026-03-22T21:58:34.649Z",
-  "phase": "04",
-  "phase_name": "storybook-foundation",
-  "phase_dir": ".planning/phases/04-storybook-foundation",
-  "plan": 2,
+  "timestamp": "2026-03-23T22:09:23.067Z",
+  "phase": "06",
+  "phase_name": "primitive-components-figma-integration",
+  "phase_dir": ".planning/phases/06-primitive-components-figma-integration",
+  "plan": 3,
   "task": 3,
-  "total_tasks": 3,
-  "status": "phase_complete",
+  "total_tasks": 8,
+  "status": "paused",
   "completed_tasks": [
-    {"id": 1, "name": "Install addon-designs and configure main.ts", "status": "done", "commit": "131f08b"},
-    {"id": 2, "name": "Create preview.tsx with CSS imports, decorator, storySort", "status": "done", "commit": "57f8ad9"},
-    {"id": 3, "name": "Create Introduction.mdx root page", "status": "done", "commit": "4c74cf2"},
-    {"id": 4, "name": "Create Design Purpose and Design Principles MDX pages", "status": "done", "commit": "67e47b9"},
-    {"id": 5, "name": "Verify Storybook sidebar and Figma pages (checkpoint)", "status": "done", "commit": "3265859"}
+    {"id": 1, "name": "06-01: Primitive components + Phase 5 gap fixes", "status": "done", "commit": "e173646"},
+    {"id": 2, "name": "06-02: Storybook stories + MDX documentation", "status": "done", "commit": "f987e30"},
+    {"id": 3, "name": "06-03: Code Connect + release checklist", "status": "done", "commit": "5ffcd3c"},
+    {"id": 4, "name": "Verification", "status": "done", "commit": "78e489a"},
+    {"id": 5, "name": "Fix: Figma import path + autodocs conflict", "status": "done", "commit": "e67a557"},
+    {"id": 6, "name": "Fix: Theme switching on docs pages", "status": "done", "commit": "4fc9233"},
+    {"id": 7, "name": "Fix: Dark mode text color + Archivo font loading", "status": "done", "commit": "9b306ef"},
+    {"id": 8, "name": "UAT: Storybook visual polish (ongoing)", "status": "in_progress", "progress": "Typography, spacing, colors pages polished. Google Sans Code + Material Symbols icons added. Still in human UAT."}
   ],
-  "remaining_tasks": [],
+  "remaining_tasks": [
+    {"id": 9, "name": "Complete human UAT verification (4 items)", "status": "not_started"},
+    {"id": 10, "name": "Mark phase complete + update roadmap", "status": "not_started"}
+  ],
   "blockers": [],
-  "human_actions_pending": [],
+  "human_actions_pending": [
+    {"action": "Complete 4 human UAT items in 06-HUMAN-UAT.md", "context": "Autodocs props table, Figma embed block (confirmed), theme-reactive styles (partially tested), sidebar primitives section", "blocking": true},
+    {"action": "Replace TODO Figma node IDs in .figma.tsx files before publishing Code Connect", "context": "Placeholder node IDs gated in RELEASE_CHECKLIST.md step 8", "blocking": false}
+  ],
   "decisions": [
-    {"decision": "Storybook 10.3.1 (not 8) — installed version wins over stale ROADMAP reference", "rationale": "Already installed and working in Phase 1", "phase": "04"},
-    {"decision": "Import parent-brand/light.css only — not all 4 semantic CSS files", "rationale": "Both light CSS files use :root selector — simultaneous import causes silent last-import-wins collision", "phase": "04"},
-    {"decision": "Global decorator uses var(--dsx-color-background-default) + 2rem padding", "rationale": "Semantic token background is honest to the system; 2rem is industry standard", "phase": "04"},
-    {"decision": "preview.ts renamed to preview.tsx for JSX decorator support", "rationale": "JSX (<Story />) not valid in .ts file — causes parse error at startup", "phase": "04"},
-    {"decision": "addon-designs v11.1.2 for Storybook 10 compatibility", "rationale": "v11.x peer-depends on storybook ^10.0.0", "phase": "04"}
+    {"decision": "Removed tags: ['autodocs'] from story files", "rationale": "Storybook 10 errors when CSF has autodocs tag AND matching MDX with <Meta of={}>", "phase": "06"},
+    {"decision": "Fixed Figma import to @storybook/addon-designs/blocks", "rationale": "storybook-addon-designs is the old package name; @storybook/addon-designs is what's installed", "phase": "06"},
+    {"decision": "Added Google Sans Code as monospace font", "rationale": "User requested to match design language", "phase": "06"},
+    {"decision": "Added Material Symbols icons for copy-to-clipboard", "rationale": "User requested visible copy affordance on all copyable token names", "phase": "06"},
+    {"decision": "Used Archivo Black (900) for docs page headers", "rationale": "Matches Figma page header styles; note: weight 900 not in token system, possibly from external Liip Slides:Base library", "phase": "06"},
+    {"decision": "StylesTokenTable syncs data-brand/data-theme attributes", "rationale": "Decorator only fires on story renders, not pure MDX docs pages", "phase": "06"}
   ],
-  "uncommitted_files": [
-    ".planning/config.json",
-    ".planning/phases/03-semantic-tokens-figma-pipeline/03-VERIFICATION.md",
-    ".planning/reports/",
-    ".planning/todos/pending/figma-secondary-color-scale.md"
-  ],
-  "next_action": "Run /gsd:discuss-phase 5 to gather context for Token Documentation Pages — color, typography, spacing, elevation, grid/breakpoints visual reference pages + brand×mode theme switcher",
-  "context_notes": "Phase 4 fully complete and verified. All 4 phases of the first half of v1.0 are done (monorepo → primitives → semantics → Storybook foundation). Phase 5 builds the visual token reference pages that populate the Storybook sidebar categories (Tokens section). Phase 6 builds the primitive React components. The brand×mode theme switcher toolbar was explicitly deferred from Phase 4 to Phase 5 — Phase 5 will need to update the SD config to use brand-scoped CSS selectors before the switcher can work."
+  "uncommitted_files": [".planning/config.json"],
+  "next_action": "Resume human UAT: test remaining items (autodocs props, theme-reactive styles after restart, sidebar section). Then mark phase complete.",
+  "context_notes": "Phase 6 execution complete — all 3 plans shipped. Verification passed (12/12 must-haves). Extended session doing visual polish based on user's design feedback: consistent code tag styling, font loading, dark mode fixes, copy icons, zebra stripe removal, swatch sizing. User has expert design eye — expect further visual refinements."
 }
