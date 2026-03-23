@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TypographySpecimen } from '../components/TypographySpecimen'
+import { TokenTable } from '../components/TokenTable'
+import { getPrimitiveTypographyTokens } from '../components/token-data'
+
+<Meta title="Tokens/Typography" />
+
+# Typography
+
+The type scale provides 13 steps from `text-xs` (12px) to `text-9xl` (128px). All steps use the Archivo font family.
+
+## Primitive Tokens
+
+{getPrimitiveTypographyTokens().map((t) => (
+  <TypographySpecimen key={t.name} {...t} />
+))}
+
+## Semantic Tokens
+
+Typography does not currently have a semantic token layer. Typography tokens are primitives consumed directly. Semantic typography mappings (e.g., heading styles mapped to specific scale steps) are shown on the [Styles/Headings](?path=/docs/styles-headings--docs) page.
