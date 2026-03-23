@@ -134,13 +134,13 @@ Plans:
 
 **Requirements covered:** STORY-04, STORY-05, STORY-06, STORY-07, STORY-08, STORY-09
 
-**Plans:** 2/5 plans executed
+**Plans:** 4/5 plans executed
 
 Plans:
 - [x] 05-01-PLAN.md — SD selector refactor (compound [data-brand][data-theme]) + preview.tsx theme switcher
 - [x] 05-02-PLAN.md — Shared visualization components (TokenTable, AliasChain, CopyToClipboard) + token-data utilities
-- [ ] 05-03-PLAN.md — Token pages: Colors, Typography, Spacing (STORY-04, STORY-05, STORY-06)
-- [ ] 05-04-PLAN.md — Token pages: Elevation, Grid/Breakpoints (STORY-07, STORY-08)
+- [x] 05-03-PLAN.md — Token pages: Colors, Typography, Spacing (STORY-04, STORY-05, STORY-06)
+- [x] 05-04-PLAN.md — Token pages: Elevation, Grid/Breakpoints (STORY-07, STORY-08)
 - [ ] 05-05-PLAN.md — Styles sub-pages: Headings, Body Text, Surfaces, Interactive States, Feedback (STORY-09)
 
 ### Tasks
@@ -200,7 +200,7 @@ Plans:
 | 2 | Primitive Token Pipeline | TOKEN-01--05, TOKEN-09 | ✓ Complete |
 | 3 | Semantic Tokens & Figma Pipeline | Complete    | 2026-03-22 |
 | 4 | 2/2 | Complete   | 2026-03-22 |
-| 5 | 2/5 | In Progress|  |
+| 5 | 4/5 | In Progress|  |
 | 6 | Primitive Components & Figma Integration | STORY-10--12, FIGMA-04--05 | ○ Pending |
 
 **Total v1 requirements:** 30 | **Phases:** 6 | **All requirements mapped** ✓

@@ -43,11 +43,11 @@
 - [x] **STORY-01**: Storybook 8 configured with `@storybook/react-vite` builder, `@storybook/addon-essentials`, and `reactDocgen: "react-docgen-typescript"` for full TypeScript prop inference
 - [x] **STORY-02**: CSS custom property output from Style Dictionary imported in `.storybook/preview.ts` so all token variables are available globally in stories and MDX
 - [x] **STORY-03**: Sidebar sort order: Introduction → Design Purpose → Design Principles → Tokens → Styles → Primitives
-- [ ] **STORY-04**: Token preview page — Color: displays full palette using `ColorPalette`/`ColorItem` blocks with hex values and token names
-- [ ] **STORY-05**: Token preview page — Typography: displays all font families, weights, sizes, and line heights
-- [ ] **STORY-06**: Token preview page — Spacing: visual scale showing all spacing steps with pixel values and token names
-- [ ] **STORY-07**: Token preview page — Elevation: displays all shadow levels with visual examples
-- [ ] **STORY-08**: Token preview page — Grid/Breakpoints: displays breakpoint values and grid column configurations
+- [x] **STORY-04**: Token preview page — Color: displays full palette using `ColorPalette`/`ColorItem` blocks with hex values and token names
+- [x] **STORY-05**: Token preview page — Typography: displays all font families, weights, sizes, and line heights
+- [x] **STORY-06**: Token preview page — Spacing: visual scale showing all spacing steps with pixel values and token names
+- [x] **STORY-07**: Token preview page — Elevation: displays all shadow levels with visual examples
+- [x] **STORY-08**: Token preview page — Grid/Breakpoints: displays breakpoint values and grid column configurations
 - [ ] **STORY-09**: Styles preview section — shows composed primitive styles (e.g. heading styles, body text styles, surface styles)
 - [ ] **STORY-10**: Primitive component stories cover all states and variants using Storybook Controls
 - [ ] **STORY-11**: Each primitive has an MDX documentation file with usage guidelines, props table (via Autodocs), and Figma frame embed
@@ -113,11 +113,11 @@
 | STORY-01 | Phase 4 | Complete |
 | STORY-02 | Phase 4 | Complete |
 | STORY-03 | Phase 4 | Complete |
-| STORY-04 | Phase 5 | Pending |
-| STORY-05 | Phase 5 | Pending |
-| STORY-06 | Phase 5 | Pending |
-| STORY-07 | Phase 5 | Pending |
-| STORY-08 | Phase 5 | Pending |
+| STORY-04 | Phase 5 | Complete |
+| STORY-05 | Phase 5 | Complete |
+| STORY-06 | Phase 5 | Complete |
+| STORY-07 | Phase 5 | Complete |
+| STORY-08 | Phase 5 | Complete |
 | STORY-09 | Phase 5 | Pending |
 | STORY-10 | Phase 6 | Pending |
 | STORY-11 | Phase 6 | Pending |
