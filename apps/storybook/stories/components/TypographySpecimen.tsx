@@ -44,22 +44,15 @@ export function TypographySpecimen({
     borderRadius: '4px',
     padding: '2px 6px',
     fontFamily: 'monospace',
-    fontSize: '13px',
+    fontSize: '12px',
+    color: 'var(--dsx-color-text-default)',
   }
 
   const detailLabelStyle: React.CSSProperties = {
-    fontSize: '11px',
-    color: 'var(--dsx-color-text-muted)',
-    fontFamily: 'monospace',
-    margin: 0,
-    lineHeight: '1.6',
-  }
-
-  const detailValueStyle: React.CSSProperties = {
     fontSize: '12px',
-    color: 'var(--dsx-color-text-default)',
-    fontFamily: 'monospace',
-    fontWeight: 500,
+    color: 'var(--dsx-color-text-muted)',
+    margin: 0,
+    lineHeight: '1.8',
   }
 
   return (
@@ -79,30 +72,28 @@ export function TypographySpecimen({
 
       {/* Right column — token details */}
       <div style={{ flex: '0 0 40%', minWidth: 0, paddingTop: '4px' }}>
-        <div style={{ marginBottom: '6px' }}>
+        <div style={{ marginBottom: '8px' }}>
           <CopyToClipboard text={name}>
-            <code style={{ ...codeTagStyle, fontWeight: 600 }}>{name}</code>
+            <code style={codeTagStyle}>{name}</code>
           </CopyToClipboard>
         </div>
 
         <p style={detailLabelStyle}>
-          Font size:{' '}
-          <span style={detailValueStyle}>{rawFontSize || '—'}</span>
+          Font size: <code style={codeTagStyle}>{rawFontSize || '—'}</code>
           {fontSize && (
-            <span style={{ marginLeft: '6px' }}>
+            <>
+              {' '}
               <CopyToClipboard text={fontSize}>
-                <code style={{ ...codeTagStyle, fontSize: '11px', color: 'var(--dsx-color-text-subtle)' }}>{fontSize}</code>
+                <code style={codeTagStyle}>{fontSize}</code>
               </CopyToClipboard>
-            </span>
+            </>
           )}
         </p>
         <p style={detailLabelStyle}>
-          Font weight:{' '}
-          <span style={detailValueStyle}>{rawFontWeight || '—'}</span>
+          Font weight: <code style={codeTagStyle}>{rawFontWeight || '—'}</code>
         </p>
         <p style={detailLabelStyle}>
-          Line height:{' '}
-          <span style={detailValueStyle}>{rawLineHeight || '—'}</span>
+          Line height: <code style={codeTagStyle}>{rawLineHeight || '—'}</code>
         </p>
       </div>
     </div>

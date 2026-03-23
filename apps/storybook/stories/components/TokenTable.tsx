@@ -62,7 +62,9 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
     border: '1px solid var(--dsx-color-border-default)',
     borderRadius: '4px',
     padding: '2px 6px',
-    fontSize: '13px',
+    fontFamily: 'monospace',
+    fontSize: '12px',
+    color: 'var(--dsx-color-text-default)',
   }
 
   return (
