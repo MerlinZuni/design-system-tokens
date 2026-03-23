@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-23T10:19:55.429Z"
+last_updated: "2026-03-23T10:24:59.922Z"
 progress:
   total_phases: 5
   completed_phases: 4
   total_plans: 13
-  completed_plans: 9
+  completed_plans: 10
 ---
 
 # STATE: Design System X
@@ -34,18 +34,19 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 - [x] Phase 4 Plan 01: Storybook Config (addon-designs, preview.tsx) — **COMPLETE** (04-01)
 - [x] Phase 4 Plan 02: Introduction MDX pages (Introduction, Design Purpose, Design Principles) — **COMPLETE** (04-02)
 - [x] Phase 5 Plan 01: SD compound selectors + Storybook theme switcher toolbar — **COMPLETE** (05-01)
+- [x] Phase 5 Plan 02: Shared token visualization components + token-data.ts utility — **COMPLETE** (05-02)
 
 ## Active Phase
 
-**Phase 5: Token Documentation Pages** — In Progress (1/5 plans complete)
+**Phase 5: Token Documentation Pages** — In Progress (2/5 plans complete)
 
 - Plan 05-01 — SD compound selectors + Storybook Brand/Mode toolbar — ✓ COMPLETE
-- Plan 05-02 — Colors documentation page — pending
+- Plan 05-02 — Shared components (TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection) + token-data.ts — ✓ COMPLETE
 - Plan 05-03 — Typography documentation page — pending
 - Plan 05-04 — Spacing, Elevation, Grid documentation pages — pending
 - Plan 05-05 — Styles section (Headings, Body Text, Surfaces, Interactive States, Feedback) — pending
 
-Current position: Phase 5, Plan 01 COMPLETE — ready to begin Plan 05-02
+Current position: Phase 5, Plan 02 COMPLETE — ready to begin Plan 05-03
 
 ## Decisions
 
@@ -86,6 +87,8 @@ Current position: Phase 5, Plan 01 COMPLETE — ready to begin Plan 05-02
 - [Phase 04-storybook-foundation]: Figma pages (Design Purpose, Design Principles) created manually mirroring MDX content — FIGMA-06 satisfied
 - [Phase 05-token-documentation-pages]: Compound [data-brand][data-theme] CSS selectors: light mode off :root, both attributes required
 - [Phase 05-token-documentation-pages]: context.globals in Storybook decorator instead of useGlobals hook — avoids import path ambiguity in Storybook 10 monorepo
+- [Phase 05-02]: flattenSemanticTokens skips non-string alias values — shadow semantic tokens alias to composite elevation tokens, not string values, so SemanticTokenRow cannot be built for them
+- [Phase 05-02]: SemanticTokenSection uses require() try/catch for useGlobals — consistent with context.globals pattern decision, resilient for Storybook 10 monorepo build
 
 ## Open Questions / Risks
 
@@ -120,3 +123,4 @@ Current position: Phase 5, Plan 01 COMPLETE — ready to begin Plan 05-02
 *Last session: 2026-03-22 — Completed 04-01-PLAN.md (Storybook config: addon-designs registered, preview.tsx with CSS imports + global decorator + storySort, turbo build passing)*
 *Last session: 2026-03-22 — Completed 04-02-PLAN.md (Introduction MDX pages: Introduction root, Design Purpose, Design Principles — sidebar verified, FIGMA-06 satisfied, Phase 4 COMPLETE)*
 *Last session: 2026-03-23 — Completed 05-01-PLAN.md (SD compound [data-brand][data-theme] selectors, Storybook Brand+Mode toolbar, withThemeAttributes decorator, all 4 semantic CSS files imported)*
+*Last session: 2026-03-23 — Completed 05-02-PLAN.md (token-data.ts DTCG parsing utilities, TokenTable, AliasChain, CopyToClipboard, SemanticTokenSection components — shared layer for all token pages)*
