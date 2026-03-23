@@ -1,3 +1,5 @@
+
+
 import { Meta } from '@storybook/addon-docs/blocks'
 import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
 import { SemanticColorTable } from '../components/SemanticColorTable'
@@ -205,11 +207,11 @@ The color system is organized in two tiers: **primitive** tokens define the raw 
   renderPreview={(token) => (
     <div
       style={{
-        width: 24,
-        height: 24,
-        borderRadius: 4,
+        width: 40,
+        height: 40,
+        borderRadius: 6,
         backgroundColor: token.rawValue,
-        border: '1px solid #e5e7eb',
+        border: '1px solid var(--dsx-color-border-default)',
       }}
     />
   )}

@@ -43,9 +43,9 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
     whiteSpace: 'nowrap',
   }
 
-  const getRowStyle = (index: number): React.CSSProperties => ({
-    backgroundColor: index % 2 === 1 ? 'var(--dsx-color-background-subtle)' : 'transparent',
-  })
+  const rowStyle: React.CSSProperties = {
+    borderBottom: '1px solid var(--dsx-color-border-subtle)',
+  }
 
   const cellStyle: React.CSSProperties = {
     padding: '8px',
@@ -87,7 +87,7 @@ export function TokenTable({ tokens, showAliasChain = false, renderPreview }: To
       </thead>
       <tbody>
         {tokens.map((token, index) => (
-          <tr key={token.name} style={getRowStyle(index)}>
+          <tr key={token.name} style={rowStyle}>
             {renderPreview && (
               <td style={cellStyle}>{renderPreview(token)}</td>
             )}

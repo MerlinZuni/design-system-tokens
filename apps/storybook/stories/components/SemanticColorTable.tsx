@@ -106,9 +106,9 @@ export function SemanticColorTable({ brand: brandProp, mode: modeProp }: Semanti
               renderPreview={(token) => (
                 <div
                   style={{
-                    width: 24,
-                    height: 24,
-                    borderRadius: 4,
+                    width: 40,
+                    height: 40,
+                    borderRadius: 6,
                     border: '1px solid var(--dsx-color-border-default)',
                     backgroundColor: `var(${token.cssVar})`,
                   }}
