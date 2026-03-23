@@ -36,12 +36,16 @@
   color: var(--dsx-color-text-default);
 }
 
-/* Inline code / token names */
+/* Inline code / token names — must override Storybook's built-in code styling */
 .sbdocs-wrapper code,
 .sb-unstyled code {
-  border: 1px solid var(--dsx-color-border-default);
-  border-radius: 4px;
-  color: var(--dsx-color-text-default);
+  background-color: var(--dsx-color-background-subtle) !important;
+  border: 1px solid var(--dsx-color-border-default) !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-family: monospace !important;
+  font-size: 14px !important;
+  color: var(--dsx-color-text-default) !important;
 }
 
 /* Story Canvas containers */
