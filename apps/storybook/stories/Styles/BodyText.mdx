@@ -1,0 +1,109 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../components/TokenTable'
+
+<Meta title="Styles/Body Text" />
+
+# Body Text Variants
+
+Four text styles cover the range of in-page content roles. All colors use semantic tokens — they update when you switch the Brand or Mode in the toolbar.
+
+---
+
+## Body
+
+Default reading text used for paragraphs, descriptions, and general content.
+
+<div style={{
+  fontFamily: 'var(--dsx-typography-text-base-font-family)',
+  fontSize: 'var(--dsx-typography-text-base-font-size)',
+  fontWeight: 400,
+  lineHeight: 'var(--dsx-typography-text-base-line-height)',
+  letterSpacing: 'var(--dsx-typography-text-base-letter-spacing)',
+  color: 'var(--dsx-color-text-default)',
+  marginBottom: '8px',
+}}>
+  This is body text — the default reading font used for paragraphs, descriptions, and general content. It should be comfortable to read at length.
+</div>
+<div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
+  body — text-base / 16px / weight 400 / 24px line-height — color.text.default
+</div>
+
+---
+
+## Caption
+
+Supporting text for timestamps, secondary details, and supplementary information.
+
+<div style={{
+  fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+  fontSize: 'var(--dsx-typography-text-sm-font-size)',
+  fontWeight: 400,
+  lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+  letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
+  color: 'var(--dsx-color-text-muted)',
+  marginBottom: '8px',
+}}>
+  Caption text is used for supporting information, timestamps, and secondary details.
+</div>
+<div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
+  caption — text-sm / 14px / weight 400 / 20px line-height — color.text.muted
+</div>
+
+---
+
+## Overline
+
+Small uppercase label used above section headings and category titles.
+
+<div style={{
+  fontFamily: 'var(--dsx-typography-text-xs-font-family)',
+  fontSize: 'var(--dsx-typography-text-xs-font-size)',
+  fontWeight: 600,
+  lineHeight: 'var(--dsx-typography-text-xs-line-height)',
+  letterSpacing: '0.05em',
+  color: 'var(--dsx-color-text-subtle)',
+  textTransform: 'uppercase',
+  marginBottom: '8px',
+}}>
+  OVERLINE TEXT
+</div>
+<div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
+  overline — text-xs / 12px / weight 600 / uppercase / letter-spacing 0.05em — color.text.subtle
+</div>
+
+---
+
+## Label
+
+Form labels, navigation items, and interactive element text.
+
+<div style={{
+  fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+  fontSize: 'var(--dsx-typography-text-sm-font-size)',
+  fontWeight: 600,
+  lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+  letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
+  color: 'var(--dsx-color-text-default)',
+  marginBottom: '8px',
+}}>
+  Label text is used for form labels, navigation items, and interactive element text.
+</div>
+<div style={{ fontSize: '12px', fontFamily: 'monospace', color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
+  label — text-sm / 14px / weight 600 / 20px line-height — color.text.default
+</div>
+
+---
+
+### Tokens Used
+
+<TokenTable tokens={[
+  { name: 'typography.text-base.font-size', cssVar: '--dsx-typography-text-base-font-size', rawValue: '16px', description: 'Body font size' },
+  { name: 'typography.text-base.line-height', cssVar: '--dsx-typography-text-base-line-height', rawValue: '24px', description: 'Body line height' },
+  { name: 'typography.text-sm.font-size', cssVar: '--dsx-typography-text-sm-font-size', rawValue: '14px', description: 'Caption and label font size' },
+  { name: 'typography.text-sm.line-height', cssVar: '--dsx-typography-text-sm-line-height', rawValue: '20px', description: 'Caption and label line height' },
+  { name: 'typography.text-xs.font-size', cssVar: '--dsx-typography-text-xs-font-size', rawValue: '12px', description: 'Overline font size' },
+  { name: 'typography.text-xs.line-height', cssVar: '--dsx-typography-text-xs-line-height', rawValue: '16px', description: 'Overline line height' },
+  { name: 'color.text.default', cssVar: '--dsx-color-text-default', rawValue: 'var(--dsx-color-neutral-900)', description: 'Body and label text color (semantic — theme-reactive)' },
+  { name: 'color.text.muted', cssVar: '--dsx-color-text-muted', rawValue: 'var(--dsx-color-neutral-500)', description: 'Caption text color (semantic — theme-reactive)' },
+  { name: 'color.text.subtle', cssVar: '--dsx-color-text-subtle', rawValue: 'var(--dsx-color-neutral-400)', description: 'Overline text color (semantic — theme-reactive)' },
+]} />
