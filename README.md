@@ -70,7 +70,7 @@ npx turbo run build
 npm run dev --workspace=@design-system-x/storybook
 ```
 
-Opens at [http://localhost:6006](http://localhost:6006).
+Opens at  https://merlinzuni.github.io/design-system-tokens/
 
 ## Usage
 
