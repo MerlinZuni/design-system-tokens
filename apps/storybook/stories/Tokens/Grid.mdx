@@ -14,6 +14,80 @@ Breakpoints define responsive layout boundaries. They are exported as **TypeScri
 
 <BreakpointRuler breakpoints={BREAKPOINTS} />
 
+## Grid Specifications
+
+Each breakpoint defines a column grid with specific margins and gutters sourced from Figma.
+
+export const GRID_SPECS = [
+  { name: 'Mobile portrait', columns: 4, type: 'fluid', margin: '16px', gutter: '16px', query: '—', width: '< 640px', color: '#6366f1' },
+  { name: 'Mobile landscape', columns: 4, type: 'fluid', margin: '16px', gutter: '16px', query: 'min-width: 640px', width: '640px', color: '#0891b2' },
+  { name: 'Tablet portrait', columns: 6, type: 'fluid', margin: '16px', gutter: '16px', query: 'min-width: 768px', width: '768px', color: '#0d9488' },
+  { name: 'Tablet landscape', columns: 8, type: 'fluid', margin: '32px', gutter: '24px', query: 'min-width: 1024px', width: '1024px', color: '#059669' },
+  { name: 'Desktop laptop', columns: 12, type: 'fluid', margin: '48px', gutter: '24px', query: 'min-width: 1280px', width: '1280px', color: '#d97706' },
+  { name: 'Desktop monitor', columns: 12, type: 'fixed', margin: 'auto', gutter: '24px', query: 'min-width: 1380px', width: '1380px', color: '#dc2626' },
+]
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1rem' }}>
+  {GRID_SPECS.map((spec) => (
+    <div key={spec.name} style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+        <span style={{ fontSize: '1.125rem', fontWeight: 700 }}>{spec.name}</span>
+        <span style={{ fontSize: '0.6875rem', padding: '0.125rem 0.5rem', borderRadius: '999px', background: spec.color + '18', color: spec.color, fontWeight: 600 }}>
+          {spec.query === '—' ? 'default' : spec.query}
+        </span>
+      </div>
+
+      {/* Visual grid diagram */}
+      <div style={{ marginBottom: '1rem', background: '#fff', borderRadius: '0.5rem', border: '1px solid #e2e8f0', padding: '0.75rem 0', overflow: 'hidden' }}>
+        <div style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
+          {/* Left margin */}
+          <div style={{ flexShrink: 0, width: spec.margin === 'auto' ? '20px' : `${parseInt(spec.margin) * 0.5}px`, height: '100%', background: '#fde68a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ fontSize: '0.5625rem', color: '#92400e', fontWeight: 600, writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>{spec.margin === 'auto' ? 'auto' : spec.margin}</span>
+          </div>
+          {/* Columns + gutters */}
+          <div style={{ flex: 1, display: 'flex', gap: `${Math.max(parseInt(spec.gutter) * 0.25, 2)}px`, height: '100%' }}>
+            {Array.from({ length: spec.columns }).map((_, i) => (
+              <div key={i} style={{ flex: 1, background: spec.color + '28', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontSize: '0.625rem', color: spec.color, fontWeight: 600 }}>{i + 1}</span>
+              </div>
+            ))}
+          </div>
+          {/* Right margin */}
+          <div style={{ flexShrink: 0, width: spec.margin === 'auto' ? '20px' : `${parseInt(spec.margin) * 0.5}px`, height: '100%', background: '#fde68a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ fontSize: '0.5625rem', color: '#92400e', fontWeight: 600, writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>{spec.margin === 'auto' ? 'auto' : spec.margin}</span>
+          </div>
+        </div>
+        {/* Legend row */}
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '0.5rem', fontSize: '0.6875rem', color: '#64748b' }}>
+          <span><span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '2px', background: '#fde68a', marginRight: '4px', verticalAlign: 'middle' }}></span>Margin</span>
+          <span><span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '2px', background: spec.color + '28', marginRight: '4px', verticalAlign: 'middle' }}></span>Column</span>
+          <span><span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '2px', background: '#fff', border: '1px solid #e2e8f0', marginRight: '4px', verticalAlign: 'middle' }}></span>Gutter ({spec.gutter})</span>
+        </div>
+      </div>
+
+      {/* Specs row */}
+      <div style={{ display: 'flex', gap: '2rem', fontSize: '0.8125rem' }}>
+        <div>
+          <span style={{ color: '#94a3b8', fontWeight: 500 }}>Columns</span>
+          <div style={{ fontWeight: 600, fontFamily: "'Google Sans Code', monospace" }}>{spec.columns} {spec.type}</div>
+        </div>
+        <div>
+          <span style={{ color: '#94a3b8', fontWeight: 500 }}>Margins</span>
+          <div style={{ fontWeight: 600, fontFamily: "'Google Sans Code', monospace" }}>{spec.margin}{spec.margin === 'auto' ? ' (centered)' : ' L/R'}</div>
+        </div>
+        <div>
+          <span style={{ color: '#94a3b8', fontWeight: 500 }}>Gutter</span>
+          <div style={{ fontWeight: 600, fontFamily: "'Google Sans Code', monospace" }}>{spec.gutter}</div>
+        </div>
+        <div>
+          <span style={{ color: '#94a3b8', fontWeight: 500 }}>Media query</span>
+          <div style={{ fontWeight: 600, fontFamily: "'Google Sans Code', monospace" }}>{spec.query}</div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
 ## TypeScript Usage
 
 Import breakpoint constants in your application code:
@@ -26,10 +100,32 @@ const query = `@media (min-width: ${GridBreakpointMd})`
 
 ## Token Reference
 
-| Name | TS Constant | CSS Token | Value |
-|------|------------|-----------|-------|
-| sm | `GridBreakpointSm` | N/A (not a CSS var) | 640px |
-| md | `GridBreakpointMd` | N/A (not a CSS var) | 768px |
-| lg | `GridBreakpointLg` | N/A (not a CSS var) | 1024px |
-| xl | `GridBreakpointXl` | N/A (not a CSS var) | 1280px |
-| 2xl | `GridBreakpoint2xl` | N/A (not a CSS var) | 1536px |
+Breakpoints are exported as **TypeScript constants only** — CSS `var()` cannot be used inside `@media` queries, so no CSS custom properties are generated.
+
+export const TOKEN_REF = [
+  { name: 'sm', constant: 'GridBreakpointSm', value: '640px' },
+  { name: 'md', constant: 'GridBreakpointMd', value: '768px' },
+  { name: 'lg', constant: 'GridBreakpointLg', value: '1024px' },
+  { name: 'xl', constant: 'GridBreakpointXl', value: '1280px' },
+  { name: '2xl', constant: 'GridBreakpoint2xl', value: '1536px' },
+]
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '1rem' }}>
+  {TOKEN_REF.map((token, idx) => (
+    <div key={token.name} style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '1rem',
+      padding: '0.75rem 1rem',
+      borderRadius: '0.5rem',
+      background: idx % 2 === 0 ? '#f8fafc' : '#fff',
+      border: '1px solid #e2e8f0',
+    }}>
+      <span style={{ fontWeight: 700, fontSize: '1rem', width: '2.5rem' }}>{token.name}</span>
+      <div style={{ flex: 1 }}>
+        <code style={{ fontSize: '0.8125rem', fontFamily: "'Google Sans Code', monospace", color: '#6366f1' }}>{token.constant}</code>
+      </div>
+      <span style={{ fontFamily: "'Google Sans Code', monospace", fontSize: '0.875rem', fontWeight: 600, color: '#475569' }}>{token.value}</span>
+    </div>
+  ))}
+</div>

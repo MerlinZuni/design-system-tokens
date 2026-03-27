@@ -1,0 +1,25 @@
+<script>
+  // Sync Brand/Mode toolbar globals to data-attributes in the preview iframe.
+  // The channel event "globalsUpdated" fires when the user toggles toolbar globals.
+  (function () {
+    function apply(brand, mode) {
+      document.documentElement.setAttribute('data-brand', brand);
+      document.documentElement.setAttribute('data-theme', mode);
+    }
+    // Set defaults
+    apply('parent', 'light');
+
+    // Poll for the Storybook channel (available after hydration)
+    var poll = setInterval(function () {
+      var ch = window.__STORYBOOK_ADDONS_CHANNEL__;
+      if (!ch) return;
+      clearInterval(poll);
+
+      // Listen for globals changes
+      ch.on('globalsUpdated', function (payload) {
+        var g = payload && payload.globals ? payload.globals : payload;
+        if (g) apply(g.brand || 'parent', g.mode || 'light');
+      });
+    }, 50);
+  })();
+</script>

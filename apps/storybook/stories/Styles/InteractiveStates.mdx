@@ -9,129 +9,39 @@ Interactive elements progress through five states: default, hover, active, focus
 
 ---
 
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', marginBottom: '48px', alignItems: 'flex-start' }}>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '48px' }}>
 
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-default)',
-      color: 'var(--dsx-color-text-inverse)',
-      border: 'none',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 600,
-      marginBottom: '8px',
-    }}>
-      Default
+  {[
+    { label: 'Default', bg: 'var(--dsx-color-action-default)', color: 'var(--dsx-color-text-inverse)', border: 'none', cursor: 'pointer', outline: 'none', token: 'action.default' },
+    { label: 'Hover', bg: 'var(--dsx-color-action-hover)', color: 'var(--dsx-color-text-inverse)', border: 'none', cursor: 'pointer', outline: 'none', token: 'action.hover' },
+    { label: 'Active', bg: 'var(--dsx-color-action-pressed)', color: 'var(--dsx-color-text-inverse)', border: 'none', cursor: 'pointer', outline: 'none', token: 'action.pressed' },
+    { label: 'Focus', bg: 'var(--dsx-color-action-default)', color: 'var(--dsx-color-text-inverse)', border: 'none', cursor: 'pointer', outline: '2px solid var(--dsx-color-focus-ring)', token: 'action.default + focus-ring' },
+    { label: 'Disabled', bg: 'var(--dsx-color-action-disabled)', color: 'var(--dsx-color-text-disabled)', border: 'none', cursor: 'not-allowed', outline: 'none', token: 'action.disabled + text.disabled' },
+    { label: 'Subtle', bg: 'var(--dsx-color-action-subtle)', color: 'var(--dsx-color-action-default)', border: '1px solid var(--dsx-color-border-default)', cursor: 'pointer', outline: 'none', token: 'action.subtle + border.default' },
+  ].map((state) => (
+    <div key={state.label} style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+      <div style={{
+        backgroundColor: state.bg,
+        color: state.color,
+        border: state.border,
+        borderRadius: '6px',
+        padding: '10px 24px',
+        cursor: state.cursor,
+        fontSize: '14px',
+        fontWeight: 600,
+        outline: state.outline,
+        outlineOffset: state.outline !== 'none' ? '2px' : undefined,
+        width: '100%',
+        textAlign: 'center',
+        boxSizing: 'border-box',
+      }}>
+        {state.label}
+      </div>
+      <code style={{ fontSize: '0.75rem', fontFamily: "'Google Sans Code', monospace", color: '#64748b' }}>
+        {state.token}
+      </code>
     </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.default
-    </div>
-  </div>
-
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-hover)',
-      color: 'var(--dsx-color-text-inverse)',
-      border: 'none',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 600,
-      marginBottom: '8px',
-    }}>
-      Hover
-    </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.hover
-    </div>
-  </div>
-
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-pressed)',
-      color: 'var(--dsx-color-text-inverse)',
-      border: 'none',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 600,
-      marginBottom: '8px',
-    }}>
-      Active
-    </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.pressed
-    </div>
-  </div>
-
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-default)',
-      color: 'var(--dsx-color-text-inverse)',
-      border: 'none',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 600,
-      outline: '2px solid var(--dsx-color-focus-ring)',
-      outlineOffset: '2px',
-      marginBottom: '8px',
-    }}>
-      Focus
-    </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.default · focus-ring
-    </div>
-  </div>
-
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-disabled)',
-      color: 'var(--dsx-color-text-disabled)',
-      border: 'none',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'not-allowed',
-      fontSize: '14px',
-      fontWeight: 600,
-      marginBottom: '8px',
-    }}>
-      Disabled
-    </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.disabled · text.disabled
-    </div>
-  </div>
-
-  <div style={{ textAlign: 'center' }}>
-    <div style={{
-      display: 'inline-block',
-      backgroundColor: 'var(--dsx-color-action-subtle)',
-      color: 'var(--dsx-color-action-default)',
-      border: '1px solid var(--dsx-color-border-default)',
-      borderRadius: '6px',
-      padding: '10px 20px',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 600,
-      marginBottom: '8px',
-    }}>
-      Subtle
-    </div>
-    <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
-      action.subtle · border.default
-    </div>
-  </div>
+  ))}
 
 </div>
 

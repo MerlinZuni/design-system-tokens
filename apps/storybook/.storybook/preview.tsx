@@ -12,9 +12,8 @@ import '@design-system-x/tokens/child-brand/dark'
 // Docs page typography — Archivo Black headers matching Figma page styles
 import './docs-theme.css'
 
-// Set initial theme attributes so docs-only pages get themed CSS vars on first load
-document.documentElement.setAttribute('data-brand', 'parent')
-document.documentElement.setAttribute('data-theme', 'light')
+// Theme syncing for docs-only pages is handled by preview-head.html script.
+// The decorator below handles story canvas pages.
 
 const withThemeAttributes: Decorator = (Story, context) => {
   const { brand = 'parent', mode = 'light' } = context.globals

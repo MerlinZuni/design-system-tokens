@@ -58,27 +58,27 @@
     "status": {
       "error": {
         "background": { "$value": "{color.red.900}",   "$description": "Error state background (dark mode)" },
-        "text":       { "$value": "{color.red.200}",   "$description": "Error text (AA on red.900)" },
-        "border":     { "$value": "{color.red.700}",   "$description": "Error border" },
-        "icon":       { "$value": "{color.red.400}",   "$description": "Error icon" }
+        "text":       { "$value": "{color.red.200}",   "$description": "Error text (AA 6.93:1 on red.900)" },
+        "border":     { "$value": "{color.red.300}",   "$description": "Error border (5.28:1 on red.900)" },
+        "icon":       { "$value": "{color.red.400}",   "$description": "Error icon (3.62:1 on red.900)" }
       },
       "warning": {
         "background": { "$value": "{color.yellow.900}", "$description": "Warning state background (dark mode)" },
-        "text":       { "$value": "{color.yellow.200}", "$description": "Warning text (AA on yellow.900)" },
-        "border":     { "$value": "{color.yellow.700}", "$description": "Warning border" },
-        "icon":       { "$value": "{color.yellow.400}", "$description": "Warning icon" }
+        "text":       { "$value": "{color.yellow.200}", "$description": "Warning text (AA 7.45:1 on yellow.900)" },
+        "border":     { "$value": "{color.yellow.300}", "$description": "Warning border (6.58:1 on yellow.900)" },
+        "icon":       { "$value": "{color.yellow.400}", "$description": "Warning icon (5.66:1 on yellow.900)" }
       },
       "success": {
         "background": { "$value": "{color.green.900}", "$description": "Success state background (dark mode)" },
-        "text":       { "$value": "{color.green.200}", "$description": "Success text (AA on green.900)" },
-        "border":     { "$value": "{color.green.700}", "$description": "Success border" },
-        "icon":       { "$value": "{color.green.400}", "$description": "Success icon" }
+        "text":       { "$value": "{color.green.200}", "$description": "Success text (AA 7.52:1 on green.900)" },
+        "border":     { "$value": "{color.green.300}", "$description": "Success border (6.49:1 on green.900)" },
+        "icon":       { "$value": "{color.green.400}", "$description": "Success icon (5.23:1 on green.900)" }
       },
       "info": {
         "background": { "$value": "{color.blue.900}", "$description": "Info state background (dark mode)" },
-        "text":       { "$value": "{color.blue.200}", "$description": "Info text (AA on blue.900)" },
-        "border":     { "$value": "{color.blue.700}", "$description": "Info border" },
-        "icon":       { "$value": "{color.blue.400}", "$description": "Info icon" }
+        "text":       { "$value": "{color.blue.200}", "$description": "Info text (AA 7.29:1 on blue.900)" },
+        "border":     { "$value": "{color.blue.300}", "$description": "Info border (5.74:1 on blue.900)" },
+        "icon":       { "$value": "{color.blue.400}", "$description": "Info icon (4.07:1 on blue.900)" }
       }
     },
     "overlay": {

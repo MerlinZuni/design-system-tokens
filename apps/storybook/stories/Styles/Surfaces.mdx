@@ -63,15 +63,14 @@ Surface patterns combine background color, border, and elevation tokens to creat
 
   <div>
     <div style={{
-      display: 'inline-block',
       backgroundColor: 'var(--dsx-color-surface-tooltip)',
-      color: 'var(--dsx-color-text-inverse)',
-      borderRadius: '4px',
-      padding: '8px 12px',
-      fontSize: '12px',
+      borderRadius: '8px',
+      padding: '24px',
       marginBottom: '8px',
+      boxShadow: '0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -1px rgba(0,0,0,0.06)',
     }}>
-      Tooltip surface — appears above all other layers
+      <div style={{ fontWeight: 600, color: 'var(--dsx-color-text-inverse)', marginBottom: '8px', fontSize: '16px' }}>Tooltip</div>
+      <div style={{ color: 'var(--dsx-color-text-inverse)', fontSize: '14px', opacity: 0.85 }}>Tooltip surface — appears above all other layers. Uses inverse text to ensure contrast against the dark background.</div>
     </div>
     <div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
       surface.tooltip · text.inverse

@@ -13,19 +13,53 @@ Four text styles cover the range of in-page content roles. All colors use semant
 
 Default reading text used for paragraphs, descriptions, and general content.
 
-<div style={{
-  fontFamily: 'var(--dsx-typography-text-base-font-family)',
-  fontSize: 'var(--dsx-typography-text-base-font-size)',
-  fontWeight: 400,
-  lineHeight: 'var(--dsx-typography-text-base-line-height)',
-  letterSpacing: 'var(--dsx-typography-text-base-letter-spacing)',
-  color: 'var(--dsx-color-text-default)',
-  marginBottom: '8px',
-}}>
-  This is body text — the default reading font used for paragraphs, descriptions, and general content. It should be comfortable to read at length.
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc', marginBottom: '1rem' }}>
+  <div style={{
+    fontFamily: 'var(--dsx-typography-text-base-font-family)',
+    fontSize: 'var(--dsx-typography-text-base-font-size)',
+    fontWeight: 400,
+    lineHeight: 'var(--dsx-typography-text-base-line-height)',
+    letterSpacing: 'var(--dsx-typography-text-base-letter-spacing)',
+    color: 'var(--dsx-color-text-default)',
+    marginBottom: '1rem',
+  }}>
+    This is body text — the default reading font used for paragraphs, descriptions, and general content. It should be comfortable to read at length.
+  </div>
+  <div style={{ fontSize: '0.75rem', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
+    text-base / 16px / weight 400 / 24px line-height / color.text.default
+  </div>
 </div>
-<div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
-  body — text-base / 16px / weight 400 / 24px line-height — color.text.default
+
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: 'var(--dsx-color-surface-default)', marginBottom: '2rem' }}>
+  <div style={{ fontSize: '0.6875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.75rem' }}>Usage examples</div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Article paragraph</div>
+      <p style={{
+        fontFamily: 'var(--dsx-typography-text-base-font-family)',
+        fontSize: 'var(--dsx-typography-text-base-font-size)',
+        fontWeight: 400,
+        lineHeight: 'var(--dsx-typography-text-base-line-height)',
+        color: 'var(--dsx-color-text-default)',
+        margin: 0,
+      }}>
+        Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values in order to maintain a scalable and consistent visual system for UI development.
+      </p>
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Card description</div>
+      <p style={{
+        fontFamily: 'var(--dsx-typography-text-base-font-family)',
+        fontSize: 'var(--dsx-typography-text-base-font-size)',
+        fontWeight: 400,
+        lineHeight: 'var(--dsx-typography-text-base-line-height)',
+        color: 'var(--dsx-color-text-default)',
+        margin: 0,
+      }}>
+        A brief summary of the card content that gives users enough context to decide whether to click through for more details.
+      </p>
+    </div>
+  </div>
 </div>
 
 ---
@@ -34,19 +68,63 @@ Default reading text used for paragraphs, descriptions, and general content.
 
 Supporting text for timestamps, secondary details, and supplementary information.
 
-<div style={{
-  fontFamily: 'var(--dsx-typography-text-sm-font-family)',
-  fontSize: 'var(--dsx-typography-text-sm-font-size)',
-  fontWeight: 400,
-  lineHeight: 'var(--dsx-typography-text-sm-line-height)',
-  letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
-  color: 'var(--dsx-color-text-muted)',
-  marginBottom: '8px',
-}}>
-  Caption text is used for supporting information, timestamps, and secondary details.
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc', marginBottom: '1rem' }}>
+  <div style={{
+    fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+    fontSize: 'var(--dsx-typography-text-sm-font-size)',
+    fontWeight: 400,
+    lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+    letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
+    color: 'var(--dsx-color-text-muted)',
+    marginBottom: '1rem',
+  }}>
+    Caption text is used for supporting information, timestamps, and secondary details.
+  </div>
+  <div style={{ fontSize: '0.75rem', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
+    text-sm / 14px / weight 400 / 20px line-height / color.text.muted
+  </div>
 </div>
-<div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
-  caption — text-sm / 14px / weight 400 / 20px line-height — color.text.muted
+
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: 'var(--dsx-color-surface-default)', marginBottom: '2rem' }}>
+  <div style={{ fontSize: '0.6875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.75rem' }}>Usage examples</div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Timestamp</div>
+      <span style={{
+        fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+        fontSize: 'var(--dsx-typography-text-sm-font-size)',
+        fontWeight: 400,
+        lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+        color: 'var(--dsx-color-text-muted)',
+      }}>
+        Published 27 March 2026 · 5 min read
+      </span>
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Helper text below input</div>
+      <span style={{
+        fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+        fontSize: 'var(--dsx-typography-text-sm-font-size)',
+        fontWeight: 400,
+        lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+        color: 'var(--dsx-color-text-muted)',
+      }}>
+        Password must be at least 8 characters long
+      </span>
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Image caption</div>
+      <span style={{
+        fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+        fontSize: 'var(--dsx-typography-text-sm-font-size)',
+        fontWeight: 400,
+        lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+        color: 'var(--dsx-color-text-muted)',
+      }}>
+        Fig. 1 — Token architecture overview showing the three-tier hierarchy
+      </span>
+    </div>
+  </div>
 </div>
 
 ---
@@ -55,20 +133,66 @@ Supporting text for timestamps, secondary details, and supplementary information
 
 Small uppercase label used above section headings and category titles.
 
-<div style={{
-  fontFamily: 'var(--dsx-typography-text-xs-font-family)',
-  fontSize: 'var(--dsx-typography-text-xs-font-size)',
-  fontWeight: 600,
-  lineHeight: 'var(--dsx-typography-text-xs-line-height)',
-  letterSpacing: '0.05em',
-  color: 'var(--dsx-color-text-subtle)',
-  textTransform: 'uppercase',
-  marginBottom: '8px',
-}}>
-  OVERLINE TEXT
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc', marginBottom: '1rem' }}>
+  <div style={{
+    fontFamily: 'var(--dsx-typography-text-xs-font-family)',
+    fontSize: 'var(--dsx-typography-text-xs-font-size)',
+    fontWeight: 600,
+    lineHeight: 'var(--dsx-typography-text-xs-line-height)',
+    letterSpacing: '0.05em',
+    color: 'var(--dsx-color-text-subtle)',
+    textTransform: 'uppercase',
+    marginBottom: '1rem',
+  }}>
+    OVERLINE TEXT
+  </div>
+  <div style={{ fontSize: '0.75rem', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
+    text-xs / 12px / weight 600 / uppercase / letter-spacing 0.05em / color.text.subtle
+  </div>
 </div>
-<div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
-  overline — text-xs / 12px / weight 600 / uppercase / letter-spacing 0.05em — color.text.subtle
+
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: 'var(--dsx-color-surface-default)', marginBottom: '2rem' }}>
+  <div style={{ fontSize: '0.6875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.75rem' }}>Usage examples</div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Section label above heading</div>
+      <div style={{
+        fontFamily: 'var(--dsx-typography-text-xs-font-family)',
+        fontSize: 'var(--dsx-typography-text-xs-font-size)',
+        fontWeight: 600,
+        lineHeight: 'var(--dsx-typography-text-xs-line-height)',
+        letterSpacing: '0.05em',
+        color: 'var(--dsx-color-text-subtle)',
+        textTransform: 'uppercase',
+        marginBottom: '4px',
+      }}>
+        Getting started
+      </div>
+      <div style={{
+        fontFamily: 'var(--dsx-typography-text-2xl-font-family)',
+        fontSize: 'var(--dsx-typography-text-2xl-font-size)',
+        fontWeight: 700,
+        lineHeight: 'var(--dsx-typography-text-2xl-line-height)',
+        color: 'var(--dsx-color-text-default)',
+      }}>
+        Installation Guide
+      </div>
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Category label</div>
+      <div style={{
+        fontFamily: 'var(--dsx-typography-text-xs-font-family)',
+        fontSize: 'var(--dsx-typography-text-xs-font-size)',
+        fontWeight: 600,
+        lineHeight: 'var(--dsx-typography-text-xs-line-height)',
+        letterSpacing: '0.05em',
+        color: 'var(--dsx-color-text-subtle)',
+        textTransform: 'uppercase',
+      }}>
+        Design Tokens
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
@@ -77,19 +201,76 @@ Small uppercase label used above section headings and category titles.
 
 Form labels, navigation items, and interactive element text.
 
-<div style={{
-  fontFamily: 'var(--dsx-typography-text-sm-font-family)',
-  fontSize: 'var(--dsx-typography-text-sm-font-size)',
-  fontWeight: 600,
-  lineHeight: 'var(--dsx-typography-text-sm-line-height)',
-  letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
-  color: 'var(--dsx-color-text-default)',
-  marginBottom: '8px',
-}}>
-  Label text is used for form labels, navigation items, and interactive element text.
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: '#f8fafc', marginBottom: '1rem' }}>
+  <div style={{
+    fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+    fontSize: 'var(--dsx-typography-text-sm-font-size)',
+    fontWeight: 600,
+    lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+    letterSpacing: 'var(--dsx-typography-text-sm-letter-spacing)',
+    color: 'var(--dsx-color-text-default)',
+    marginBottom: '1rem',
+  }}>
+    Label text is used for form labels, navigation items, and interactive element text.
+  </div>
+  <div style={{ fontSize: '0.75rem', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)' }}>
+    text-sm / 14px / weight 600 / 20px line-height / color.text.default
+  </div>
 </div>
-<div style={{ fontSize: '12px', fontFamily: "'Google Sans Code', monospace", color: 'var(--dsx-color-text-muted)', marginBottom: '32px' }}>
-  label — text-sm / 14px / weight 600 / 20px line-height — color.text.default
+
+<div style={{ padding: '1.25rem', borderRadius: '0.75rem', border: '1px solid #e2e8f0', background: 'var(--dsx-color-surface-default)', marginBottom: '2rem' }}>
+  <div style={{ fontSize: '0.6875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94a3b8', marginBottom: '0.75rem' }}>Usage examples</div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Form field label</div>
+      <label style={{
+        fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+        fontSize: 'var(--dsx-typography-text-sm-font-size)',
+        fontWeight: 600,
+        lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+        color: 'var(--dsx-color-text-default)',
+        display: 'block',
+        marginBottom: '6px',
+      }}>
+        Email address
+      </label>
+      <div style={{ height: '36px', borderRadius: '6px', border: '1px solid var(--dsx-color-border-default)', background: '#fff' }} />
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Navigation items</div>
+      <div style={{ display: 'flex', gap: '1.5rem' }}>
+        {['Dashboard', 'Settings', 'Profile'].map((item, i) => (
+          <span key={item} style={{
+            fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+            fontSize: 'var(--dsx-typography-text-sm-font-size)',
+            fontWeight: 600,
+            lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+            color: i === 0 ? 'var(--dsx-color-text-default)' : 'var(--dsx-color-text-muted)',
+          }}>
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+    <div style={{ padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', background: '#fff' }}>
+      <div style={{ fontSize: '0.6875rem', color: '#94a3b8', marginBottom: '0.375rem', fontFamily: "'Google Sans Code', monospace" }}>Button text</div>
+      <div style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '8px 16px',
+        borderRadius: '6px',
+        background: 'var(--dsx-color-action-default)',
+        color: '#fff',
+        fontFamily: 'var(--dsx-typography-text-sm-font-family)',
+        fontSize: 'var(--dsx-typography-text-sm-font-size)',
+        fontWeight: 600,
+        lineHeight: 'var(--dsx-typography-text-sm-line-height)',
+      }}>
+        Save changes
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
